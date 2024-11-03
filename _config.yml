@@ -1,0 +1,10 @@
+
+
+menu:
+  home: / || fa fa-home
+  archive: /archives || fa fa-archive
+  categories: /categories || fa fa-th-large
+  tags: /tags || fa fa-tags
+  about: /about || fa fa-user
+  links: /links || fa fa-link
+  rss: /atom.xml || fa fa-rss

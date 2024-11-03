@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+  color: rgb(34, 30, 30);
+  background-color: rgb(65, 65, 65);
+}
+.hover-underline {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none; /* 去除默认的下划线 */
+  display: inline-block;
+  padding-bottom: 2px; /* 为下划线留出空间 */
+  transition: all 0.3s ease-in-out; /* 过渡效果 */
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  height: 1px; /* 下划线高度 */
+  background: #D3D3D3; /* 灰白色 */
+  transition: all 0.3s ease-in-out; /* 过渡效果 */
+}
+
+.hover-underline:hover::after {
+  left: 0;
+  right: 0;
+}
+
+.page-all-minbox {
+  position: absolute; /* 使用absolute以便从视口居中 */
+  left: 20%;
+  top: 10%;
+  width: 60%;
+  height: 45%;
+  //transform: translate(-50%, -50%); /* 使用transform来调整位置，实现居中 */
+  display: grid;
+  place-items: 0 center; /* 保持内容居中 */
+}
+
+.page-minbox{
+ display: grid;
+ width:100%;
+ height: 30%;  
+ background-color: #33333367;
+ place-items: 0px center; /* 保持内容居中 */
+}
+.post{
+
+}
+.post-title{
+  text-align: center;  
+}
+.post-title-link{
+  color: white;
+}
+.post-meta{
+  display: flex;
+  justify-content: center;
+}
+
+
+@import "_partial/header";
