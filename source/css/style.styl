@@ -4,10 +4,19 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+.fa{
+margin: 2px;  
+}
+html{
+  //display: flex;
+  //overflow: scroll;
+}
 
 body {
   color: rgb(34, 30, 30);
   background-color: rgb(65, 65, 65);
+  //width :100%;
+  //height: 100%;
 }
 .hover-underline {
   position: relative;
@@ -35,26 +44,32 @@ body {
 }
 
 .page-all-minbox {
-  position: absolute; /* 使用absolute以便从视口居中 */
-  left: 20%;
-  top: 10%;
-  width: 60%;
-  height: 45%;
+  //position: absolute; /* 使用absolute以便从视口居中 */
+  //max-width: 1200px;
+  //max-height: 2048px;
+  //width: 1096px;
+  //height: 800px;
   //transform: translate(-50%, -50%); /* 使用transform来调整位置，实现居中 */
   display: grid;
-  place-items: 0 center; /* 保持内容居中 */
+  //place-items: 0 center; /* 保持内容居中 */
 }
 
 .page-minbox{
  display: grid;
- width:100%;
- height: 30%;  
+ width:  850px;
+ height:  250px;  
  background-color: #33333367;
- place-items: 0px center; /* 保持内容居中 */
+ margin: 10px;
+ //place-items: 0px center; /* 保持内容居中 */
+}
+.posts{
+ display: grid;
+ place-items: center;
 }
 .post{
-
-}
+  height: 100%;
+  background-color: #33333367;
+  }
 .post-title{
   text-align: center;  
 }
@@ -65,6 +80,16 @@ body {
   display: flex;
   justify-content: center;
 }
+.post-time{
+ display: flex;  
+}
 
+.night{
+color: white;  
+}
+
+.big_font_size{
+font-size: 20px;  
+}
 
 @import "_partial/header";

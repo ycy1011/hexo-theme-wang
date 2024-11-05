@@ -4,26 +4,22 @@
         <div class="page-minbox">
         <article class="post">
             <div class="post-title">
-                <a class="post-title-link hover-underline" href="<%- url_for(post.path)%>"><h2><%= post.title %></h2h2></a>
+                <h2><a class="post-title-link hover-underline" href="<%- url_for(post.path)%>"><%= post.title %></a></h2>
             </div>
             <div class="post-meta">
                 <span class="post-time">
-                    <i class="fa fa-clock"></i>
-                    <%- date(post.date, 'YYYY-MM-DD HH:mm:ss') %>
+                    <i class="fa fa-clock night"></i>
+                    <p class="night"><%- date(post.date, 'YYYY-MM-DD HH:mm:ss') %></p>
                 </span>
-                <p style="margin: 0 3px;">||</p>
+                    <p style="margin: 0 3px;" class="night">||</p>
                 <span class="post-time">
-                    <i class="fa fa-refresh"></i>
-                    <%- date(post.updated, 'YYYY-MM-DD HH:mm:ss') %>
+                    <i class="fa fa-refresh night"></i>
+                    <p class="night"><%- date(post.updated, 'YYYY-MM-DD HH:mm:ss') %></p>
                 </span>
             </div>
-            <div class="post-content">
-                 <!--<%= post.content %>-->
-                 <div></div>
-                 <%- post.excerpt %>
-            </div>
+                 <center class="night"><%- post.excerpt %></center>
         </article>
         </div>
-        <% }) %>
+    <% }) %>
     </div>
 </section>

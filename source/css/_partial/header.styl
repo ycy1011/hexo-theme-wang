@@ -1,3 +1,9 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* 确保header在页面最上层 */
+    transition: top 0.3s;
+}
 .header-toggle-all{
     width : 100%;
     height: 60pX;
@@ -18,7 +24,7 @@
     text-decoration: none;    
 }
 .logo-img {
-margin-right: 10px;
+ margin-right: 10px;
 
 }
 .logo-title {
@@ -48,7 +54,7 @@ margin-right: 10px;
 }
 
 .menu-item {
-    flex-grow: 1; 
+    flex: 1; 
     display: flex;
     align-items: center; 
     justify-content: center; 
