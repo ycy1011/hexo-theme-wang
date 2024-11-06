@@ -4,7 +4,7 @@
         <div class="page-minbox">
         <article class="post">
             <div class="post-title">
-                <h2><a class="post-title-link hover-underline" href="<%- url_for(post.path)%>"><%= post.title %></a></h2>
+                <h2 style="margin:auto;"><a class="post-title-link hover-underline" href="<%- url_for(post.path)%>"><%= post.title %></a></h2>
             </div>
             <div class="post-meta">
                 <span class="post-time">
@@ -17,7 +17,11 @@
                     <p class="night"><%- date(post.updated, 'YYYY-MM-DD HH:mm:ss') %></p>
                 </span>
             </div>
-                 <center class="night"><%- post.excerpt %></center>
+                 <div class="night excerpt"><%- post.excerpt %></div>
+                 <div class="readmore-box">
+                 <a href="<%- url_for(post.path)%>" class="readmore night hover-underline">Read More</a>
+                 </div>
+                </article>
         </article>
         </div>
     <% }) %>

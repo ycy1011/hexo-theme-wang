@@ -1,8 +1,11 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    //box-sizing: border-box;
     text-decoration: none;
+}
+.excerpt{
+margin-top:5px;  
 }
 .fa{
 margin: 2px;  
@@ -50,23 +53,31 @@ body {
   //width: 1096px;
   //height: 800px;
   //transform: translate(-50%, -50%); /* 使用transform来调整位置，实现居中 */
-  display: grid;
+  //display: grid;
+  margin-top: 50px;
   //place-items: 0 center; /* 保持内容居中 */
 }
 
 .page-minbox{
- display: grid;
+ //display: grid;
+ //border: 2px solid white;
  width:  850px;
- height:  250px;  
+ height:  300px; 
+ max-height: 600px; 
  background-color: #33333367;
- margin: 10px;
+ margin: 15px;
  //place-items: 0px center; /* 保持内容居中 */
+}
+.page-minbox:hover{
+ background-color: #444; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .posts{
  display: grid;
  place-items: center;
 }
 .post{
+  display: grid;
   height: 100%;
   background-color: #33333367;
   }
@@ -85,11 +96,24 @@ body {
 }
 
 .night{
-color: white;  
+color: white;    
 }
 
 .big_font_size{
-font-size: 20px;  
+ font-size: 20px;  
 }
-
+.readmore-box{
+  padding: 30px;
+  display: absolute;
+ text-align: center;  
+}
+.readmore{
+  margin-bottom: 10px;
+  background-color: #33333367;  
+  border: 2px solid rgb(65, 65, 65); 
+}
+img{
+  margin: 0 auto;
+  display: block;
+}
 @import "_partial/header";

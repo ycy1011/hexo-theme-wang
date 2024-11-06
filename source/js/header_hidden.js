@@ -1,14 +1,20 @@
-// 获取header元素
-var header = document.getElementById("myHeader");
+document.addEventListener('DOMContentLoaded', function() {
+    const header = document.getElementById('header');
+    let lastScrollTop = 0; // 上一次的滚动位置
+    // 监听滚动事件
+    window.addEventListener('scroll', function() {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop; // 获取当前滚动位置
 
-// 监听页面的滚动事件
-window.onscroll = function() { scrollFunction() };
+        // 检查滚动方向
+        if (scrollTop > lastScrollTop) {
+            // 向下滚动
+            header.classList.add('hidden-header');
+        } else {
+            // 向上滚动
+            header.classList.remove('hidden-header');
+        }
 
-function scrollFunction() {
-    // 如果页面向下滚动超过header的高度
-    if (document.body.scrollTop > header.offsetHeight) {
-        header.classList.add("hidden");
-    } else {
-        header.classList.remove("hidden");
-    }
-}
+        // 更新上一次的滚动位置
+        lastScrollTop = scrollTop;
+    });
+});

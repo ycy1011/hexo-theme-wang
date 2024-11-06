@@ -1,8 +1,14 @@
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000; /* 确保header在页面最上层 */
-    transition: top 0.3s;
+#header {
+  position: fixed; /* 固定定位 */
+  //top: 0; /* 顶部对齐 */
+  width: 100%; /* 宽度100% */
+  z-index: 0; /* 确保在顶部 */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* 平滑过渡 */
+  transform: translateY(0); /* 初始位置 */
+}
+#header.hidden-header  {
+    transform: translateY(-100%); /* 向上移动，完全移出视口 */
+    opacity: 0; /* 隐藏元素 */
 }
 .header-toggle-all{
     width : 100%;
