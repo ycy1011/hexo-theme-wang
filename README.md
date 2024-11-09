@@ -1,80 +1,3 @@
-<style>
-@import url('https://static.zeoseven.com/zsft/84/main/result.css');
-
-html {
-   font-family: "Douyin Sans";
-   font-weight: normal;
-}
-
-  body {
-  font-family: 'Douyin Sans', sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f5f5;
-  color: #333;
-}
-
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 20px;
-}
-
-header .logo {
-  display: block;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2em;
-  color: #333;
-}
-
-.introduction, .development-log {
-  margin-bottom: 40px;
-}
-
-.introduction strong, .development-log h2 {
-  font-weight: bold;
-  color: #007BFF;
-}
-
-.introduction ul, .development-log ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.introduction li, .development-log li {
-  margin-bottom: 5px;
-}
-
-.development-log .log-entry {
-  margin-bottom: 20px;
-}
-
-.development-log .log-entry h3 {
-  margin-top: 0;
-  font-size: 1.5em;
-  color: #007BFF;
-}
-
-a {
-  color: #007BFF;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-</style>
 <center>
 <img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
 
@@ -83,8 +6,9 @@ a:hover {
 
 # wang-一个简约的hexo主题（尚未完成）
 
-## 字体 
- + [Douyin Sans 抖音美好体](https://fonts.zeoseven.com/zh-CN/items/84/) : [采用OFL许可协议](https://openfontlicense.org/)
+## 协议
+ + [Douyin Sans 抖音美好体](https://fonts.zeoseven.com/zh-CN/items/84/) : [采用OFL许可协议](FONT-LICENSE)
+ + 代码及其他 : [MIT许可协议](LICENSE)
 
 ## 参考
  感谢以下的教程和文章及其网站，在此向他们表示感谢！
