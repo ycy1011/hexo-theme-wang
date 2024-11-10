@@ -1,4 +1,47 @@
 @import url('https://static.zeoseven.com/zsft/84/main/result.css');
+
+.box {
+//  width: 200px; /* 盒子宽度 */
+//  height: 200px; /* 盒子高度 */
+  background-color: #414141fd; /* 盒子背景颜色 */
+  border: 1px solid #ccc; /* 盒子边框 */
+  margin: 50px; /* 盒子外边距 */
+  border-radius: 8px; /* 圆角效果 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 平滑过渡效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初始阴影 */
+}
+
+.box:hover {
+  transform: translateY(-2px); /* 鼠标悬停时向上移动 */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影 */
+}  
+
+a {
+  /* 去除下划线 */
+  text-decoration: none;
+
+  /* 去除点击时的焦点轮廓 */
+  outline: none;
+
+  /* 去除鼠标悬停时的颜色变化 */
+  color: inherit;
+
+  /* 去除点击时的背景颜色变化 */
+  background-color: transparent;
+
+  /* 去除点击时的边框 */
+  border: none;
+
+  /* 去除默认的字体颜色变化 */
+  color: initial;
+
+  /* 去除默认的字体样式变化 */
+  font-style: normal;
+
+  /* 去除默认的字体粗细变化 */
+  font-weight: normal;
+}
+
 // // fancybox 
 .markdown-section img 
   max-width: 100%;
@@ -142,3 +185,4 @@ img{
 @import "_partial/header";
 @import "post";
 @import "a11y-dark"
+@import "_partial/footer"
