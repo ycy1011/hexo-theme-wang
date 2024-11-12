@@ -1,0 +1,55 @@
+
+.page-nav {
+  margin: 10px auto;
+  padding: 5px;
+  max-width: 800px;
+  width :600px;
+  display: flex; /* 使用Flexbox布局 */
+  justify-content: space-between; /* 子元素均匀分布 */
+  align-items: center; /* 垂直居中 */
+  background-color: #414141fd; /* 盒子背景颜色 */
+  //border: 1px solid #ccc; /* 盒子边框 */
+  border-radius: 15px; /* 圆角效果 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 平滑过渡效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初始阴影 */
+}
+// .page-nav:hover {
+//   transform: translateY(-2px); /* 鼠标悬停时向上移动 */
+//   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影 */
+//   }
+.pagination-prev,
+.pagination-next,.pagination-page {
+  width :50px;
+  text-align: center; /* 居中 */
+  display:inline-block; /* 使得元素成为块级元素 */
+  background-color: #414141fd; /* 盒子背景颜色 */
+  border: 1px solid #ccc; /* 盒子边框 */
+  border-radius: 5px; /* 圆角效果 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 平滑过渡效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初始阴影 */
+  padding: 5px;
+}
+.pagination-prev:hover,.pagination-next:hover ,.pagination-page:hover{
+  transform: translateY(-2px); /* 鼠标悬停时向上移动 */
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影 */
+    
+}
+
+.pagination-current {
+  background-color: #414141fd; /* 盒子背景颜色 */
+  border: 0;
+  border-radius: 5px; /* 圆角效果 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 平滑过渡效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初始阴影 */
+  /* 为当前页链接添加样式 */
+  padding: 5px;
+}
+
+.pagination-space {
+  background-color: #414141fd; /* 盒子背景颜色 */
+  //border: 1px solid #ccc; /* 盒子边框 */
+  border-radius: 5px; /* 圆角效果 */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 平滑过渡效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初始阴影 */
+  padding: 5px;
+}

@@ -1,21 +1,22 @@
-<article class="post-article">
-<header class="post-header" id="post-header">
-<div class="post-title">
-    <center class="post-title"><h1 class="night"><%=page.title %></h1></center>
-</div>
-<div class="post-meta">
-    <span class="post-time">
-        <i class="fa fa-clock night"></i>
-        <p class="night"><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
-    </span>
-        <p style="margin: 0 3px;" class="night">||</p>
-    <span class="post-time">
-        <i class="fa fa-refresh night"></i>
-        <p class="night">  <%= page.updated.format("YYYY/MM/DD HH:mm:ss z") %></p>
-    </span>
-</div>
-</header>
+<article class="post-article ">
 <div class="post-content night box" style="font-family:Douyin Sans">
+    <header class="post-header" id="post-header">
+        <div class="post-title">
+            <p class="post-title"><h1 class="night"><%=page.title %></h1></p>
+        </div>
+        <br>
+        <div class="post-meta">
+            <span class="post-time">
+                <i class="fa fa-clock night"></i>
+                <p class="night"><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
+            </span>
+                <p style="margin: 0 3px;" class="night">||</p>
+            <span class="post-time">
+                <i class="fa fa-refresh night"></i>
+                <p class="night">  <%= page.updated.format("YYYY/MM/DD HH:mm:ss z") %></p>
+            </span>
+        </div>
+        </header>
  <%- page.content %>
 </div>
 </article>

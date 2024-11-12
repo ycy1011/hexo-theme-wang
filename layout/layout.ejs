@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="<%- config.language %>" >  
 <%- partial('_partial/head') %>
-<body>
+<body class>
  <%- partial('_partial/header') %>
+ <div class="container">
+ <%- partial('_partial/sidebar_left') %>
  <%- body %>
- <%- partial('_partial/footer') %>   
+ <%- partial('_partial/sidebar_right') %>
+ </div>
+ <%- partial('_partial/footer') %>  
+ <%- js('js/fancybox.js') %>
+ <%- js('js/header_hidden.js') %>
+ <%- js('js/copyright.js') %> 
 </body>
 </html>

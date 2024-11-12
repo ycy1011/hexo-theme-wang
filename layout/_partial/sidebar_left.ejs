@@ -1,0 +1,20 @@
+<aside class="sidebar-left night box">
+    <div class="sidebar-item">
+      <h2 class="title-center"><%= config.title %></h2>
+      <img class="avatar rounded-img" src="<%= url_for() %>images/avatar.png" alt="avatar"></img>
+      <h2 class="sidebar-author"><%= config.author %></h2>
+      <p class="sidebar-description"><%= config.description %></p>
+      <ul class="social-links">
+        <% for (let name in theme.social_links) { %>
+          <% let [url, icon] = theme.social_links[name].split('||').map(item => item.trim()); %>
+          <li class="social-links-item">
+              <a href="<%= url %>" class="social-links-link">
+                  <i class="fa <%= icon %>" aria-hidden="true"></i>
+                  <p class="hover-underline"><%= name %><p>
+              </a>
+          </li>
+      <% } %>
+      </ul> 
+    </div>
+    <!-- 可以添加更多侧边栏项目 -->
+</aside>

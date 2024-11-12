@@ -2,13 +2,13 @@
     <span class="header-toggle-all">
             <span class="header-toggle">        
             <a href="<%= url_for() %>" class="logo">
-                <img class="logo-img" src="<%= url_for() %>images/logo.png" alt="logo" style="width: 50px; height: 50px;margin: 0px"/>
+                <img class="logo-img" src="<%= url_for() %>images/logo.png" style="width: 50px; height: 50px;margin: 0px"/>
             </a>
             <a href="<%= url_for() %>" class="logo logo-title hover-underline">
                 <h1><%= config.title %></h1>
             </a>
-            </span>
-    <div></div>
+    </span>
+    <div class="header-subtitle night"><%= config.subtitle %></div>
     <nav class="navbar">
         <ul class="menu">
             <% for (let name in theme.menu) { %>

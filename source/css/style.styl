@@ -1,12 +1,19 @@
 @import url('https://static.zeoseven.com/zsft/84/main/result.css');
-
+img {
+  width: auto; /* 或者具体的像素值，比如300px */
+  height: auto; /* 保持图片的宽高比 */
+  object-fit: cover; /* 保持图片的宽高比，可能会裁剪图片 */
+  object-fit: contain;
+ //height: 500px; /* 保持图片完整显示，可能会有空白 */
+  max-width: 100%;
+  max-height: 700px;
+}
 .box {
 //  width: 200px; /* 盒子宽度 */
 //  height: 200px; /* 盒子高度 */
   background-color: #414141fd; /* 盒子背景颜色 */
-  border: 1px solid #ccc; /* 盒子边框 */
-  margin: 50px; /* 盒子外边距 */
-  border-radius: 8px; /* 圆角效果 */
+  //border: 1px solid #ccc; /* 盒子边框 */
+  border-radius: 15px; /* 圆角效果 */
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* 平滑过渡效果 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 初始阴影 */
 }
@@ -15,7 +22,12 @@
   transform: translateY(-2px); /* 鼠标悬停时向上移动 */
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* 鼠标悬停时增加阴影 */
 }  
-
+p{
+  padding auto;
+}
+h1, h2, h3, h4, h5, h6{
+  margin: auto;
+}
 a {
   /* 去除下划线 */
   text-decoration: none;
@@ -41,6 +53,7 @@ a {
   /* 去除默认的字体粗细变化 */
   font-weight: normal;
 }
+
 
 // // fancybox 
 .markdown-section img 
@@ -80,7 +93,12 @@ html{
   //display: flex;
   //overflow: scroll;
 }
-
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* 子元素水平居中 */
+  width :100%;
+  }
 body {
   color: rgb(34, 30, 30);
   background-color: rgb(65, 65, 65);
@@ -113,45 +131,50 @@ body {
 }
 
 .page-all-minbox {
-  //position: absolute; /* 使用absolute以便从视口居中 */
-  //max-width: 1200px;
-  //max-height: 2048px;
-  //width: 1096px;
-  //height: 800px;
-  //transform: translate(-50%, -50%); /* 使用transform来调整位置，实现居中 */
-  //display: grid;
-  margin-top: 50px;
-  //place-items: 0 center; /* 保持内容居中 */
+  justify-content: center; /* 子元素水平居中 */
+  margin:auto;
+  margin-top: 60px;
+  margin-right: 20px;
+  margin-left: 20px;
+  padding: 10px;
+  //display: flex;  
+  //display: flex;
+  flex-direction: column; /* 子元素垂直排列 */
+  //height: 100vh; /* 容器高度 */
 }
 
-.page-minbox{
- //display: grid;
- //border: 2px solid white;
- width:  850px;
- height:  300px; 
- max-height: 600px; 
- background-color: #33333367;
- margin: 15px;
- //place-items: 0px center; /* 保持内容居中 */
+.page-minbox{ 
+//  max-height: 900px; 
+//  background-color: #33333367;
+  margin-bottom: 45px;
+//  max-width:800px;
+//  min-height:400px;
 }
+
 .page-minbox:hover{
  background-color: #444; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .posts{
- display: grid;
+ //display: grid;
  place-items: center;
 }
 .post{
   display: grid;
   height: 100%;
   background-color: #33333367;
+  max-height: 900px; 
+ background-color: #33333367;;
+ max-width:800px;
+ min-height:400px;
   }
 .post-title{
   text-align: center;  
 }
 .post-title-link{
   color: white;
+  margin:auto;
+  padding-top: 35px;
 }
 .post-meta{
   display: flex;
@@ -162,27 +185,41 @@ body {
 }
 
 .night{
-color: white;    
+color: #CECECE;    
 }
-
+.night a{
+  color: #CECECE;  
+}
+.night.excerpt p {
+  text-align: center; /* 文本居中 */
+  white-space: normal; /* 确保文本自动换行 */
+  //word-wrap: break-word; /* 长单词或URL在必要时可以换行 */
+  overflow-wrap: break-word; /* 同上，是 word-wrap 的新名称 */
+}
+然后在
 .big_font_size{
  font-size: 20px;  
 }
 .readmore-box{
-  padding: 30px;
-  display: absolute;
  text-align: center;  
 }
 .readmore{
-  margin-bottom: 10px;
+  text-align: center;
+  margin:auto;
+  //margin-bottom: 10px;
   background-color: #33333367;  
   border: 2px solid rgb(65, 65, 65); 
 }
 img{
-  margin: 0 auto;
+  margin: auto;
   display: block;
+}
+.copy-btn{
+
 }
 @import "_partial/header";
 @import "post";
 @import "a11y-dark"
 @import "_partial/footer"
+@import "_partial/pagination"
+@import "_partial/sidebar"

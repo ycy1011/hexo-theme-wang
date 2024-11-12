@@ -1,6 +1,20 @@
 
 highlight_theme: night
-
+social_links:
+  Github: https://github.com/WangYuNeng || fab fa-github
+  Email: mailto:<您的邮箱地址> || fa fa-envelope
+  Twitter: https://twitter.com/<您的Twitter用户名> || fab fa-twitter
+  LinkedIn: https://www.linkedin.com/in/<您的LinkedIn用户名> || fab fa-linkedin-in
+  Facebook: https://www.facebook.com/<您的Facebook用户名> || fab fa-facebook-f
+  Instagram: https://www.instagram.com/<您的Instagram用户名> || fab fa-instagram
+  YouTube: https://www.youtube.com/<您的YouTube频道名> || fab fa-youtube
+  #Medium: https://medium.com/@<您的Medium用户名> || fab fa-medium-m
+  Zhihu: https://www.zhihu.com/people/<您的知乎用户名> || fab fa-zhihu  # 知乎
+  Bilibili: https://space.bilibili.com/<您的B站ID> || fab fa-bilibili  # B站
+  Weibo: https://weibo.com/<您的微博用户名> || fab fa-weibo  # 微博
+  QQ: https://im.qq.com/?tuin=<您的QQ号> || fab fa-qq  # QQ
+  WeChat: wechat://添加<您的微信ID> || fab fa-weixin  # 微信
+  Website: https://<您的个人或公司网站> || fa fa-globe
 menu:
   home: / || fa fa-home
   archive: /archives || fa fa-archive
