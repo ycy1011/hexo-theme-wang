@@ -1,5 +1,5 @@
 .sidebar-left,.sidebar-right{
-    display: block;
+    //display: ;
     position: sticky;
     top: 60px;
     bottom: 0;
@@ -8,6 +8,7 @@
     width :15%;
     max-width: 20%;
     height:60%;
+    max-height: 50%;
 }
 .title-center,.sidebar-author,.sidebar-description{
     text-align: center;
@@ -65,5 +66,20 @@
 }
 
 .social-links-item:nth-child(even) {
-  text-align: left; /* 偶数位置的子元素右对齐 */
+  text-align: left; 
+}
+.sidebar-menu{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  list-style-type: none
+  justify-content: space-between;
+}
+.sidebar-menu-item{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.big{
+ font-size: 30px;  
 }

@@ -1,0 +1,99 @@
+<div class="archive-container box night">
+    <div class="timeline"></div>
+    <%  
+    var oldyear=null; 
+    var oldmonth=null;
+    var oldday=null;
+    var sb=[];
+    site.posts.each(function(post){
+        var ssb=post;
+        sb.push(ssb);
+    })
+    sb.sort(function(a, b){
+        var dateA = new Date(a.date);
+        var dateB = new Date(b.date);
+        return dateB - dateA;
+    });
+    sb.forEach(function (post) { 
+        var date = new Date(post.date); 
+        var year = date.getFullYear(); 
+        var month = date.getMonth() + 1; 
+        var day = date.getDate(); 
+        var formattedMonth = month < 10 ? '0' + month : month; 
+        var formattedDay = day < 10 ? '0' + day : day; 
+        var title = post.title; 
+        var postlink = post.path;
+
+        if (year !== oldyear) {
+
+            if((day!==oldday)&&(oldday!=null)){
+    %>
+        </div>
+    <%};
+            
+%><div class="archive-posts-container">
+    <div class="archive-year-container">
+        <i class="fa fa-globe archive-year" aria-hidden="true"></i>
+        <h2 class="archive-year"><%= year %></h2>
+        <i class="fa fa-globe archive-year" aria-hidden="true"></i>
+    </div>
+    <div class="archive-month-container">
+        <i class="fa fa-moon archive-month" aria-hidden="true">
+        </i><h3 class="archive-month"><%= formattedMonth %></h3>
+        <i class="fa fa-moon archive-month" aria-hidden="true"></i>
+    </div>
+    <div class="archive-day-container">
+        <div class="archive-day-container-day">
+        <i class="fa fa-sun archive-day" aria-hidden="true"></i>
+            <h4 class="archive-day"><%= year %>-<%= formattedMonth %>-<%= formattedDay %></h4>
+            <i class="fa fa-sun archive-day" aria-hidden="true"></i>
+        </div>
+<%
+            oldyear = year; 
+            oldmonth = month; // 初始化月份
+            oldday = day; // 初始化日期
+        } else if ((year === oldyear) && (month !== oldmonth)) {
+
+            if((day!==oldday)&&(oldday!=null)){
+    %>
+        </div>
+    <%};
+%>
+    <div class="archive-month-container">
+        <i class="fa fa-moon archive-month" aria-hidden="true">
+        </i><h3 class="archive-month"><%= formattedMonth %></h3>
+        <i class="fa fa-moon archive-month" aria-hidden="true"></i>
+    </div>
+    <div class="archive-day-container">
+        <div class="archive-day-container-day">
+        <i class="fa fa-sun archive-day" aria-hidden="true"></i>
+            <h4 class="archive-day"><%= year %>-<%= formattedMonth %>-<%= formattedDay %></h4>
+            <i class="fa fa-sun archive-day" aria-hidden="true"></i>
+        </div>   
+<%
+            oldmonth = month; 
+            oldday = day; // 初始化日期
+        } else if ((year === oldyear) && (month === oldmonth) && (day !== oldday)) {
+
+            if((day!==oldday)&&(oldday!=null)){
+    %>
+        </div>
+    <%};
+%>  <div class="archive-day-container">
+    <div class="archive-day-container-day">
+    <i class="fa fa-sun archive-day" aria-hidden="true"></i>
+            <h4 class="archive-day"><%= year %>-<%= formattedMonth %>-<%= formattedDay %></h4>
+            <i class="fa fa-sun archive-day" aria-hidden="true"></i>
+            </div>
+<%
+            oldday = day; 
+        }
+%>
+        <h5 class="archive-title"><a class="hover-underline" href="<%- url_for(post.path)%>"><%= title %></a></h5> <%
+    });
+
+%>
+</div>
+</div>
+<div class="timeline"></div>
+</div>

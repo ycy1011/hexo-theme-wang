@@ -16,5 +16,19 @@
       <% } %>
       </ul> 
     </div>
+    <ul class="sidebar-menu">
+    <li class="sidebar-menu-item big">
+      <a href="<%= config.root %>archives/"><i class="fa fa-archive"></i></a>
+      <a href="<%= config.root %>archives/" class="hover-underline"><%= site.posts.length %></a>
+    </li>
+    <li class="sidebar-menu-item big ">
+      <a href="<%= config.root %>categories/"><i class="fa fa-th-large"></i></a>
+      <a href="<%= config.root %>categories/" class="hover-underline"><%= site.categories.length %></a>
+    </li>
+    <li class="sidebar-menu-item big">
+      <a href="<%= config.root %>tags/"><i class="fa fa-tags"></i></a>
+      <a href="<%= config.root %>tags/" class="hover-underline"><%= site.tags.length %></a>
+    </li>
+    </ul>
     <!-- 可以添加更多侧边栏项目 -->
 </aside>

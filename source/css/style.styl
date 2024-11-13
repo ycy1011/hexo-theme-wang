@@ -6,7 +6,6 @@ img {
   object-fit: contain;
  //height: 500px; /* 保持图片完整显示，可能会有空白 */
   max-width: 100%;
-  max-height: 700px;
 }
 .box {
 //  width: 200px; /* 盒子宽度 */
@@ -74,6 +73,7 @@ a {
 html {
     font-family: "Douyin Sans";
     font-weight: normal;
+    height: 100%;
 }
 * {
     margin: 0;
@@ -95,15 +95,13 @@ html{
 }
 .container{
   display: flex;
-  flex-direction: row;
-  justify-content: center; /* 子元素水平居中 */
-  width :100%;
+  justify-content: space-around; /* 子元素水平居中 */
+  min-height: 96vh; /* 容器高度 */
   }
 body {
   color: rgb(34, 30, 30);
   background-color: rgb(65, 65, 65);
-  //width :100%;
-  //height: 100%;
+  height: 100%;
 }
 .hover-underline {
   position: relative;
@@ -196,19 +194,19 @@ color: #CECECE;
   //word-wrap: break-word; /* 长单词或URL在必要时可以换行 */
   overflow-wrap: break-word; /* 同上，是 word-wrap 的新名称 */
 }
-然后在
 .big_font_size{
  font-size: 20px;  
 }
-.readmore-box{
- text-align: center;  
+.readmore-box {
+  text-align: center; /* 使内容在水平方向上居中 */
+  display: flex; /* 使用flex布局 */
+  justify-content: center; /* 在主轴上居中 */
+  align-items: center; /* 在交叉轴上居中 */
 }
-.readmore{
-  text-align: center;
-  margin:auto;
-  //margin-bottom: 10px;
-  background-color: #33333367;  
-  border: 2px solid rgb(65, 65, 65); 
+
+.readmore {
+  display: inline-block; /* 使链接表现得像块级元素，但不会换行 */
+  white-space: nowrap; /* 防止文本换行 */
 }
 img{
   margin: auto;
@@ -223,3 +221,4 @@ img{
 @import "_partial/footer"
 @import "_partial/pagination"
 @import "_partial/sidebar"
+@import "archive"
