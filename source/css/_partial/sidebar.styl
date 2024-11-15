@@ -9,6 +9,7 @@
     max-width: 20%;
     height:60%;
     max-height: 50%;
+    background-color: #33333367;
 }
 .title-center,.sidebar-author,.sidebar-description{
     text-align: center;
@@ -74,6 +75,7 @@
   margin-top: 20px;
   list-style-type: none
   justify-content: space-between;
+  padding: 0;
 }
 .sidebar-menu-item{
   display: flex;
@@ -82,4 +84,110 @@
 }
 .big{
  font-size: 30px;  
+}
+
+//right
+
+/* 基本样式 */
+.sidebar-right {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  padding: 20px;
+  //background-color: #f9f9f9;
+  //border: 1px solid #ddd;
+}
+
+.sidebar-item h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* 年份样式 */
+.year-reverse {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 月份样式 */
+.month-reverse {
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+/* 日期样式 */
+.day-reverse {
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+
+/* 文章列表样式 */
+ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+ul li a:hover {
+  //text-decoration: underline;
+}
+
+/* 动画效果 */
+details summary {
+  outline: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: '> ';
+  font-size: 1em;
+  color: #007bff;
+  margin-right: 5px;
+}
+
+details[open] > summary::before {
+  content: 'v ';
+}
+
+details > summary {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+
+details details {
+  margin-left: 10px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+details[open] details {
+  max-height: 1000px; /* 足够大的值以显示所有内容 */
+}
+
+details:not([open]) details {
+  max-height: 0;
+}
+.ipshow{
+ text-align:center;  
 }

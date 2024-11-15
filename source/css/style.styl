@@ -162,7 +162,6 @@ body {
   height: 100%;
   background-color: #33333367;
   max-height: 900px; 
- background-color: #33333367;;
  max-width:800px;
  min-height:400px;
   }
@@ -215,6 +214,20 @@ img{
 .copy-btn{
 
 }
+.excerpt a{
+ text-decoration: underline;
+}
+.excerpt a:not(:has(img))::after {
+  content: '\f08e'; /* Font Awesome 的外链图标 Unicode */
+  font-family: 'Font Awesome 5 Free'; /* 指定 Font Awesome 字体 */
+  font-weight: 900; /* 根据图标库的要求，通常使用 900 粗细 */
+  margin-left: 5px; /* 图标和链接之间的间距 */
+  font-size: 12px; /* 调整图标大小 */
+}
+ul{
+ padding: 0;
+ margin: 0;
+}
 @import "_partial/header";
 @import "post";
 @import "a11y-dark"
@@ -222,3 +235,6 @@ img{
 @import "_partial/pagination"
 @import "_partial/sidebar"
 @import "archive"
+@import "tags"
+@import "page"
+@import "category"

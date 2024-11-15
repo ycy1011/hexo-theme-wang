@@ -1,4 +1,6 @@
 
+
+
 highlight_theme: night
 social_links:
   Github: https://github.com/WangYuNeng || fab fa-github
@@ -23,3 +25,5 @@ menu:
   about: /about || fa fa-user
   links: /links || fa fa-link
   rss: /atom.xml || fa fa-rss
+ipshow:
+  enable: true  # 是否显示IP地址

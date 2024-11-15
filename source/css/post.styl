@@ -81,4 +81,15 @@ figure.highlight .code pre {
 .copy-btn{
 background: #333     
 }
+.post-content a{
+ text-decoration: underline;
+}
+.post-content a:not(.headerlink):not(:has(img))::after {
+  content: '\f08e'; /* Font Awesome 的外链图标 Unicode */
+  font-family: 'Font Awesome 5 Free'; /* 指定 Font Awesome 字体 */
+  font-weight: 900; /* 根据图标库的要求，通常使用 900 粗细 */
+  margin-left: 5px; /* 图标和链接之间的间距 */
+  font-size: 12px; /* 调整图标大小 */
+}
+
 

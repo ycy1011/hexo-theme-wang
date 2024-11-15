@@ -1,0 +1,10 @@
+<div class="tag-cloud night box">
+  <% page.posts.each(function (post) { %>
+  <div class="tagpost">
+    <a  class="hover-underline" href="<%- url_for(post.path)%>"><h2><%= post.title %></h2></a>
+  </div> 
+  <%});%>
+<div class="page-nav night">
+    <%- partial('_partial/pagination') %>
+</div>
+</div>
