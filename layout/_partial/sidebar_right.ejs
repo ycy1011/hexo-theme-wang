@@ -107,10 +107,58 @@
       </li>
       <%})%>
       </ul>
-  <%} else {%>
+  <%} else { if(theme.ipshow.enable){%>
     <div class="where is your ip">
   <h3 class="ipshow">ip show</h3>
-  <img src="https://tool.lu/netcard/" rel="https://tool.lu/ip/">
+  <img class="nofancybox" src="https://tool.lu/netcard/" rel="https://tool.lu/ip/" alt="show your ip">
 </div>
+  <%}%>
+  <%if(theme.timeshow.enable){%>
+    <div class="time">  
+    <h3 class="timetitle">Time</h3>
+    <div class="timeshow" id="currentDateTime"></div>  
+      
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // 创建一个新的Date对象，它将包含当前的本地时间
+    const now = new Date();
+
+    // 定义一个函数来格式化日期和时间
+    function formatDateTime(now, format) {
+        const year = now.getFullYear();
+        const month = (now.getMonth() + 1).toString().padStart(2, '0');
+        const day = now.getDate().toString().padStart(2, '0');
+        const hours = now.getHours().toString().padStart(2, '0');
+        const minutes = now.getMinutes().toString().padStart(2, '0');
+        const seconds = now.getSeconds().toString().padStart(2, '0');
+
+        // 替换格式字符串中的占位符
+        return format.replace(/YYYY/g, year)
+                     .replace(/MM/g, month)
+                     .replace(/DD/g, day)
+                     .replace(/HH/g, hours)
+                     .replace(/mm/g, minutes)
+                     .replace(/ss/g, seconds);
+    }
+
+    // 从配置中获取时间格式
+    const timeFormat = "<%= theme.timeshow.format %>";
+
+    // 更新时间的函数
+    function updateTime() {
+        const now = new Date();
+        const formattedDateTime = formatDateTime(now, timeFormat);
+        document.getElementById('currentDateTime').textContent = formattedDateTime;
+    }
+
+    // 初始调用更新时间函数
+    updateTime();
+
+    // 每1000毫秒（1秒）调用一次updateTime函数，更新时间
+    setInterval(updateTime, 1000);
+});
+</script>
+<%}%>
   <%}%>
 </aside>

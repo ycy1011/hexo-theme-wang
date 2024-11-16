@@ -5,7 +5,7 @@
         <div class="page-minbox box">
         <article class="post box">
             <div class="post-title">
-                <h2 style="margin:auto;"><a class="post-title-link hover-underline" href="<%- url_for(post.path)%>"><%= post.title %></a></h2>
+                <h2 style="margin:auto;"><a class="post-title-link hover-underline" href="<%- url_for(post.path)%> "><%= post.title %></a></h2>
             </div>
             <div class="post-meta">
                 <span class="post-time">
@@ -20,8 +20,8 @@
             </div>
                  <div class="night excerpt"><%- post.excerpt %></div>
                  <br>
-                 <div class="readmore-box">
-                 <a href="<%- url_for(post.path)%>" class="readmore night hover-underline"><p>Read More</p></a>
+                 <div class="readmore-box post-button" >
+                 <a href="<%- url_for(post.path)%>" class="readmore night hover-underline" hreflang="<%- config.language %>" title="<%- post.title %>" rel="nofollow" data-description="<%- post.title %>">learn more</a>
                  </div>
                 </article>
         </article>

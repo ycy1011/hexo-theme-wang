@@ -4,10 +4,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="<%= config.author %>">
     <meta name="title" content="<%= page.title %>">
+    <meta name="description" content="<%= config.description %>">
+    <meta name="keywords" content="<%= config.keywords %>">
+    <meta name="copyright" content="Copyright <%= config.author %>. All Rights Reserved.">
     <title><%= config.title %></title>
     <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" rel="stylesheet">
     <%- css('css/style') %>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <meta property="og:title" content="<%= page.title %>">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="<%= page.permalink %>">
+    <meta property="og:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
+    <meta property="og:site_name" content="<%= config.title %>">
+    <meta property="og:description" content="<%= page.excerpt %>" >
+
+    <!-- Twitter Cards元数据 -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@<%= config.twitter %>">
+    <meta name="twitter:creator" content="@<%= config.twitter %>">
+    <meta name="twitter:title" content="<%= page.title %>">
+    <meta name="twitter:description" content="<%= page.excerpt %>">
+    <meta name="twitter:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
 </head>

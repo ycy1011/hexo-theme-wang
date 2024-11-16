@@ -6,5 +6,16 @@
         <a href="https://github.com/xingwangzhe/hexo-theme-wang" alt="Wang"><p class="hover-underline night" style="display: inline;">Wang</p></a>
     </span>
 <div>&copy 2024-<%= new Date().getFullYear() %> By <%- config.author -%></div>
+<ul class="footer-links-container">
+<% for (var i = 0; i < theme.footer_links.length; i++) { %>
+    <li class="night footer-links-item">
+      <a href="<%= theme.footer_links[i].link %>" alt="<%= theme.footer_links[i].name %>" >
+        <div class="link-box">
+        <img src="<%= theme.footer_links[i].img %>" class="footer-link-img nofancybox" alt="<%= theme.footer_links[i].name %>" />
+        </div>
+      </a>
+    </li>
+  <% } %>
+</ul>
 </footer>
 </div>
