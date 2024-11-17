@@ -144,3 +144,6 @@ footer_links:
   - name: 空间穿梭-随机访问BlogsClub成员博客
     link: https://www.blogsclub.org/go
     img: https://www.blogsclub.org/images/shuttle_4.png
+footer_links_text:
+  - name: 辽ICP备2024042064号-1
+    link: http://beian.miit.gov.cn/

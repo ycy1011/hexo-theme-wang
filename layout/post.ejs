@@ -19,4 +19,12 @@
         </header>
  <%- page.content %>
 </div>
+<div class="pre-next-container">
+    <%if(page.prev){%>
+    <a href="<%- url_for(page.prev.path)%>" class="pre-btn night"><--<%-page.prev.title%></a>
+    <%}%>    
+    <%if(page.next){%>
+    <a href="<%- url_for(page.next.path)%>" class="next-btn night"><%-page.next.title%>--></a>
+    <%}%>
+</div>
 </article>
