@@ -18,13 +18,35 @@
         </div>
         </header>
  <%- page.content %>
+ <%if(theme.copyright.enable===true)%>
+<div class="copyright-container center">
+    <div class="copyright-author-container">
+    <i class="fa fa-user night margin"> a u t h o r </i>
+    <p><%= config.author %></p>
+    </div>
+    <div class="copyright-public-time-container">
+    <i class="fa fa-calendar night margin"> p u b l i c </i>
+    <p><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
+    </div>
+    <div class="copyright-license-container">
+        <i class="fa fa-balance-scale margin" >L I C E N S E"</i>
+        <a class=" headerlink" href="<%=theme.copyright.license_link%>" alt="<%theme.copyright.cc%>">
+        <div class="license-container">
+        <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
+        <% var license = theme.copyright.cc.split('-'); 
+            for(var i=0;i<license.length;i++){%>
+             <i class="fa-brands fa-creative-commons-<%=license[i]%>" aria-hidden="true"></i>   
+            <%}%>
+        </div>
+        </a>
+    </div>
 </div>
 <div class="pre-next-container">
     <%if(page.prev){%>
-    <a href="<%- url_for(page.prev.path)%>" class="pre-btn night"><--<%-page.prev.title%></a>
+    <a href="<%- url_for(page.prev.path)%>" class="pre-btn night hover-underline"><--<%-page.prev.title%></a>
     <%}%>    
     <%if(page.next){%>
-    <a href="<%- url_for(page.next.path)%>" class="next-btn night"><%-page.next.title%>--></a>
+    <a href="<%- url_for(page.next.path)%>" class="next-btn night hover-underline"><%-page.next.title%>--></a>
     <%}%>
 </div>
 </article>

@@ -12,7 +12,8 @@
 .post-content{
  background-color: #3b3b3b;
  margin:auto;
- margin-top: 60px;    
+ margin-top: 60px;
+ max-width: 100%;    
 }
 
 .post-content>*{
@@ -48,13 +49,13 @@
 figure.highlight {
     position: relative;
 }
-
-figure.highlight table {
-    width: 100%;
-    border-collapse: collapse;
+figure.highlight tr{
 }
+// table{
+//     display block;
+// }
 .gutter{
-width : 0.5em;
+ width : 0.5em;
 }
 figure.highlight .gutter pre { 
     padding-right: 0; /* 右侧内边距，以确保有足够的空间 */
@@ -64,12 +65,15 @@ figure.highlight .gutter pre {
     color: #999;
     line-height: 1.7; /* 增加行高，使行号之间有更多空间 */
 }
-
 figure.highlight .code pre {
+    display:block;
+    min-width:50%; 
+    max-width:100vh;/* 高度是视口高度的50% */
     margin-left:0; /* 代码左侧的内边距，与行号保持一致 */
-    display: block;
     line-height: 1.7; /* 增加行高，使代码之间有更多空间 */
+    overflow: auto; /* 允许滚动条 */
 }
+
 .copy-btn,box{
  position: absolute;   
  right: 0;    
@@ -99,7 +103,17 @@ background: #333
  border:1px solid grey;
  border-radius: 5px;
  padding: 5px 10px;
-
 }
-
+.copyright-container{
+ display:flex
+ align-content: center  
+ flex:1; 
+ border:1px solid grey;
+}
+.copyright-author-container,.copyright-public-time-container,.copyright-license-container{
+ margin-right:15px;
+ margin-bottom:15px;
+ align-content: center
+ justify-content:  space-around;   
+}
 

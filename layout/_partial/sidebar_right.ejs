@@ -160,6 +160,26 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 <%}%>
+<% if(is_post()) {%>
+<div class="thispost-tags-container">
+  <i class="fa fa-tags"></i>
+  <br>
+  <div class="thispost-tags">
+    <% page.tags.each(function(tag) { %>
+    <a class="thispost-tag hover-underline"km href="<%= url_for('tags/' + tag.name) %>">#<%= tag.name %></a>
+    <% }); %>
+  </div>
+</div>
+<div class="thispost-categories-container">
+  <i class="fa fa-th-large"></i>
+  <br>
+  <div class="thispost-categories">
+    <% page.categories.each(function(category) { %>
+    <a class="thispost-category hover-underline" href="<%= url_for('categories/' + category.name) %>"><%= category.name %></a>
+    <% }); %>
+  </div>
+</div>
+<%}%>
    <div>
     <%- toc(page.content, {
   class: 'toc', // 目录的 CSS 类名
