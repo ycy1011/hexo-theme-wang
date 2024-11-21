@@ -18,16 +18,16 @@ copyright:
 
 sodesu:
   enable: true
-  serverURL: 'waline.xingwangzhe.fun'
-  lang: 'zh-CN'
-  placeholder: '说点什么吧...'
-  avatar: 'mm'
-  meta: ['nick', 'mail']
-  pageSize: 10
-  visitor: false
-  commentCount: true
-  requiredFields: []
-  libUrl: 'https://unpkg.com/@waline/client/dist/waline.js'
+#   serverURL: 'waline.xingwangzhe.fun'
+#   lang: 'zh-CN'
+#   placeholder: '说点什么吧...'
+#   avatar: 'mm'
+#   meta: ['nick', 'mail']
+#   pageSize: 10
+#   visitor: false
+#   commentCount: true
+#   requiredFields: []
+#   libUrl: 'https://unpkg.com/@waline/client/dist/waline.js'
 
 highlight_theme: night
 social_links:
