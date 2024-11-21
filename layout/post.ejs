@@ -29,7 +29,7 @@
     <p><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
     </div>
     <div class="copyright-license-container">
-        <i class="fa fa-balance-scale margin" >L I C E N S E"</i>
+        <i class="fa fa-balance-scale margin" >L I C E N S E</i>
         <a class=" headerlink" href="<%=theme.copyright.license_link%>" alt="<%theme.copyright.cc%>">
         <div class="license-container">
         <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
@@ -40,6 +40,11 @@
         </div>
         </a>
     </div>
+</div>
+<%if(theme.sodesu.enable===true)%>
+<div>
+<%- include('_partial/sodesu') %>
+</div>
 </div>
 <div class="pre-next-container">
     <%if(page.prev){%>

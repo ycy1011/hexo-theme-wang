@@ -16,6 +16,18 @@ copyright:
   cc: by-nc-sa  # 版权信息的版权声明
   license_link: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
+sodesu:
+  enable: true
+  serverURL: 'waline.xingwangzhe.fun'
+  lang: 'zh-CN'
+  placeholder: '说点什么吧...'
+  avatar: 'mm'
+  meta: ['nick', 'mail']
+  pageSize: 10
+  visitor: false
+  commentCount: true
+  requiredFields: []
+  libUrl: 'https://unpkg.com/@waline/client/dist/waline.js'
 
 highlight_theme: night
 social_links:
