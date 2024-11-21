@@ -8,7 +8,7 @@
 字体：
  + [Douyin Sans 抖音美好体](https://fonts.zeoseven.com/zh-CN/items/84/) : [采用OFL许可协议](FONT-LICENSE)
 代码：[AGPL3.0](LICENSE) 根据AGPL3.0传染性，项目转为AGPL3.0协议，原MIT协议保留，但不再完全适用，具体条款请参考[AGPL3.0](LICENSE)
- + 主体代码 : [MIT许可协议](MIT_LICENSE)
+主体代码 : [MIT许可协议](MIT_LICENSE)
  + [sodesu评论区](https://github.com/BeiyanYunyi/sodesu)：[AGPL3.0](https://github.com/BeiyanYunyi/sodesu/blob/main/LICENSE)
 
 # wang-一个简约的hexo主题（尚未完成）
