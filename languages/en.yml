@@ -1,20 +1,27 @@
 ---
 name: English
 index:
-  read_more: "Read More"
-  search: "Search"
+  read_more: Read More
+  search: Search
+  total_visits: Total Visits
+  running_since: Running Since
+  times: Times
+  day: "Day"
+  hour: "Hour"
+  minute: "Minute"
+  second: "Second"
 menu:
-  home: "Home"
-  archive: "Archive"
-  categories: "Categories"
-  tags: "Tags"
-  about: "About"
-  links: "Links"
-  rss: "Subscribe"
+  home: Home
+  archive: Archive
+  categories: Categories
+  tags: Tags
+  about: About
+  links: Links
+  rss: RSS
 sidebar-right:
-  locate_fast: "Fast Navigation"
-  ip_show: "Display IP"
-  time_show: "Time"
+  locate_fast: Fast Locate
+  ip_show: IP Show
+  time_show: Time
 links:
-  referral_sites: "Recommended Sites"
-  friend_links: "Friends Links"
+  referral_sites: Referral Sites
+  friend_links: Friend Links

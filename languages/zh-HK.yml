@@ -1,20 +1,27 @@
 ---
-name: 繁體中文（中國香港）
+name: 繁體中文
 index:
-  read_more: 閱讀全文
-  search: 搜尋
+  read_more: 睇多啲
+  search: 搜索
+  total_visits: 总浏览量
+  running_since: 运行咗
+  times: 次
+  day: "日"
+  hour: "钟头"
+  minute: "分钟"
+  second: "秒钟"
 menu:
-  home: 主頁
-  archive: 歸檔
-  categories: 分類
-  tags: 標籤
-  about: 關於
-  links: 連結
-  rss: 訂閱
+  home: 屋企
+  archive: 存档
+  categories: 类别
+  tags: 标签
+  about: 关于
+  links: 链接
+  rss: 订阅
 sidebar-right:
-  locate_fast: 快速定位
-  ip_show: 顯示IP
-  time_show: 時間顯示
+  locate_fast: 快速搵
+  ip_show: 显示IP
+  time_show: 时间
 links:
-  referral_sites: 推薦網站
-  friend_links: 友情連結
+  referral_sites: 推介网站
+  friend_links: 友情链接
