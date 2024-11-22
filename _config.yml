@@ -1,3 +1,10 @@
+
+language: 
+  - zh-CN
+  - zh-TW
+  - zh-HK
+  - en-US
+
 menu:
   home: / || fa fa-home
   archive: /archives || fa fa-archive
@@ -16,9 +23,9 @@ copyright:
   cc: by-nc-sa  # 版权信息的版权声明
   license_link: https://creativecommons.org/licenses/by-nc-sa/4.0/
 
-sodesu:
+comments:
   enable: true
-#   serverURL: 'waline.xingwangzhe.fun'
+  serverURL: 'waline.xingwangzhe.fun'
 #   lang: 'zh-CN'
 #   placeholder: '说点什么吧...'
 #   avatar: 'mm'

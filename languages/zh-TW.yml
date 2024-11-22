@@ -1,0 +1,20 @@
+---
+name: 繁体中文（中國台湾）
+index:
+  read_more: 閱讀全文
+  search: 搜尋
+menu:
+  home: 首頁
+  archive: 存檔
+  categories: 分類
+  tags: 標籤
+  about: 關於
+  links: 連結
+  rss: 訂閱
+sidebar-right:
+  locate_fast: 快速導航
+  ip_show: 顯示IP
+  time_show: 時間
+links:
+  referral_sites: 推薦網站
+  friend_links: 友情連結

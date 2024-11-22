@@ -2,7 +2,7 @@
 <aside class="sidebar-right night box">
   <% if(is_archive()) { %>
   <div class="sidebar-item">
-    <h2>快速定位</h2>
+    <h2><%= __('sidebar-right.locate_fast') %></h2>
     <% 
     var sb = [];
     site.posts.each(function(post) {
@@ -109,13 +109,13 @@
       </ul>
   <%} else { if(theme.ipshow.enable){%>
     <div class="where is your ip">
-  <h3 class="ipshow">ip show</h3>
+  <h3 class="ipshow"><%= __('sidebar-right.ip_show') %></h3>
   <img class="nofancybox" src="https://tool.lu/netcard/" rel="https://tool.lu/ip/" alt="show your ip">
 </div>
   <%}%>
   <%if(theme.timeshow.enable){%>
     <div class="time">  
-    <h3 class="timetitle">Time</h3>
+    <h3 class="timetitle"><%= __('sidebar-right.time_show') %></h3>
     <div class="timeshow" id="currentDateTime"></div>  
       
     </div>

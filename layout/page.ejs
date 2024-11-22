@@ -29,8 +29,8 @@
     <%} else if(page.path === 'links/index.html' || page.path==='links/'){%>
       <div class="links night">
         <div class="tabs-container night">
-          <button class="tablinks box night" onclick="openTab(event, 'friend_links')">friend_links</button>
-          <button class="tablinks box night" onclick="openTab(event, 'referral_sites')">referral_sites</button>
+          <button class="tablinks box night" onclick="openTab(event, 'friend_links')"><%= __('links.friend_links') %></button>
+          <button class="tablinks box night" onclick="openTab(event, 'referral_sites')"><%= __('links.referral_sites') %></button>
         </div>
       <ul class="links night active links-box tabcontent" id="friend_links">
       <% for (var i = 0; i < theme.other_links.friend_links.length; i++) { %>
