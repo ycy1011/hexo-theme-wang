@@ -3,6 +3,7 @@
       <h2 class="title-center"><%= config.title %></h2>
       <img class="avatar rounded-img" src="<%= url_for() %>images/avatar.png" alt="avatar"></img>
       <h2 class="sidebar-author"><%= config.author %></h2>
+      <div class="header-subtitle night"><%= config.subtitle %></div>
       <p class="sidebar-description"><%= config.description %></p>
       <ul class="social-links">
         <% for (let name in theme.social_links) { %>

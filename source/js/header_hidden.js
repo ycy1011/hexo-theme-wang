@@ -17,4 +17,22 @@ document.addEventListener('DOMContentLoaded', function() {
         // 更新上一次的滚动位置
         lastScrollTop = scrollTop;
     });
+    const mobieheader = document.getElementById('mobie-header');
+    let mobielastScrollTop = 0; // 上一次的滚动位置
+    // 监听滚动事件
+    window.addEventListener('scroll', function() {
+        let mobiescrollTop = window.pageYOffset || document.documentElement.scrollTop; // 获取当前滚动位置
+
+        // 检查滚动方向
+        if (mobiescrollTop > lastScrollTop) {
+            // 向下滚动
+            mobieheader.classList.add('hidden-header');
+        } else {
+            // 向上滚动
+            mobieheader.classList.remove('hidden-header');
+        }
+
+        // 更新上一次的滚动位置
+        lastScrollTop = mobiescrollTop;
+    });
 });

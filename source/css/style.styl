@@ -154,7 +154,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 .posts{
- //display: grid;
  place-items: center;
 }
 .post{
@@ -239,6 +238,33 @@ ul{
 }
 .margin{
  margin:15px;  
+}
+@media (max-width: 767px) {
+
+  .container{
+  display:flex;
+  justify-content: flex-start  
+  }
+  .page-all-minbox{
+  margin-top: 120px;
+  margin-right: 1px;
+  margin-left: 1px;
+  padding: 1px;
+  flex-direction: column; /* 子元素垂直排列 */
+  //height: 100vh; /* 容器高度 */
+}
+.page-minbox{
+  max-width:400px;
+  
+  }
+.posts{
+  margin: auto;
+  max-width: 400px;
+}
+.posts-container{
+  margin: auto;
+  max-width: 400px;
+}
 }
 @import "_partial/header";
 @import "post";
