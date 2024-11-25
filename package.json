@@ -1,5 +1,13 @@
 {
-  "dependencies": {
-    "hexo-generator-search": "^2.4.3"
-  }
+  "name": "hexo-theme-wang",
+  "version": "1.0.3",
+  "description": "a hexo theme minimalism",
+  "keywords": ["wang","hexo","theme","minimalism"],
+  "author": "xingwangzhe",
+  "license": "AGPL3.0",
+  "repository": {
+  "type": "git",
+  "url": "git+https://github.com/xingwangzhe/hexo-theme-wang.git"
+},
+  "homepage":"https://github.com/xingwangzhe/hexo-theme-wang"
 }
