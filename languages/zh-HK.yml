@@ -1,0 +1,28 @@
+---
+name: 繁體中文
+index:
+  read_more: 睇多啲
+  search: 搜索
+  total_visits: 总浏览量
+  running_since: 运行咗
+  times: 次
+  day: "日"
+  hour: "钟头"
+  minute: "分钟"
+  second: "秒钟"
+menu:
+  home: 屋企
+  archive: 存档
+  categories: 类别
+  tags: 标签
+  about: 关于
+  links: 链接
+  rss: 订阅
+  travellings: 開往
+sidebar-right:
+  locate_fast: 快速搵
+  ip_show: 显示IP
+  time_show: 时间
+links:
+  referral_sites: 推介网站
+  friend_links: 友情链接
