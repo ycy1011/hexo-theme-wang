@@ -1,3 +1,4 @@
+language: zh-CN||[en](README_EN.md)
 <center>
 <img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
 
@@ -14,6 +15,8 @@
  + [sodesu评论区](https://github.com/BeiyanYunyi/sodesu)：[AGPL3.0](https://github.com/BeiyanYunyi/sodesu/blob/main/LICENSE)
 
 # wang-一个简约的hexo主题
+
+![wang](wang.png)
 
 在hexo目录下安装
 ```
