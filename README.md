@@ -13,8 +13,14 @@
  + 主体代码：[MIT许可协议](MIT_LICENSE)
  + [sodesu评论区](https://github.com/BeiyanYunyi/sodesu)：[AGPL3.0](https://github.com/BeiyanYunyi/sodesu/blob/main/LICENSE)
 
-# wang-一个简约的hexo主题（尚未完成）
+# wang-一个简约的hexo主题
 
+在hexo目录下安装
+```
+npm install hexo-theme-wang
+```
+主题会安装到`node_modules`中
+在hexo主配置文件中修改`theme`为`wang`
 
 
 ## 参考
@@ -27,6 +33,7 @@
 
 # 开发日志
 ## 2024-11-25
+ + 正在发布到hexo-theme
  + npm包发布
  + '<head>'增加扩展内容
  + 优化代码

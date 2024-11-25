@@ -1,0 +1,214 @@
+.sidebar-left,.sidebar-right{
+    //display: ;
+    position: sticky;
+    top: 60px;
+    bottom: 0;
+    margin-top: 60px;
+    padding: 20px;
+    width :15%;
+    max-width: 20%;
+    height:60%;
+    max-height: 50%;
+    background-color: #33333367;
+}
+@media (max-width: 767px) {
+   .sidebar-left,.sidebar-right{
+    display: none;
+    width :0;
+    }
+}
+.title-center,.sidebar-author,.sidebar-description{
+    text-align: center;
+    word-break: break-all;
+}
+.avatar{
+ max-width:50%;
+ border-radius: 100%;  
+ object-fit: cover  
+}
+/* 定义旋转一圈的动画 */
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* 定义反向旋转一圈的动画 */
+  @keyframes reverse-spin {
+    from {
+      transform: rotate(-360deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+}
+.rounded-img:hover {
+    animation: spin 0.5s linear forwards;
+  }
+
+  /* 鼠标离开时触发反向旋转动画 */
+  .rounded-img {
+    animation: reverse-spin 0.5s linear reverse forwards;
+  }
+.social-links {
+  border: 1px solid #ddd; /* 边框 */
+  border-radius: 5px; /* 圆角 */
+  list-style-type: none;           /* 去除列表项前面的点 */
+  padding: 0; /*          移除列表项左侧的默认内边距 */
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-wrap: wrap; /* 允许子元素换行 */
+  justify-content: space-between; /* 水平方向上两端对齐 */
+}
+
+.social-links-item {
+   margin-bottom: 10px;          /* 子元素之间的垂直间距 */
+  width: calc(50% - 5px); /* 每个子元素占一半的宽度，减去间距 */
+}        
+
+.social-links-item:nth-child(odd) {
+  text-align: left; /* 奇数位置的子元素左对齐 */
+}
+
+.social-links-item:nth-child(even) {
+  text-align: left; 
+}
+.sidebar-menu{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  list-style-type: none
+  justify-content: space-between;
+  padding: 0;
+}
+.sidebar-menu-item{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.big{
+ font-size: 30px;  
+}
+
+//right
+
+/* 基本样式 */
+.sidebar-right {
+  font-family: Arial, sans-serif;
+  width: 300px;
+  padding: 20px;
+  //background-color: #f9f9f9;
+  //border: 1px solid #ddd;
+}
+
+.sidebar-item h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* 年份样式 */
+.year-reverse {
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* 月份样式 */
+.month-reverse {
+  font-size: 1.1em;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+/* 日期样式 */
+.day-reverse {
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: all 0.3s ease;
+}
+
+/* 文章列表样式 */
+ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+ul li a:hover {
+  //text-decoration: underline;
+}
+
+/* 动画效果 */
+details summary {
+  outline: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > summary::before {
+  content: '> ';
+  font-size: 1em;
+  color: #007bff;
+  margin-right: 5px;
+}
+
+details[open] > summary::before {
+  content: 'v ';
+}
+
+details > summary {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+
+details details {
+  margin-left: 10px;
+  transition: max-height 0.3s ease;
+  overflow: hidden;
+}
+
+details[open] details {
+  max-height: 1000px; /* 足够大的值以显示所有内容 */
+}
+
+details:not([open]) details {
+  max-height: 0;
+}
+.ipshow{
+ text-align:center;  
+}
+.timeshow{
+ text-align:center; 
+ font-size: 20px; 
+}
+.timetitle{
+ text-align:center;  
+}
+.toc-child,.toc-item{
+ margin-left:15px;
+ margin-top:10px;
+ margin-bottom:10px;  
+}
+.thispost-tag,.thispost-category{
+ margin:2px;  
+}
