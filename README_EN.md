@@ -34,6 +34,10 @@ Gratitude to the following tutorials, articles, and websites for their contribut
  + [Developing a Hexo Theme from Scratch](https://liuyib.github.io/2019/08/20/develop-hexo-theme-from-0-to-1/) 
 
 # Development Log
+## 2024-11-26
+ + Modularize some pages
+ + Fix i18n bug
+ + Add "Travelling" by default
 ## 2024-11-25
  + Publishing to hexo-theme
  + npm package release

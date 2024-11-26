@@ -1,0 +1,52 @@
+<div class="links night">
+    <div class="tabs-container night">
+      <button class="tablinks box night" onclick="openTab(event, 'friend_links')"><%= __('links.friend_links') %></button>
+      <button class="tablinks box night" onclick="openTab(event, 'referral_sites')"><%= __('links.referral_sites') %></button>
+    </div>
+  <ul class="links night active links-box tabcontent" id="friend_links">
+  <% for (var i = 0; i < theme.other_links.friend_links.length; i++) { %>
+    <li class="link-content box night">
+      <a href="<%= theme.other_links.friend_links[i].link %>" alt="<%= theme.other_links.friend_links[i].name %>" >
+        <div class="link-box">
+        <img src="<%= theme.other_links.friend_links[i].img %>" class="link-img nofancybox" alt="<%= theme.other_links.friend_links[i].name %>" />
+        <div class="link-text">
+        <a class="link-title hover-underline" href="<%= theme.other_links.friend_links[i].link %>" alt="<%= theme.other_links.friend_links[i].name %>" ><%= theme.other_links.friend_links[i].name %></a>
+        <p class="link-description"><%= theme.other_links.friend_links[i].description %></p>
+        </div>
+        </div>
+      </a>
+    </li>
+  <% } %>
+    </ul>
+  <ul class="links-box links night active tabcontent" id="referral_sites">
+    <% for (var i = 0; i < theme.other_links.referral_sites.length; i++) { %>
+      <li class="link-content box night">
+        <a href="<%= theme.other_links.referral_sites[i].link %>" alt="<%= theme.other_links.referral_sites[i].name %>" >
+          <div class="link-box">
+          <img src="<%= theme.other_links.referral_sites[i].img %>" class="link-img nofancybox" alt="<%= theme.other_links.referral_sites[i].name %>" />
+          <div class="link-text">
+          <a class="link-title hover-underline" href="<%= theme.other_links.referral_sites[i].link %>" alt="<%= theme.other_links.referral_sites[i].name %>" ><%= theme.other_links.referral_sites[i].name %></a>
+          <p class="link-description"><%= theme.other_links.referral_sites[i].description %></p>
+          </div>
+          </div>
+        </a>
+      </li>
+    <% } %>
+    </ul>
+    </div>
+    <script>
+      function openTab(evt, tabName) {
+        // 获取所有tabcontent元素
+        var tabcontent = document.getElementsByClassName("tabcontent");      
+        // 移除所有tabcontent的显示
+        for (var i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none"; // 隐藏所有内容区域
+        }
+        // 显示当前选择的tab，并添加active类
+        document.getElementById(tabName).style.display = "flex"; // 显示内容区域
+        //evt.currentTarget.className += " active"; // 为当前点击的tablinks添加active类
+      }
+      document.addEventListener('DOMContentLoaded', (event) => {
+var firstTab = document.getElementsByClassName("tablinks")[0];
+openTab({currentTarget: firstTab}, firstTab.getAttribute('onclick').split('\'')[1]);});
+    </script>

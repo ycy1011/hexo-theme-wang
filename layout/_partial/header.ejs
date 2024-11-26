@@ -16,7 +16,8 @@
                 <li class="menu-item">
                     <a href="<%= url %>" class="menu-item-link" alt="<%= name %>">
                         <i class="fa <%= icon %>" aria-hidden="true"></i>
-                        <p class="hover-underline"><% 
+                        <p class="hover-underline">
+                            <% 
                             const translated = __('menu.' + name); 
                             var menuItem = translated
                             if(menuItem =='menu.'+name)
@@ -29,7 +30,7 @@
             <li class="menu-item">
                 <a class="menu-item-link" alt="search" href="javascript:void(0);" id="triggerSearch" onclick="document.getElementById('search-container').style.display = 'block';">
                     <i class="fa fa-search" aria-hidden="true"></i>
-                    <p class="hover-underline"><%=__('index.search') %></p>
+                    <p class="hover-underline"><%=__('menu.search') %></p>
                 </a>
             </li>
         </ul>
@@ -38,7 +39,6 @@
 </i>
     </span>
 </header>
-
 <div id="mobie-header">
 <header  id="mobie-header-front">
     <div class="mobie-header-nameicon">        

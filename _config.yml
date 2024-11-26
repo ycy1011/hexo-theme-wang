@@ -47,7 +47,7 @@ social_links:
   Bilibili: https://space.bilibili.com/ || fab fa-bilibili  # Bilibili链接 (Bilibili Link)
   QQ: https://im.qq.com/ || fab fa-qq  # QQ链接 (QQ Link)
  # WeChat: || fab fa-weixin  # 微信链接 (WeChat Link)
-head:  #在head标签中添加额外的HTML代码，如统计代码等 #more information in <head>
+head:  #在head标签中添加额外的HTML代码，如统计代码等 #more information in  <head>
   ''
   # '<script type="text/javascript">
   #       (function(c,l,a,r,i,t,y){

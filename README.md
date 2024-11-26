@@ -35,6 +35,10 @@ npm install hexo-theme-wang
    
 
 # 开发日志
+## 2024-11-26
+ + 部分页面模块化
+ + 修复i8n bug
+ + 默认添加开往(Travelling)
 ## 2024-11-25
  + 正在发布到hexo-theme
  + npm包发布
