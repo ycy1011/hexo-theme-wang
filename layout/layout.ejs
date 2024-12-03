@@ -10,48 +10,34 @@ pageTitle += ' [ ' + config.title + ' ]';
 %>
 
 <!DOCTYPE html>
-<html lang="<%=config.language%>">
+<html lang="<%=config.language%>" class="dark" >
 <head>
-  <meta charset="UTF-8">
-  <title><%=pageTitle%></title>
-  <% if (theme.stylesheets !== undefined && theme.stylesheets.length > 0) { %>
-    <!-- stylesheets list from _config.yml -->
-    <% theme.stylesheets.forEach(url => { %>
-      <link rel="stylesheet" href="<%=url%>">
-    <% }); %>
-  <% } %>
+  <%- partial('partials/head.ejs') -%>
 </head>
-<body>
-
-<div id="menu-outer">
-  <div id="menu-inner">
-    <% Object.keys(theme.menu).forEach(key => { %>
-      <a href="<%=theme.menu[key]%>"><%=key%></a>
-    <% }); %>
+<body class="bg-stone-900 text-stone-200">
+  <div id="app">
+  <%- partial('partials/header.ejs') -%>
+  <el-container>
+  <%- partial('sidebar-left.ejs') -%>
+  <div  class="main-container">
+ <%- body %>
   </div>
-</div>
-
-<div id="content-outer">
-  <div id="content-inner">
-    <%- body %>
+  <%- partial('sidebar-right.ejs') -%>
+  </el-container>
   </div>
-</div>
-
-<div id="bottom-outer">
-  <div id="bottom-inner">
-    Site by <%=config.author%> using
-    <a href="http://hexo.io">hexo blog framework</a>.
-    <br>
-    <a href="<%=config.root%>">Home</a>
-  </div>
-</div>
-
-<% if (theme.scripts !== undefined && theme.scripts.length > 0) { %>
-  <!-- scripts list from theme config.yml -->
-  <% theme.scripts.forEach(url => { %>
-    <script src="<%=url%>"></script>
-  <% }); %>
-<% } %>
+ <script>
+  const App = {
+    data() {
+      return {
+        message: "Hello Element Plus",
+      };
+    },
+  };
+  const app = Vue.createApp(App);
+  app.use(ElementPlus);
+  app.mount("#app");
+</script>
 
 </body>
+
 </html>

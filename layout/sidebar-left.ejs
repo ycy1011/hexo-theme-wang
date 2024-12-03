@@ -1,0 +1,9 @@
+<el-card class="w-1/5 fixed left-0" style="max-height: 900px; overflow-y: auto;" backgroun-color="#f0f2f5">
+    <template #header>
+      <div class="card-header">
+        <span>Card name</span>
+      </div>
+    </template>
+    <p v-for="o in 5" :key="o" class="text item">{{ 'List item ' + o }}</p>
+    <template #footer>Footer content</template>
+</el-card>

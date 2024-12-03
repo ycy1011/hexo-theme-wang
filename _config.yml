@@ -1,18 +1,17 @@
-
+logo: logo.png
 # html lang
 language: en
 
+
+
 # main menu navigation
 menu:
-  Home: /
-  About: /about
-  Contact: /contact
-  Archives: /archives
+  home: / || fa fa-home  # 首页 (Home)
+  archive: /archives || fa fa-archive  # 归档 (Archive)
+  categories: /categories || fa fa-th-large  # 分类 (Categories)
+  tags: /tags || fa fa-tags  # 标签 (Tags)
+  about: /about || fa fa-user  # 关于 (About)
+  links: /links || fa fa-link  # 友链 (Links)
+  rss: /atom.xml || fa fa-rss  # RSS订阅 (RSS)
+  travellings: https://www.travellings.cn/go.html || fa fa-train   # 开往 (Travellings)
 
-# stylesheets loaded in the <head>
-stylesheets:
-- /css/hexo wang vue.scss
-
-# scripts loaded in the end of the body
-scripts:
-- /js/hexo wang vue.js
