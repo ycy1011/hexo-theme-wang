@@ -1,10 +1,18 @@
-<div class="tag-cloud night box">
-  <% page.posts.each(function (post) { %>
-  <div class="tagpost">
-    <a  class="hover-underline" href="<%- url_for(post.path)%>"><h2><%= post.title %></h2></a>
-  </div> 
-  <%});%>
-<div class="page-nav night">
-    <%- partial('_partial/pagination') %>
+
+<div id="tag">
+  <h1><%=page.tag%></h1>
+  <% page.posts.each(article => { %>
+    <div class="tag-item">
+      <a href="<%=url_for(article.path)%>">
+        <%=article.title%>
+      </a>
+      <time datetime="<%=date_xml(article.date)%>">
+        <%=date(article.date)%>
+      </time>
+    </div>
+  <% }) %>
 </div>
+
+<div id="paginator">
+  <%-paginator()%>
 </div>

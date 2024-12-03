@@ -1,35 +1,6 @@
-<div class="posts-container">
-<section class="posts">
-    <div class="page-all-minbox">
-    <% page.posts.each(function (post) { %>
-        <div class="page-minbox box">
-        <article class="post box">
-            <div class="post-title">
-                <h2 style="margin:auto;"><a class="post-title-link hover-underline" href="<%- url_for(post.path)%> "><%= post.title %></a></h2>
-            </div>
-            <div class="post-meta">
-                <span class="post-time">
-                    <i class="fa fa-clock night"></i>
-                    <p class="night"><%- date(post.date, 'YYYY-MM-DD HH:mm:ss') %></p>
-                </span>
-                    <p style="margin: 0 3px;" class="night">||</p>
-                <span class="post-time">
-                    <i class="fa fa-refresh night"></i>
-                    <p class="night"><%- date(post.updated, 'YYYY-MM-DD HH:mm:ss') %></p>
-                </span>
-            </div>
-                 <div class="night excerpt"><%- post.excerpt %></div>
-                 <br>
-                 <div class="readmore-box post-button" >
-                 <a href="<%- url_for(post.path)%>" class="readmore night hover-underline" hreflang="<%- config.language %>" title="<%- post.title %>" rel="nofollow" data-description="<%- post.title %>"><%= __('index.read_more')%></a>
-                 </div>
-                </article>
-        </article>
-        </div>
-    <% }) %>
-    </div>
-</section>
-<div class="page-nav night">
-    <%- partial('_partial/pagination') %>
-</div>
+
+<%-partial('partials/recent-posts')%>
+
+<div id="paginator">
+  <%-paginator()%>
 </div>

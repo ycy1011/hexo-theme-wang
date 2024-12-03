@@ -1,77 +1,70 @@
-<div class="archive-container box night">
-<div class="timeline"></div>
-<div class="archive-content">
-    <% 
-    var sb = [];
-    site.posts.each(function(post) {
-      var ssb = post;
-      sb.push(ssb);
-    });
 
-    // 按日期降序排序
-    sb.sort(function(a, b) {
-      var dateA = new Date(a.date);
-      var dateB = new Date(b.date);
-      return dateB - dateA;
-    });
+<%
+const categoriesList = list_categories({ show_count: false });
+const tagsList = list_tags({ show_count: false });
+const archivesList = list_archives({ show_count: false });
+%>
 
-    var postsByYear = {};
+<% if (is_year() === false) { %>
+  <div id="archive">
 
-    sb.forEach(function(post) {
-      var date = new Date(post.date);
-      var year = date.getFullYear();
-      var month = date.getMonth() + 1; // 月份从0开始，所以加1
-      var day = date.getDate();
+    <h1>Archives</h1>
 
-      if (!postsByYear[year]) {
-        postsByYear[year] = {};
-      }
-      if (!postsByYear[year][month]) {
-        postsByYear[year][month] = {};
-      }
-      if (!postsByYear[year][month][day]) {
-        postsByYear[year][month][day] = [];
-      }
-      postsByYear[year][month][day].push(post);
-    });
+    <% if (theme.atom !== undefined) { %>
+      <p>
+        The feed is available via
+        <a href="<%=theme.atom%>">atom</a>.
+      </p>
+      <br>
+    <% } %>
 
-    // 提取所有年份并按降序排序
-    var years = Object.keys(postsByYear).sort((a, b) => b - a);
+    <aside>
+      <h2>Categories</h2>
+      <% if (categoriesList !== "") { %>
+        <%-categoriesList%>
+      <% } else { %>
+        <p>None.</p>
+      <% } %>
+    </aside>
+    <br>
 
-    years.forEach(year => {
-      // 提取所有月份并按降序排序
-      var months = Object.keys(postsByYear[year]).sort((a, b) => b - a);
+    <aside>
+      <h2>Tags</h2>
+      <% if (tagsList !== "") { %>
+        <%-tagsList%>
+      <% } else { %>
+        <p>None.</p>
+      <% } %>
+    </aside>
+    <br>
 
-      months.forEach(month => {
-        // 提取所有日期并按降序排序
-        var days = Object.keys(postsByYear[year][month]).sort((a, b) => b - a);
+    <aside>
+      <h2>Archives</h2>
+      <% if (archivesList !== "") { %>
+        <%-archivesList%>
+      <% } else { %>
+        <p>None.</p>
+      <% } %>
+    </aside>
 
-        days.forEach(day => {
-          // 遍历每个日期及其对应的文章
-          postsByYear[year][month][day] = postsByYear[year][month][day];
-        });
-      });
-    });
-    %>
-    <ul class="archive-year-month-day-container night">  
-    <% years.forEach(year => { %>  
-    <li><div class="ahead-archive-year-container"><div class="night"> <i class="fa fa-globe " aria-hidden="true"></i><%= year %><i class="fa fa-globe " aria-hidden="true"></i></div><ul class="archive-year-container">
-        <% var months = Object.keys(postsByYear[year]).sort((a, b) => b - a); %>
-        <% months.forEach(month => { %>
-            <li><div class="ahead-archive-month-container"><div class=" night"><i class="fa fa-moon" aria-hidden="true"></i><%= month %><i class="fa fa-moon" aria-hidden="true"></i></div><ul class="archive-month-container">
-            <% var days = Object.keys(postsByYear[year][month]).sort((a, b) => b - a); %>
-            <% days.forEach(day => { %>
-                <li><div class="ahead-archive-day-container"><div class=" night"><i class="fa fa-sun" aria-hidden="true"></i><%= year %>-<%= month %>-<%= day %><i class="fa fa-sun" aria-hidden="true"></i></div><ul class="archive-day-container">
-                  <% postsByYear[year][month][day].forEach(post => { %>
-                    <li><a class="hover-underline night"href="<%= url_for(post.path) %>"><%= post.title %></a></li>
-                  <% }) %>
-                </ul></div></li>
-            <% }) %>
-            </ul></div></li>
-        <% }) %>
-        </ul></div></li>
-    <% }) %>
-    </ul>
-<div class="timeline"></div>
-</div>
-</div>
+  </div>
+<% } else { %>
+
+  <h1><%=page.month + '/' + page.year%></h1>
+
+  <% page.posts.each(article => { %>
+    <div class="archive-item">
+      <a href="<%=url_for(article.path)%>">
+        <%=article.title%>
+      </a>
+      <time datetime="<%=date_xml(article.date)%>">
+        <%=date(article.date)%>
+      </time>
+    </div>
+  <% }) %>
+
+  <div id="paginator">
+    <%-paginator()%>
+  </div>
+
+<% } %>
