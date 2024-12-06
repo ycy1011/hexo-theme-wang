@@ -20,6 +20,8 @@ menu:
   rss: RSS
   travellings: Travellings
   search: Search
+sidebar-left:
+  introduction: Introduction
 sidebar-right:
   locate_fast: Fast Locate
   ip_show: IP Show

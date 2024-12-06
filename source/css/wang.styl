@@ -1,13 +1,63 @@
-
+@font-face {
+  font-family: "DouyinSansBold";
+  src: url('/font/DouyinSansBold.ttf');
+}
 body {
+  font-family: "DouyinSansBold", sans-serif;
   margin: 0;
 }
 .main-container{
-  max-width: 800px;
+  max-width: 60%;
   margin: auto;
 }
 #recent-posts {
   display: flex;
   flex-direction: column;
-  color: aqua;
+  margin:auto;
+  justify-content: space-between;
+}
+.recent-post{
+ min-height:300px;  
+}
+.social-links {
+  border-radius: 5px; /* 圆角 */
+  list-style-type: none;           /* 去除列表项前面的点 */
+  padding: 0; /*          移除列表项左侧的默认内边距 */
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-wrap: wrap; /* 允许子元素换行 */
+  justify-content: space-between; /* 水平方向上两端对齐 */
+}
+.social-links-item {
+   margin-bottom: 10px;          /* 子元素之间的垂直间距 */
+  width: calc(50% - 5px); /* 每个子元素占一半的宽度，减去间距 */
+}        
+
+.social-links-item:nth-child(odd) {
+  text-align: left; /* 奇数位置的子元素左对齐 */
+}
+
+.social-links-item:nth-child(even) {
+  text-align: left; 
+}
+img{
+  margin: auto;
+}
+.readmore{
+
+}
+#paginator{
+  font-size: 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .page-item{
+   padding:10px;
+   padding-right: 20px;
+   padding-left: 20px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+  }
+  .disabled{
+   border: none;
+  }
 }

@@ -4,15 +4,14 @@
             <el-image src="<%= url_for() %>images/<%= theme.logo %>" fit="contain" style="width: 50px;"/>
         </el-menu-item>
         <el-menu-item>
-            <p><%= config.title %></p>
+            <p class="text-3xl"><%= config.title %></p>
         </el-menu-item>
             <% for (let name in theme.menu) { %>
             <% let [url, icon] = theme.menu[name].split('||').map(item => item.trim()); %>
             <el-menu-item>
-                <a href="<%= url %>" class="" alt="<%= name %>">
-                    <span class="inline-flex items-center">
-                    <i class="fa <%= icon %>" aria-hidden="true"></i>
-                    <p class="ml-2">
+                <a href="<%= url %>" class="inline-flex items-center mg-auto " alt="<%= name %>">
+                    <i class="fa <%= icon %> text-lg" aria-hidden="true"></i>
+                    <p class="ml-2 text-lg">
                         <% 
                         const translated = __('menu.' + name); 
                         var menuItem = translated
@@ -21,7 +20,6 @@
                         %>
                         <%= menuItem %>
                     </p>
-                    </span>
                 </a>
             </el-menu-item>
         <% } %> 

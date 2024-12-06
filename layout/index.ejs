@@ -1,7 +1,15 @@
-<div>
+<div class="flex-col max-w-full">
 <%-partial('partials/recent-posts')%>
-
 <div id="paginator">
-  <%-paginator()%>
+  <%-paginator({
+    prev_text: '<=',
+    next_text: '=>',
+    page_class: 'page-item',
+    current_class: 'page-item disabled',
+    prev_class: 'page-item',
+    next_class: 'page-item',
+    space_class: 'page-item disabled'
+
+  })%>
 </div>
 </div>

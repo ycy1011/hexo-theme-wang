@@ -1,4 +1,5 @@
 logo: logo.png
+avatar: avatar.png
 # html lang
 language: en
 
@@ -15,3 +16,10 @@ menu:
   rss: /atom.xml || fa fa-rss  # RSS订阅 (RSS)
   travellings: https://www.travellings.cn/go.html || fa fa-train   # 开往 (Travellings)
 
+social_links:
+  Github: https://github.com/xingwangzhe || fab fa-github  # Github链接 (Github Link)
+  Twitter: https://twitter.com/|| fab fa-twitter  # Twitter链接 (Twitter Link)
+  Facebook: https://www.facebook.com/ || fab fa-facebook-f  # Facebook链接 (Facebook Link)
+  YouTube: https://www.youtube.com/ || fab fa-youtube  # YouTube链接 (YouTube Link)
+  Bilibili: https://space.bilibili.com/ || fab fa-bilibili  # Bilibili链接 (Bilibili Link)
+  QQ: https://im.qq.com/ || fab fa-qq  # QQ链接 (QQ Link)
