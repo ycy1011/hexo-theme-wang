@@ -8,14 +8,13 @@ if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
 if (is_year()) pageTitle += ': ' + page.year;
 pageTitle += ' [ ' + config.title + ' ]';
 %>
-
 <!DOCTYPE html>
 <html lang="<%=config.language%>" class="dark" >
 <head>
   <%- partial('partials/head.ejs') -%>
 </head>
 <body class="bg-stone-900 text-stone-200">
-  <div id="app">
+  <div id="app" v-pre>
   <%- partial('partials/header.ejs') -%>
   <el-container>
   <%- partial('sidebar-left.ejs') -%>
@@ -24,6 +23,7 @@ pageTitle += ' [ ' + config.title + ' ]';
   </div>
   <%- partial('sidebar-right.ejs') -%>
   </el-container>
+  <%- partial('partials/footer.ejs') -%>
   </div>
  <script>
   const App = {
@@ -37,7 +37,8 @@ pageTitle += ' [ ' + config.title + ' ]';
   app.use(ElementPlus);
   app.mount("#app");
 </script>
-
+<%- js('js/header_hidden')%>
+<%- partial('partials/search') -%> 
 </body>
 
 </html>

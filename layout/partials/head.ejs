@@ -30,17 +30,15 @@ pageTitle += ' [ ' + config.title + ' ]';
 <meta name="twitter:title" content="<%= page.title %>">
 <meta name="twitter:description" content="<%= page.excerpt %>">
 <meta name="twitter:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
-<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css" rel="stylesheet">
-<!-- Import style -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <link rel="stylesheet" href="//unpkg.com/element-plus/dist/index.css" />
 <%- css('css/wang') %>
 <%- js('js/wang') %>
-<!-- Import Vue 3 -->
-<script src="//unpkg.com/vue@3"></script>
-<!-- Import component library -->
+<%- js('js/search.js') %> 
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
 <script src="//unpkg.com/element-plus"></script>
 <script src="//unpkg.com/@element-plus/icons-vue"></script>
-<script src="//cdn.jsdelivr.net/npm/@element-plus/icons-vue"></script>
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
     tailwind.config = {

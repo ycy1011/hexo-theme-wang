@@ -1,7 +1,7 @@
 <% if (page.posts.length > 0) { %>
   <el-container id="recent-posts">
     <% page.posts.sort('date', -1).limit(config.per_page).each(post => { %>
-      <el-card class="bg-stone-800 text-stone-100 mb-10 mt-10 recent-post">
+      <el-card class="bg-stone-800 text-stone-100 mt-20 recent-post">
           <div class="card-header">
             <h1 class="text-center text-3xl"><%=post.title%></h1>
             <br/>
@@ -19,7 +19,9 @@
           </div>
           <br/>
         <div class="card-body">
+          <div style="text-align: center; justify-content: center; align-items: center;">
           <%- post.excerpt%>
+          </div>
         </div>
         <br/>
         <div class="flex justify-center m-auto">

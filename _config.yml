@@ -1,11 +1,12 @@
-logo: logo.png
-avatar: avatar.png
-# html lang
-language: en
-
-
-
-# main menu navigation
+##
+begin_time: 2024-6-20 12:00:00
+logo: /logo.png
+avatar: /avatar.png
+language:
+  - en
+  - zh-CN
+  - zh-TW
+  - zh-HK
 menu:
   home: / || fa fa-home  # 首页 (Home)
   archive: /archives || fa fa-archive  # 归档 (Archive)
@@ -13,9 +14,31 @@ menu:
   tags: /tags || fa fa-tags  # 标签 (Tags)
   about: /about || fa fa-user  # 关于 (About)
   links: /links || fa fa-link  # 友链 (Links)
-  rss: /atom.xml || fa fa-rss  # RSS订阅 (RSS)
+  #rss: /atom.xml || fa fa-rss  # RSS订阅 (RSS)
   travellings: https://www.travellings.cn/go.html || fa fa-train   # 开往 (Travellings)
+ipshow:
+  enable: true  # 是否显示IP地址 (Enable IP Address Display)
+timeshow:
+  enable: true  # 是否显示时间 (Enable Time Display)
+  format: "YYYY-MM-DD HH:mm:ss"  # 时间格式 (Time Format)
+copyright:
+  enable: true  # 是否显示版权信息 (Enable Copyright Information)
+  cc: by-nc-sa  # 版权信息的版权声明 (Copyright License)
+  license_link: https://creativecommons.org/licenses/by-nc-sa/4.0/  # 版权协议链接 (License Link)
+comments: #由Sodesu组件提供评论服务 #Powered by Sodesu v0.1.0:https://github.com/BeiyanYunyi/sodesu
+  enable: true  # 是否开启评论 (Enable Comments)
+  serverURL: 'waline.xingwangzhe.fun'  # 评论服务器URL (Comment Server URL)
+  lang: 'zh-CN'  # 语言设置 (Language Setting)
+#   placeholder: '说点什么吧...'  # 评论框占位符 (Comment Placeholder)
+#   avatar: 'mm'  # 头像设置 (Avatar Setting)
+#   meta: ['nick', 'mail']  # 元数据 (Meta Data)
+#   pageSize: 10  # 每页显示评论数 (Comments per Page)
+#   visitor: false  # 是否显示访客数 (Enable Visitor Count)
+#   commentCount: true  # 是否显示评论计数 (Enable Comment Count Display)
+#   requiredFields: []  # 必填字段 (Required Fields)
+#   libUrl: 'https://unpkg.com/@waline/client/dist/waline.js'  # 资源库URL (Library URL)
 
+highlight_theme: night  # 代码高亮主题 (Highlight Theme)
 social_links:
   Github: https://github.com/xingwangzhe || fab fa-github  # Github链接 (Github Link)
   Twitter: https://twitter.com/|| fab fa-twitter  # Twitter链接 (Twitter Link)
@@ -23,3 +46,58 @@ social_links:
   YouTube: https://www.youtube.com/ || fab fa-youtube  # YouTube链接 (YouTube Link)
   Bilibili: https://space.bilibili.com/ || fab fa-bilibili  # Bilibili链接 (Bilibili Link)
   QQ: https://im.qq.com/ || fab fa-qq  # QQ链接 (QQ Link)
+ # WeChat: || fab fa-weixin  # 微信链接 (WeChat Link)
+head:  #在head标签中添加额外的HTML代码，如统计代码等 #more information in  <head>
+  ''
+  # '<script type="text/javascript">
+  #       (function(c,l,a,r,i,t,y){
+  #           c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+  #           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+  #           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  #       })(window, document, "clarity", "script", "12345566");
+  #   </script>'
+## friend_links and Referral sites
+## 友链和推荐网站 (Friend Links and Referral Sites)
+other_links:
+  friend_links:
+    - name: 姓王者的博客
+      link: https://xingwangzhe.fun/
+      img: https://xingwangzhe.fun/images/apple-touch-icon-next.png
+      description: 记录学习生活的琐事，或技术文章 (A blog documenting learning and daily life)
+    - name: 姓王者的博客
+      link: https://xingwangzhe.fun/
+      img: https://xingwangzhe.fun/images/apple-touch-icon-next.png
+      description: 记录学习生活的琐事，或技术文章 (A blog documenting learning and daily life)
+  referral_sites:
+    - name: 必应
+      link: https://www.bing.com
+      img: https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico
+      description: 微软的搜索引擎，提供网页、图片、视频搜索等服务 (Microsoft's search engine providing web, image, and video search services)
+    - name: 谷歌
+      link: https://www.google.com
+      img: https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png
+      description: 全球最大的搜索引擎，提供网页、图片、视频搜索等服务 (The world's largest search engine providing web, image, and video search services)
+footer_links:
+  - name: 开往-友链接力
+    link: https://www.travellings.cn/go.html
+    img: https://www.travellings.cn/assets/logo.gif
+  # - name: 阿里云支持
+  #   link: https://www.aliyun.com/minisite/goods?userCode=lmvvqvl9
+  #   img: https://i.ibb.co/h7XJkfm/LOGO.png
+  # - name: 大佬论坛
+  #   link: https://www.dalao.net/
+  #   img: https://www.dalao.net/img/dalao-svg.svg
+  # - name: BlogFinder
+  #   link: https://bf.zzxworld.com/
+  #   img: https://bf.zzxworld.com/images/logo-v2.png
+  # - name: 2024-10-29-133009
+  #   link: https://storeweb.cn/
+  #   img: https://i.ibb.co/tc0z0Y5/2024-10-29-133009.png
+  # - name: 空间穿梭-随机访问BlogsClub成员博客
+  #   link: https://www.blogsclub.org/go
+  #   img: https://www.blogsclub.org/images/shuttle_4.png
+footer_links_text: 
+  - name: 
+    link: 
+#  - name: 文字描述  # 备案信息 (Record Information)
+#    link: http://beian.miit.gov.cn/  # 备案链接 (Record Link)

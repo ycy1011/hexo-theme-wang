@@ -1,17 +1,17 @@
-<el-header class="p-0" padding="0">
+<el-header class="p-0" padding="0" id="header">
         <el-menu class="justify-between" mode="horizontal" background-color="#2B2B2C" text-color="#CFD3DC" active-text-color="#CFD3DC" margin="0">
         <el-menu-item>
             <el-image src="<%= url_for() %>images/<%= theme.logo %>" fit="contain" style="width: 50px;"/>
         </el-menu-item>
         <el-menu-item>
-            <p class="text-3xl"><%= config.title %></p>
+            <p class="text-3xl hover-underline"><%= config.title %></p>
         </el-menu-item>
             <% for (let name in theme.menu) { %>
             <% let [url, icon] = theme.menu[name].split('||').map(item => item.trim()); %>
             <el-menu-item>
                 <a href="<%= url %>" class="inline-flex items-center mg-auto " alt="<%= name %>">
                     <i class="fa <%= icon %> text-lg" aria-hidden="true"></i>
-                    <p class="ml-2 text-lg">
+                    <p class="ml-2 text-lg hover-underline">
                         <% 
                         const translated = __('menu.' + name); 
                         var menuItem = translated
@@ -23,6 +23,12 @@
                 </a>
             </el-menu-item>
         <% } %> 
+        <el-menu-item>
+            <button v-pre class="menu-item-link inline-flex items-center mg-auto" alt="search" id="triggerSearch" onclick="document.getElementById('search-container').style.display='block';">
+                <i class="fa fa-search text-lg" aria-hidden="true"></i>
+                <p class="hover-underline ml-2 text-lg"><%=__('menu.search') %></p>
+            </button>
+        </el-menu-item>
         </el-menu>
 </el-header>
   

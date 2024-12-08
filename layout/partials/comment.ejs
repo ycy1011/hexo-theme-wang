@@ -1,0 +1,21 @@
+
+<div class="comments-container night">
+    <div id="sodesu"></div>
+    <script src="https://unpkg.com/sodesu-comment/dist/sodesu.aio.umd.js"></script>
+    <script>
+      Sodesu.init({
+        el: '#sodesu',
+        serverURL: '<%= theme.comments.serverURL %>',
+        dark: 'html.dark',
+        pageview: true,
+        commentClassName: 'prose prose-neutral dark:prose-invert min-w-0 max-w-none',
+        lang: '<%= config.language %>', // 
+        avatar: 'mm', // 
+        meta: ['nick', 'mail'], // 
+        pageSize: 10, //
+        visitor: true, // 
+        commentCount: true, // 
+        requiredFields: ['nick', 'mail'], //   
+      });
+    </script>
+    </div>

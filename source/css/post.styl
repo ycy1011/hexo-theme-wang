@@ -1,0 +1,127 @@
+.post-article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top:60px; 
+    max-width: 100%;
+    margin: 52px 15px;
+    
+}
+@media (max-width: 767px) {
+   .post-article{
+     min-width: 400px;
+     max-width: 100%;
+     margin: 52px 5px;
+    
+    }
+}
+.post-header{
+ margin-top: 20px;
+}
+.post-content{
+ background-color: #3b3b3b;
+ margin:auto;
+ margin-top: 60px;
+ max-width: 100%;    
+}
+
+.post-content>*{
+ margin-bottom: 20px;
+ margin-left:25px;    
+ margin-right:25px; 
+}
+.post-content>h2
+{
+    border-bottom: 2px solid #fff;
+}
+
+.post-content>h3
+{
+    border-bottom: 1px dashed #fff;
+    
+}
+.post-content>h4
+{
+    border-bottom: 5px dashed #fff;
+}
+.post-content>h5
+{
+    border-bottom: 5px dashed #fff;
+}
+.post-content>h6
+{
+    border-bottom: 5px dashed #fff;
+}
+.post-content .highlight{
+    background-color: #333;
+}
+figure.highlight {
+    position: relative;
+    overflow: auto;
+}
+figure.highlight tr{
+}
+// table{
+//     display block;
+// }
+.gutter{
+ width : 0.5em;
+}
+figure.highlight .gutter pre { 
+    padding-right: 0; /* 右侧内边距，以确保有足够的空间 */
+    border-right: 1px solid #ccc; /* 分隔线，可选 */
+    display: inline-block;
+    text-align: right;
+    color: #999;
+    line-height: 1.7; /* 增加行高，使行号之间有更多空间 */
+}
+figure.highlight .code pre {
+    display:block;
+    min-width:50%; 
+    max-width:100vh;/* 高度是视口高度的50% */
+    margin-left:0; /* 代码左侧的内边距，与行号保持一致 */
+    line-height: 1.7; /* 增加行高，使代码之间有更多空间 */
+}
+
+.copy-btn,box{
+ position: absolute;   
+ right: 0;    
+ width :50px;
+ height: 30px;
+ border-radius: 5px;
+
+}
+.copy-btn{
+background: #333     
+}
+.post-content a{
+ text-decoration: underline;
+}
+.post-content a:not(.headerlink):not(:has(img))::after {
+  content: '\f08e'; /* Font Awesome 的外链图标 Unicode */
+  font-family: 'Font Awesome 5 Free'; /* 指定 Font Awesome 字体 */
+  font-weight: 900; /* 根据图标库的要求，通常使用 900 粗细 */
+  margin-left: 5px; /* 图标和链接之间的间距 */
+  font-size: 12px; /* 调整图标大小 */
+}
+.pre-next-container{
+  display: flex;
+  justify-content: space-around;
+}
+.pre-btn,.next-btn{
+ border:1px solid grey;
+ border-radius: 5px;
+ padding: 5px 10px;
+}
+.copyright-container{
+ display:flex
+ align-content: center  
+ flex:1; 
+ border:1px solid grey;
+}
+.copyright-author-container,.copyright-public-time-container,.copyright-license-container{
+ margin-right:15px;
+ margin-bottom:15px;
+ align-content: center
+ justify-content:  space-around;   
+}

@@ -1,0 +1,63 @@
+.search-container {
+  display: none; /* 默认隐藏搜索框 */
+  position: fixed; /* 使用绝对定位脱离文档流 */
+  top: 20%; /* 定位到窗口的垂直中心 */
+  left: 25%;
+  //transform: translate(-50%, -80%); /* 使用 transform 属性微调，使其精确居中 */
+  width: 50%; /* 搜索框的宽度 */
+  max-height: 50%;
+  z-index: 1000; /* 确保搜索框在最上层 */
+}
+
+#local-search-result{
+  max-height: 400px;
+  overflow: auto; /* 允许滚动条 */
+  display: flex;
+  flex-direction: column;
+}
+#local-search-result li {
+  background-color:rgb(65, 65, 65);
+  border: 1px solid #ccc;
+}
+.search-keyword{
+ color: red;  
+}
+/* 表单样式 */
+.search-container form {
+  display: flex;
+  align-items: center; /* 使按钮和输入框垂直居中 */
+  background-color: #303030
+}
+
+/* 搜索输入框样式 */
+#local-search-input {
+  flex-grow: 1; /* 输入框占据剩余空间 */
+  padding: 10px; /* 输入框内边距 */
+  border: 1px solid #ccc; /* 输入框边框颜色 */
+  background: #757575; /* 输入框背景颜色 */
+  border-radius: 4px 0 0 4px; /* 输入框圆角，左边圆角 */
+  outline: none; /* 移除焦点时的轮廓 */
+  margin:auto;
+  color:rgb(71, 71, 71);
+}
+
+/* 搜索按钮样式 */
+button.fa.fa-search {
+  border: 1px solid #ccc; /* 按钮边框颜色 */
+  background: #797979; /* 按钮背景颜色 */
+  border-radius: 4px 0 0 4px; /* 按钮圆角，右边圆角 */
+  font-size: 1rem; /* 图标大小 */
+  color: rgb(231, 231, 231)ff; /* 图标颜色 */
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  padding: 10px; /* 按钮内边距 */
+}
+button.fa.fa-xmark {
+  border: 1px solid #ccc; /* 按钮边框颜色 */
+  background: #797979;  /* 按钮背景颜色 */
+  border-radius: 0 4px 4px 0; /* 按钮圆角，右边圆角 */
+  font-size: 1rem; /* 图标大小 */
+  color: rgb(231, 231, 231)ff; /* 图标颜色 */
+  cursor: pointer; /* 鼠标悬停时显示指针 */
+  padding: 10px; /* 按钮内边距 */
+
+}

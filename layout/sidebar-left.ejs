@@ -1,4 +1,4 @@
-<el-card class="w-1/6 fixed left-0 bg-stone-800 text-stone-200" style="max-height: 900px; overflow-y: auto;">
+<el-card class="w-1/6 fixed left-0 bg-stone-800 text-stone-200" style="margin-top:60px; max-height: 900px; overflow-y: auto;">
     <template #header>
       <div class="card-header">
         <h2 class="text-center text-xl"><%= config.subtitle %></h2>
@@ -9,6 +9,7 @@
       <h2 class="text-3xl"><%= config.author %></h2>
       <h2 class="text-2xl"><%= config.description %></h2>
     </div>
+    <br/>
     <ul class="flex justify-between items-center">
       <li class="text-3xl">
         <a href="<%= config.root %>archives/"><i class="fa fa-archive"></i></a>
