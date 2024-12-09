@@ -1,10 +1,9 @@
-<div class=" page-container">
-  <div class="night box"><%- page.content %></div>
-    <% if (page.path === 'tags/index.html' || page.path === 'tags/') { %>
-      <%- include('_partial/tags.ejs') %>
-    <% } else if(page.path === 'categories/index.html' || page.path === 'categories/') {%>
-      <%- include('_partial/category.ejs') %>
-    <%} else if(page.path === 'links/index.html' || page.path==='links/'){%>
-      <%- include('_partial/links.ejs') %>
-      <%}%>
-</div>
+<%- page.content %>
+<% if (page.path === 'tags/index.html' || page.path === 'tags/') { %>
+    <%- include('tags.ejs') %>
+  <% } else if(page.path === 'categories/index.html' || page.path === 'categories/') {%>
+    <%- include('category.ejs') %>
+  <%} else if(page.path === 'links/index.html' || page.path==='links/'){%>
+    <%- include('links.ejs') %>
+<%}%>
+

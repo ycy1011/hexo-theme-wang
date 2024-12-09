@@ -27,7 +27,7 @@ copyright:
   license_link: https://creativecommons.org/licenses/by-nc-sa/4.0/  # 版权协议链接 (License Link)
 comments: #由Sodesu组件提供评论服务 #Powered by Sodesu v0.1.0:https://github.com/BeiyanYunyi/sodesu
   enable: true  # 是否开启评论 (Enable Comments)
-  serverURL: 'waline.xingwangzhe.fun'  # 评论服务器URL (Comment Server URL)
+  serverURL: 'waline.xxxx.com'  # 评论服务器URL (Comment Server URL)
   lang: 'zh-CN'  # 语言设置 (Language Setting)
 #   placeholder: '说点什么吧...'  # 评论框占位符 (Comment Placeholder)
 #   avatar: 'mm'  # 头像设置 (Avatar Setting)
@@ -39,6 +39,7 @@ comments: #由Sodesu组件提供评论服务 #Powered by Sodesu v0.1.0:https://g
 #   libUrl: 'https://unpkg.com/@waline/client/dist/waline.js'  # 资源库URL (Library URL)
 
 highlight_theme: night  # 代码高亮主题 (Highlight Theme)
+
 social_links:
   Github: https://github.com/xingwangzhe || fab fa-github  # Github链接 (Github Link)
   Twitter: https://twitter.com/|| fab fa-twitter  # Twitter链接 (Twitter Link)

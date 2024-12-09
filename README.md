@@ -32,9 +32,22 @@ npm install hexo-theme-wang
  + [代码高亮highlight](https://highlightjs.org/)
  + [kimi](https://kimi.moonshot.cn/)
  + [从 0 到 1 开发 Hexo 主题杂谈](https://liuyib.github.io/2019/08/20/develop-hexo-theme-from-0-to-1/)
-   
-
+ + [Element-Plus](https://element-plus.org)
+ + [tailwindcss](https://tailwindcss.com/)  
 # 开发日志
+## 2024 12-9
+ + 完成基本功能，基本满足日常使用
+## 2024-12-8
+ + 增加标签，分类，归档，链接，右侧边栏
+ + 优化代码，修复bug
+## 2024-12-6
+ + 左侧边栏完善
+ + 主页主体完善
+## 重构试试 2024-12-3
+ + 重构代码
+ + vue.js+elementui+tailwindcss
+ + 导航栏
+ + 左中右结构
 ## 2024-11-26
  + 部分页面模块化
  + 修复i8n bug
@@ -120,5 +133,6 @@ npm install hexo-theme-wang
 + 顶部导航栏css简单设计
 + 绘制简单Logo
 <img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
+
 ~~翻看hexo文档，查看landscape主题的布局~~
 

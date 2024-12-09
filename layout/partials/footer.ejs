@@ -1,0 +1,70 @@
+<div class="footer">
+    <footer class="night box footer-center">
+        <span>
+            <a href="https://hexo.io" alt="Hexo"><p class="hover-underline night" style="display: inline;">Hexo</p></a>
+            <p style="display: inline; color: red;">❤</p>
+            <a href="https://github.com/xingwangzhe/hexo-theme-wang" alt="Wang"><p class="hover-underline night" style="display: inline;">Wang</p></a>
+        </span>
+    <div>&copy 2024-<%= new Date().getFullYear() %> By <%- config.author -%></div>
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span  style="margin: auto;"  styid="busuanzi_container_site_pv"> <%=__('index.total_visits')%> <span id="busuanzi_value_site_pv"></span> <%=__('index.times')%></span>
+    <span id="runtime_span" class="night" style="font-weight:bold"> </span>
+    <script>
+    
+    function show_runtime(){
+    
+      window.setTimeout("show_runtime()",1000);
+      var beginTimeConfig = "<%= theme.begin_time %>";
+      // 将日期字符串转换为日期对象
+      var beginTime = new Date(beginTimeConfig);
+      //X = new Date("01/06/2016 5:22:00");
+      X = beginTime;
+      Y = new Date();
+    
+      T = (Y.getTime()-X.getTime());
+    
+      M = 24*60*60*1000;
+    
+      a = T/M;
+    
+      A = Math.floor(a);
+    
+      b = (a-A)*24;
+    
+      B = Math.floor(b);
+    
+      c = (b-B)*60;
+    
+      C = Math.floor((b-B)*60);
+    
+      D = Math.floor((c-C)*60);
+    
+      runtime_span.innerHTML ="<%=__('index.running_since')%>"+" "+ A + " <%=__('index.day')%> " + B + " <%=__('index.hour')%> " + C + " <%=__('index.minute')%> " + D + " <%=__('index.second')%>" ;
+    
+    }
+    show_runtime();
+    </script>
+    <ul class="footer-links-container text-links">
+      <% for (var i = 0; i < theme.footer_links_text.length; i++) { %>
+          <li class="night text-link">
+            <a href="<%= theme.footer_links_text[i].link %>" alt="<%= theme.footer_links_text[i].name %>" >
+              <div class=" ">
+                <p class="hover-underline night"><%= theme.footer_links_text[i].name %></p>
+              </div>
+            </a>
+          </li>
+        <% }%>
+      </ul>
+    <ul class="footer-links-container">
+    <% for (var i = 0; i < theme.footer_links.length; i++) { %>
+        <li class="night footer-links-item">
+          <a href="<%= theme.footer_links[i].link %>" alt="<%= theme.footer_links[i].name %>" >
+            <div class="link-box">
+            <img src="<%= theme.footer_links[i].img %>" class="footer-link-img nofancybox" alt="<%= theme.footer_links[i].name %>"/>
+            </div>
+          </a>
+        </li>
+      <% } %>
+    </ul>
+    </footer>
+  </div>

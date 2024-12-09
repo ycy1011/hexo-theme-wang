@@ -1,57 +1,58 @@
-<article class="post-article ">
-<div class="post-content night box" style="font-family:Douyin Sans">
-    <header class="post-header" id="post-header">
-        <div class="post-title">
-            <p class="post-title"><h1 class="night"><%=page.title %></h1></p>
-        </div>
-        <br>
-        <div class="post-meta">
-            <span class="post-time">
-                <i class="fa fa-clock night"></i>
-                <p class="night"><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
+<article class="post-article " v-pre>
+  <div class="post-content night box" style="border-radius: 15px;;">
+      <header class="post-header" id="post-header">
+          <h1 class="text-center text-3xl"><%= page.title%></h1>
+          <br/>
+          <div class="post-meta flex justify-center">
+            <span class="post-time text-xl">
+                <i class="fa fa-clock night text-xl"></i>
+                <time datetime="<%- date(page.date, 'YYYY-MM-DD HH:mm:ss') %>" class="night"><%- date(page.date, 'YYYY-MM-DD HH:mm:ss') %></p>
             </span>
-                <p style="margin: 0 3px;" class="night">||</p>
-            <span class="post-time">
-                <i class="fa fa-refresh night"></i>
-                <p class="night">  <%= page.updated.format("YYYY/MM/DD HH:mm:ss z") %></p>
+                <p style="margin: 0 10px;" class="night text-xl">||</p>
+            <span class="post-time text-xl">
+                <i class="fa fa-refresh night text-xl"></i>
+                <time datetime="<%- date(page.updated, 'YYYY-MM-DD HH:mm:ss') %>" class="night"><%- date(page.updated, 'YYYY-MM-DD HH:mm:ss') %></p>
             </span>
         </div>
-        </header>
- <%- page.content %>
- <%if(theme.copyright.enable===true)%>
-<div class="copyright-container center">
-    <div class="copyright-author-container">
-    <i class="fa fa-user night margin"> a u t h o r </i>
-    <p><%= config.author %></p>
-    </div>
-    <div class="copyright-public-time-container">
-    <i class="fa fa-calendar night margin"> p u b l i c </i>
-    <p><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
-    </div>
-    <div class="copyright-license-container">
-        <i class="fa fa-balance-scale margin" >L I C E N S E</i>
-        <a class=" headerlink" href="<%=theme.copyright.license_link%>" alt="<%theme.copyright.cc%>">
-        <div class="license-container">
-        <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
-        <% var license = theme.copyright.cc.split('-'); 
-            for(var i=0;i<license.length;i++){%>
-             <i class="fa-brands fa-creative-commons-<%=license[i]%>" aria-hidden="true"></i>   
-            <%}%>
-        </div>
-        </a>
-    </div>
-</div>
-<%if(theme.comments.enable===true)%>
-<div>
-<%- include('_partial/comment.ejs') %>
-</div>
-</div>
-<div class="pre-next-container">
-    <%if(page.prev){%>
-    <a href="<%- url_for(page.prev.path)%>" class="pre-btn night hover-underline"><--<%-page.prev.title%></a>
-    <%}%>    
-    <%if(page.next){%>
-    <a href="<%- url_for(page.next.path)%>" class="next-btn night hover-underline"><%-page.next.title%>--></a>
-    <%}%>
-</div>
+          </header>
+   <%- page.content %>
+   <%if(theme.copyright.enable===true)%>
+  <div class="copyright-container " style="  text-align: center;
+  justify-content: center;
+  align-content: center;
+  align-items: center;">
+      <div class="copyright-author-container">
+      <i class="fa fa-user night" style="margin:auto;"> a u t h o r </i>
+      <p><%= config.author %></p>
+      </div>
+      <div class="copyright-public-time-container">
+      <i class="fa fa-calendar night" style="margin:auto;"> p u b l i c </i>
+      <p><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
+      </div>
+      <div class="copyright-license-container">
+          <i class="fa fa-balance-scale" style="margin:auto;" >L I C E N S E</i>
+          <a class=" headerlink" href="<%=theme.copyright.license_link%>" alt="<%theme.copyright.cc%>">
+          <div class="license-container">
+          <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
+          <% var license = theme.copyright.cc.split('-'); 
+              for(var i=0;i<license.length;i++){%>
+               <i class="fa-brands fa-creative-commons-<%=license[i]%>" aria-hidden="true"></i>   
+              <%}%>
+          </div>
+          </a>
+      </div>
+  </div>
+  </div>
+  <%if(theme.comments.enable===true)%>
+  <div>
+  <%- partial('partials/comment.ejs')%>
+  </div>
+  <div class="pre-next-container">
+      <%if(page.prev){%>
+      <a href="<%- url_for(page.prev.path)%>" class="pre-btn night hover-underline"><--<%-page.prev.title%></a>
+      <%}%>    
+      <%if(page.next){%>
+      <a href="<%- url_for(page.next.path)%>" class="next-btn night hover-underline"><%-page.next.title%>--></a>
+      <%}%>
+  </div>
 </article>

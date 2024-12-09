@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "DouyinSansBold";
+  src: url('/font/DouyinSansBold.ttf');
+}
+body {
+  font-family: "DouyinSansBold", sans-serif;
+  margin: 0;
+}
+.main-container{
+  max-width: 60%;
+  margin: auto;
+  min-height: 90vh;
+}
+#recent-posts {
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  justify-content: space-between;
+}
+.recent-post{
+ min-height:300px;  
+}
+.social-links {
+  border-radius: 5px; /* 圆角 */
+  list-style-type: none;           /* 去除列表项前面的点 */
+  padding: 0; /*          移除列表项左侧的默认内边距 */
+  display: flex; /* 使用 Flexbox 布局 */
+  flex-wrap: wrap; /* 允许子元素换行 */
+  justify-content: space-between; /* 水平方向上两端对齐 */
+}
+.social-links-item {
+   margin-bottom: 10px;          /* 子元素之间的垂直间距 */
+  width: calc(50% - 5px); /* 每个子元素占一半的宽度，减去间距 */
+}        
+
+.social-links-item:nth-child(odd) {
+  text-align: left; /* 奇数位置的子元素左对齐 */
+}
+
+.social-links-item:nth-child(even) {
+  text-align: left; 
+}
+img{
+  margin: auto;
+}
+.readmore{
+
+}
+#paginator{
+  font-size: 23px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  .page-item{
+   padding:8px;
+   padding-right: 20px;
+   padding-left: 20px;
+   border-radius: 5px;
+   border: 1px solid #ddd;
+  }
+  .disabled{
+   border: none;
+  }
+}
+.archive{
+  width :100hv;
+  .time-item{
+  min-width:510px;  
+  }
+}
+.toc-child,.toc-item{
+ margin-left:15px;
+ margin-top:10px;
+ margin-bottom:10px;  
+}
+.thispost-tag,.thispost-category{
+ margin:2px;  
+}
+/* 全局滚动条样式 */
+::-webkit-scrollbar {
+  width: 5px; /* 垂直滚动条的宽度 */
+  height: 10px; /* 水平滚动条的高度 */
+}
+
+/* 滚动条轨道 */
+::-webkit-scrollbar-track {
+  background: #353535; /* 轨道颜色 */
+}
+
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  background: #555; /* 滑块颜色 */
+  border-radius: 6px; /* 滑块圆角 */
+}
+
+/* 滚动条滑块 hover 状态 */
+::-webkit-scrollbar-thumb:hover {
+  background:  #949494; /* 滑块 hover 颜色 */
+}
+.excerpt a:not(:has(img))::after {
+  content: '\f08e'; /* Font Awesome 的外链图标 Unicode */
+  font-family: 'Font Awesome 5 Free'; /* 指定 Font Awesome 字体 */
+  font-weight: 900; /* 根据图标库的要求，通常使用 900 粗细 */
+  margin-left: 5px; /* 图标和链接之间的间距 */
+  font-size: 12px; /* 调整图标大小 */
+}
+#header {
+  position: fixed;
+  width: 100%; /* 宽度100% */
+  z-index: 9999; /* 确保在顶部 */
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out; /* 平滑过渡 */
+  transform: translateY(0); /* 初始位置 */
+  margin-bottom: 50px
+}
+#header.hidden-header  {
+    transform: translateY(-100%); /* 向上移动，完全移出视口 */
+    opacity: 0; /* 隐藏元素 */
+}
+.hover-underline {
+  position: relative;
+  cursor: pointer;
+  text-decoration: none; /* 去除默认的下划线 */
+  display: inline-block;
+  padding-bottom: 2px; /* 为下划线留出空间 */
+  transition: all 0.3s ease-in-out; /* 过渡效果 */
+}
+
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  height: 1px; /* 下划线高度 */
+  background: #D3D3D3; /* 灰白色 */
+  transition: all 0.3s ease-in-out; /* 过渡效果 */
+}
+
+.hover-underline:hover::after {
+  left: 0;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main-container{
+  max-width: auto;
+  margin: auto;
+  min-height: 90vh;
+}
+}
+@import "category"
+@import "tags"
+@import "links"
+@import "footer"
+@import "post"
+@import "search"
+@import "a11y-dark"

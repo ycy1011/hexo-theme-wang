@@ -1,18 +1,48 @@
-<!DOCTYPE html>
-<html lang="<%- config.language %>" class="dark">  
-<%- partial('_partial/head') %>
-<body>
- <%- partial('_partial/header') %>
- <div class="container">
- <%- partial('_partial/sidebar_left') %>
- <%- body %>
- <%- partial('_partial/sidebar_right') %>
- </div>
- <%- partial('_partial/search') %>
- <%- partial('_partial/footer') %>
 
- <%- js('js/fancybox.js') %>
- <%- js('js/header_hidden.js') %>
- <%- js('js/copyright.js') %> 
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+<!DOCTYPE html>
+<html lang="<%=config.language%>" class="dark" >
+<head>
+  <%- partial('partials/head.ejs') -%>
+</head>
+<body class="bg-stone-900 text-stone-200">
+  <div id="app" v-pre>
+  <%- partial('partials/header.ejs') -%>
+  <div style="height:60px"> </div>
+  <el-container>
+  <%- partial('sidebar-left.ejs') -%>
+  <div  class="main-container">
+ <%- body %>
+  </div>
+  <%- partial('sidebar-right.ejs') -%>
+  </el-container>
+  <%- partial('partials/footer.ejs') -%>
+  </div>
+ <script>
+  const App = {
+    data() {
+      return {
+        message: "Hello Element Plus",
+      };
+    },
+  };
+  const app = Vue.createApp(App);
+  app.use(ElementPlus);
+  app.mount("#app");
+</script>
+<div v-pre>
+<%- js('js/header_hidden')%>
+<%- partial('partials/search') -%> 
+<%- js('js/wang') %>
+</div>
 </body>
+
 </html>

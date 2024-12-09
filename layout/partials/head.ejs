@@ -1,0 +1,51 @@
+
+<%
+var pageTitle = page.title || config.subtitle || '';
+if (is_archive()) pageTitle = 'Archives';
+if (is_tag()) pageTitle = 'Tag: ' + page.tag;
+if (is_category()) pageTitle = 'Category: ' + page.category;
+if (is_month()) pageTitle += ': ' + page.month + '/' + page.year;
+if (is_year()) pageTitle += ': ' + page.year;
+pageTitle += ' [ ' + config.title + ' ]';
+%>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="<%= config.author %>">
+<meta name="title" content="<%= page.title %>">
+<meta name="description" content="<%= config.description %>">
+<meta name="keywords" content="<%= config.keywords %>">
+<meta name="copyright" content="Copyright <%= config.author %>. All Rights Reserved.">
+<title><%= config.title %></title>
+<meta property="og:title" content="<%= page.title %>">
+<meta property="og:type" content="article">
+<meta property="og:url" content="<%= page.permalink %>">
+<meta property="og:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
+<meta property="og:site_name" content="<%= config.title %>">
+<meta property="og:description" content="<%= page.excerpt %>" >
+<!-- Twitter Cards元数据 -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@<%= config.twitter %>">
+<meta name="twitter:creator" content="@<%= config.twitter %>">
+<meta name="twitter:title" content="<%= page.title %>">
+<meta name="twitter:description" content="<%= page.excerpt %>">
+<meta name="twitter:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
+<%- css('css/all.min') %>
+<%- css('css/index') %>
+<%- css('css/wang') %>
+<%- js('js/search') %> 
+<%- js('js/vue') %> 
+<%- js('js/jquery')%>
+<%- js('js/index')%>
+<%- js('js/tws')%>
+<script src="//unpkg.com/@element-plus/icons-vue"></script>
+<link
+rel="stylesheet"
+href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+/>
+<script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+</script>
+<%- theme.head%>
