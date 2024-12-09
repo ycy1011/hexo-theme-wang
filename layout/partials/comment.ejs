@@ -1,10 +1,10 @@
 
 <div class="comments-container night">
-    <div id="sodesu"></div>
-    <script src="https://unpkg.com/sodesu-comment/dist/sodesu.aio.umd.js"></script>
-    <script>
-      Sodesu.init({
-        el: '#sodesu',
+    <div id="waline"></div>
+    <script type="module">
+      import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+      init({
+        el: '#waline',
         serverURL: '<%= theme.comments.serverURL %>',
         dark: 'html.dark',
         pageview: true,
