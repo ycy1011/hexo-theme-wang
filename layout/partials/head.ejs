@@ -30,16 +30,15 @@ pageTitle += ' [ ' + config.title + ' ]';
 <meta name="twitter:title" content="<%= page.title %>">
 <meta name="twitter:description" content="<%= page.excerpt %>">
 <meta name="twitter:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<link rel="stylesheet" href="//unpkg.com/element-plus/dist/index.css" />
+<%- css('css/all.min') %>
+<%- css('css/index') %>
 <%- css('css/wang') %>
-<%- js('js/wang') %>
-<%- js('js/search.js') %> 
-<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-<script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.7.1/jquery.js"></script>
-<script src="//unpkg.com/element-plus"></script>
+<%- js('js/search') %> 
+<%- js('js/vue') %> 
+<%- js('js/jquery')%>
+<%- js('js/index')%>
+<%- js('js/tws')%>
 <script src="//unpkg.com/@element-plus/icons-vue"></script>
-<script src="https://cdn.tailwindcss.com"></script>
 <script>
     tailwind.config = {
       darkMode: 'class'

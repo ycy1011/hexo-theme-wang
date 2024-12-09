@@ -10,6 +10,7 @@ index:
   hour: "Hour"
   minute: "Minute"
   second: "Second"
+  copy_success: Copy Success
 menu:
   home: Home
   archive: Archive

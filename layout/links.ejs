@@ -1,4 +1,4 @@
-<div class="links night">
+<div class="links night" style="margin-top:60px">
     <div class="tabs-container night">
       <button class="tablinks box night" onclick="openTab(event, 'friend_links')"><%= __('links.friend_links') %></button>
       <button class="tablinks box night" onclick="openTab(event, 'referral_sites')"><%= __('links.referral_sites') %></button>
@@ -34,7 +34,8 @@
     <% } %>
     </ul>
     </div>
-    <script>
+    <%- partial('partials/comment.ejs')%>
+    <script v-pre>
       function openTab(evt, tabName) {
         // 获取所有tabcontent元素
         var tabcontent = document.getElementsByClassName("tabcontent");      

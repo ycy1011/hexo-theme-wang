@@ -16,6 +16,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 <body class="bg-stone-900 text-stone-200">
   <div id="app" v-pre>
   <%- partial('partials/header.ejs') -%>
+  <div style="height:60px"> </div>
   <el-container>
   <%- partial('sidebar-left.ejs') -%>
   <div  class="main-container">
@@ -37,8 +38,11 @@ pageTitle += ' [ ' + config.title + ' ]';
   app.use(ElementPlus);
   app.mount("#app");
 </script>
+<div v-pre>
 <%- js('js/header_hidden')%>
 <%- partial('partials/search') -%> 
+<%- js('js/wang') %>
+</div>
 </body>
 
 </html>

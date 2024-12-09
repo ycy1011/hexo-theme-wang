@@ -1,5 +1,42 @@
-   
+language: zh-CN||[en](README_EN.md)
+<center>
+<img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
+
+# Wang
+</center>
+
+## 协议
+字体：
+ + [Douyin Sans 抖音美好体](https://fonts.zeoseven.com/zh-CN/items/84/) : [采用OFL许可协议](FONT-LICENSE)
+
+代码：[AGPL3.0](LICENSE) 
+  根据AGPL3.0传染性，项目转为AGPL3.0协议，原MIT协议保留，但不再完全适用
+ + 主体代码：[MIT许可协议](MIT_LICENSE)
+ + [sodesu评论区](https://github.com/BeiyanYunyi/sodesu)：[AGPL3.0](https://github.com/BeiyanYunyi/sodesu/blob/main/LICENSE)
+
+# wang-一个简约的hexo主题
+
+![wang](wang.png)
+
+在hexo目录下安装
+```
+npm install hexo-theme-wang
+```
+主题会安装到`node_modules`中
+在hexo主配置文件中修改`theme`为`wang`
+
+
+## 参考
+ 感谢以下的教程和文章及其网站，在此向他们表示感谢！
+ + [hexo官网](https://hexo.io/)
+ + [代码高亮highlight](https://highlightjs.org/)
+ + [kimi](https://kimi.moonshot.cn/)
+ + [从 0 到 1 开发 Hexo 主题杂谈](https://liuyib.github.io/2019/08/20/develop-hexo-theme-from-0-to-1/)
+ + [Element-Plus](https://element-plus.org)
+ + [tailwindcss](https://tailwindcss.com/)  
 # 开发日志
+## 2024 12-9
+ + 完成基本功能，基本满足日常使用
 ## 2024-12-8
  + 增加标签，分类，归档，链接，右侧边栏
  + 优化代码，修复bug
@@ -96,5 +133,6 @@
 + 顶部导航栏css简单设计
 + 绘制简单Logo
 <img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
+
 ~~翻看hexo文档，查看landscape主题的布局~~
 
