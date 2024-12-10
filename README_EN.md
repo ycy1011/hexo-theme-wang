@@ -37,6 +37,8 @@ Gratitude to the following tutorials, articles, and websites for their contribut
  + [Tailwind CSS](https://tailwindcss.com/)  
 
 # Development Log
+## 2024-12-10
+ + Bug fixed
 ## 2024-12-9
  + Basic functionality completed, meeting daily use requirements.
 ## 2024-12-8

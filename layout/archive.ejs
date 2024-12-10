@@ -1,5 +1,7 @@
 <div class="archive" >
-<h1><%= __('menu.archive') %></h1>
+  <div>
+    <h1 style="margin:auto; text-align:center;"><%=  page.tag !== undefined ? page.tag+"物品擦破模式" : __('menu.archive')  %></h1>
+    </div>
 <el-timeline>
   <% 
   var sb = [];

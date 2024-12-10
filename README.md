@@ -35,6 +35,8 @@ npm install hexo-theme-wang
  + [Element-Plus](https://element-plus.org)
  + [tailwindcss](https://tailwindcss.com/)  
 # 开发日志
+## 2024-12-10
+ + 修复bug 
 ## 2024 12-9
  + 完成基本功能，基本满足日常使用
 ## 2024-12-8
