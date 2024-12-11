@@ -12,17 +12,17 @@ pageTitle += ' [ ' + config.title + ' ]';
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="<%= config.author %>">
-<meta name="title" content="<%= page.title %>">
+<meta name="title" content="<%= config.title%>">
 <meta name="description" content="<%= config.description %>">
 <meta name="keywords" content="<%= config.keywords %>">
 <meta name="copyright" content="Copyright <%= config.author %>. All Rights Reserved.">
 <title><%= config.title %></title>
-<meta property="og:title" content="<%= page.title %>">
+<meta property="og:title" content="<%= is_home() ? config.title :  page.title %>">
 <meta property="og:type" content="article">
-<meta property="og:url" content="<%= page.permalink %>">
+<meta property="og:url" content="<%= url_for(page.path) %>">
 <meta property="og:image" content="<%= url_for() %>images<%= theme.avatar %>">
 <meta property="og:site_name" content="<%= config.title %>">
-<meta property="og:description" content="<%= page.excerpt %>" >
+<meta property="og:description" content="<%= is_home() ? config.description : page.excerpt %>" >
 <!-- Twitter Cards元数据 -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@<%= config.twitter %>">
