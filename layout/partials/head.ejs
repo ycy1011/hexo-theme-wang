@@ -1,4 +1,4 @@
-
+<%- theme.head%>
 <%
 var pageTitle = page.title || config.subtitle || '';
 if (is_archive()) pageTitle = 'Archives';
@@ -20,7 +20,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 <meta property="og:title" content="<%= page.title %>">
 <meta property="og:type" content="article">
 <meta property="og:url" content="<%= page.permalink %>">
-<meta property="og:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
+<meta property="og:image" content="<%= url_for() %>images<%= theme.avatar %>">
 <meta property="og:site_name" content="<%= config.title %>">
 <meta property="og:description" content="<%= page.excerpt %>" >
 <!-- Twitter Cards元数据 -->
@@ -29,7 +29,7 @@ pageTitle += ' [ ' + config.title + ' ]';
 <meta name="twitter:creator" content="@<%= config.twitter %>">
 <meta name="twitter:title" content="<%= page.title %>">
 <meta name="twitter:description" content="<%= page.excerpt %>">
-<meta name="twitter:image" content="<%= config.url %><%= page.cover || 'path/to/default/image.jpg' %>">
+<meta name="twitter:image" content="<%= url_for() %>images<%= theme.avatar %>">
 <%- css('css/all.min') %>
 <%- css('css/index') %>
 <%- css('css/wang') %>
@@ -48,4 +48,3 @@ href="https://unpkg.com/@waline/client@v3/dist/waline.css"
       darkMode: 'class'
     }
 </script>
-<%- theme.head%>
