@@ -1,13 +1,18 @@
 {
   "name": "hexo-theme-wang",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "a hexo theme minimalism",
-  "keywords": ["wang","hexo","theme","minimalism"],
+  "keywords": [
+    "wang",
+    "hexo",
+    "theme",
+    "minimalism"
+  ],
   "author": "xingwangzhe",
   "license": "AGPL3.0",
   "repository": {
-  "type": "git",
-  "url": "git+https://github.com/xingwangzhe/hexo-theme-wang.git"
-},
-  "homepage":"https://github.com/xingwangzhe/hexo-theme-wang"
+    "type": "git",
+    "url": "git+https://github.com/xingwangzhe/hexo-theme-wang.git"
+  },
+  "homepage": "https://github.com/xingwangzhe/hexo-theme-wang"
 }
