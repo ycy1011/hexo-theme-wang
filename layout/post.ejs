@@ -1,5 +1,5 @@
-<article class="post-article " v-pre>
-  <div class="post-content night box" style="border-radius: 15px;;">
+<article class="post-article" v-pre>
+  <div class="post-content bg-stone-800 text-stone-100  night box" style="border-radius: 15px;;">
       <header class="post-header" id="post-header">
           <h1 class="text-center text-3xl"><%= page.title%></h1>
           <br/>
@@ -22,15 +22,15 @@
   align-content: center;
   align-items: center;">
       <div class="copyright-author-container">
-      <i class="fa fa-user night" style="margin:auto;"> a u t h o r </i>
+      <i class="fa fa-user night" style="margin:20px;"> a u t h o r </i>
       <p><%= config.author %></p>
       </div>
       <div class="copyright-public-time-container">
-      <i class="fa fa-calendar night" style="margin:auto;"> p u b l i c </i>
+      <i class="fa fa-calendar night" style="margin:20px;"> p u b l i c </i>
       <p><%= page.date.format("YYYY/MM/DD HH:mm:ss z") %></p>
       </div>
       <div class="copyright-license-container">
-          <i class="fa fa-balance-scale" style="margin:auto;" >L I C E N S E</i>
+          <i class="fa fa-balance-scale" style="margin:20px;" >L I C E N S E</i>
           <a class=" headerlink" href="<%=theme.copyright.license_link%>" alt="<%theme.copyright.cc%>">
           <div class="license-container">
           <i class="fa-brands fa-creative-commons" aria-hidden="true"></i>
