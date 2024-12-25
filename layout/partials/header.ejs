@@ -1,0 +1,16 @@
+<div class="header-trigger" style="position: fixed; top: 0; left: 0; right: 0; height: 20px;"></div>
+<div class="nav-toggle">
+    <img src="images/menu_ico/arrow.svg">
+</div>
+<header>
+    <ul>
+        <% for (let key in theme.menu) { %>
+            <li>
+                <a href="<%= theme.menu[key] %>">
+                    <%= __(key) || key %>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+</header>
+<%- js('js/header') -%>

@@ -1,0 +1,25 @@
+<div class="first-screen">
+    <%- partial('partials/header.ejs')%>
+    <div class="lefttop-container">
+        <div class="container">
+            <div class="col-md-6">
+                <h1 class="site-title"><%- config.title %></h1>
+                <img class="avatar <%= theme.avatar.isround ? 'avatar-round' : '' %>" src="<%- url_for(theme.avatar.src) %>" style="width:50px;">
+                <h2 class="site-author"><%- config.author %></h2>
+                <h3 class="site-subtitle"><%- config.subtitle %></h3>
+            </div>
+        </div>
+    </div>
+    <div class="rightbottom-container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="first-screen__title">Wang</h1>
+                <p class="first-screen__description">Wang is a free, open-source and lightweight front-end framework for faster and easier web development.</p>
+            </div>
+        </div>
+    </div>
+    <div class="description-io">
+        <h2 id="typed-output" data-text="<%= config.description %>"></h2>
+    </div>
+</div>
+<%- js('js/typed-effect.js') -%>

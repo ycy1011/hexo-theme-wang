@@ -1,0 +1,14 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content="<%= page.keywords || config.keywords %>">
+<%- open_graph({
+  title: page.title || config.title,
+  description: page.description || config.description,
+  type: 'website',
+  url: url,
+  image: page.cover || config.cover,
+  site_name: config.title,
+  author: config.author
+})%>
+<%-js('js/wang') -%>
+<%-css('css/wang')-%>

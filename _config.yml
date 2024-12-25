@@ -1,0 +1,17 @@
+
+avatar:
+  src: images/avatar.webp #头像
+  isround: true #是否是圆形
+
+
+# html lang
+language: en
+
+# main menu navigation
+menu:
+  Home: /
+  Archives: /archives
+  Categories: /categories
+  Tags: /tags
+  About: /about
+  Links: /links
