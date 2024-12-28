@@ -1,6 +1,7 @@
 # hexo-theme-wang
 一个基于hexo的简约的暗色主题
 hexo-theme-wang
+
 ![alt text](image.png)
 
 i18n:zh-CN,zh-TW,zh-HK,en
