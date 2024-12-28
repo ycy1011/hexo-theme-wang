@@ -1,29 +1,29 @@
----
-name: 繁體中文
-index:
-  read_more: 閱讀全文
-  search: 搜尋
-  total_visits: 總訪問量
-  running_since: 已運行時間
-  times: 次
-  day: "天"
-  hour: "小時"
-  minute: "分鐘"
-  second: "秒"
-menu:
-  home: 首頁
-  archive: 存檔
-  categories: 分類
-  tags: 標籤
-  about: 关于
-  links: 連結
-  rss: 訂閱
-  travellings: 開往
-  search: 搜尋
-sidebar-right:
-  locate_fast: 快速定位
-  ip_show: 顯示IP
-  time_show: 時間
-links:
-  referral_sites: 推薦網站
-  friend_links: 友情連結
+Home: 首頁
+Archives: 檔案
+Categories: 分類
+Tags: 標籤
+About: 關於
+Links: 連結
+PoweredBy: 由 Hexo 提供動力
+BuiltWith: 使用 Wang 主題建置
+RSS: RSS
+Travelling: 旅行
+social_links: 聯絡我
+
+paginator:
+  prev: 上一頁
+  next: 下一頁
+search:
+  no_results: 找不到結果
+  loading: 載入中...
+  placeholder: 搜尋文章...
+post:
+  category: 分類
+  posted_on: 發表於
+  read_more: 閱讀更多
+  word_count: 字數
+  reading_time: 閱讀時間
+  minutes: 分
+  last_updated: 最後更新
+  prev_post: 上一篇文章
+  next_post: 下一篇文章

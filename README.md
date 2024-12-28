@@ -1,140 +1,120 @@
-language: zh-CN||[en](README_EN.md)
-<center>
-<img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
+# hexo-theme-wang
+一个基于hexo的简约的暗色主题
+hexo-theme-wang
+![alt text](image.png)
 
-# Wang
-</center>
+i18n:zh-CN,zh-TW,zh-HK,en
 
-## 协议
-字体：
- + [Douyin Sans 抖音美好体](https://fonts.zeoseven.com/zh-CN/items/84/) : [采用OFL许可协议](FONT-LICENSE)
+我的站点:[https://xingwangzhe.fun](https://xingwangzhe.fun)
 
-代码：[AGPL3.0](LICENSE) 
-  根据AGPL3.0传染性，项目转为AGPL3.0协议，原MIT协议保留，但不再完全适用
- + 主体代码：[MIT许可协议](MIT_LICENSE)
- + [sodesu评论区](https://github.com/BeiyanYunyi/sodesu)：[AGPL3.0](https://github.com/BeiyanYunyi/sodesu/blob/main/LICENSE)
+## 在此感谢
+  [Copilot](https://github.com/features/copilot)提供的样式帮助
+  [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape)官方的hexo主题模板结构
+  [Mozila](https://developer.mozilla.org/zh-CN/)的文档
+  ~~最不感谢改了三版的自己~~
 
-# wang-一个简约的hexo主题
+## 如何使用
+  1. gitclone本仓库到你的hexo主题文件夹下
+   
+   ```git
+   git clone https://github.com/xingwangzhe/hexo-theme-wang.git
+   ```
+   或者使用npm安装到hexo的依赖中
+   
+   ```bash
+   npm install hexo-theme-wang
+   ```
+  2. 在hexo更目录下的_config.yml中更改使用主题
+   ```yml
+   theme: hexo-theme-wang
+   ```
+  3. 运行hexo s 查看效果
 
-![wang](wang.png)
+## 主题配置文件说明(示例)
 
-在hexo目录下安装
+```yml
+## 主题配置文件，图片路径都是在主题文件夹下的source文件夹下
+### 额外的<head>标签内插入内容，你可能会需要插入一些第三方的js库，例如统计代码等
+head:
+  '<script>
+  console.log("Hello hexo-theme-wang");
+  </script>'
+
+## 头像配置 
+avatar:
+  src: images/avatar.webp #头像路径
+  isround: true #是否是圆形
+
+## 导航栏菜单 用 || 隔开，前面是菜单名称，后面是图标名称，位置在source/images/menu_ico
+menu:
+  Home: / ||home
+  Archives: /archives ||archives
+  Categories: /categories || categories
+  Tags: /tags || tags
+  About: /about || about
+  Links: /links || links
+  RSS: /atom.xml || rss                   ##需要安装 hexo-generator-feed
+  Travelling: https://www.travellings.cn/go.html || train
+
+## 展示社交媒体链接 前面是名称，后面是图标名称 位置在source/images/social_links
+social_links:
+  Github: https://github.com/xingwangzhe || github
+  Email: mailto:xingwangzhe@outloock.com || envelope
+
+
+  # 需要安装hexo-generator-searchdb
+search:
+  enable: false # 是否启用搜索功能
+  path: /search.xml # 添加前导斜杠，表示从网站根目录开始
+
+## 时间是否显示秒
+time:
+  show_seconds: true
+
+
+## Waline评论,需要设置serverURL，详情请访问Waline官网:https://waline.js.org
+comments:
+  enable: false # 是否启用评论功能
+  serverURL: ''
+
+## 友链,需要设置name，link，img，description
+friend_links:
+    - name: 姓王者
+      link: https://xingwangzhe.fun/
+      img: https://i.ibb.co/vLC0cft/202406212107148.jpg
+      description: 记录学习生活的琐事，或技术文章
+    - name: 
+      link: 
+      img: 
+      description:
+
+## 底部链接,需要设置name，link，img
+footer_links:
+  - name: 开往-友链接力
+    link: https://www.travellings.cn/go.html
+    img: https://www.travellings.cn/assets/logo.gif
+  - name: 阿里云支持
+    link: https://www.aliyun.com/minisite/goods?userCode=lmvvqvl9
+    img: https://i.ibb.co/h7XJkfm/LOGO.png
+  - name: 大佬论坛
+    link: https://www.dalao.net/
+    img: https://www.dalao.net/img/dalao-svg.svg
+  - name: BlogFinder
+    link: https://bf.zzxworld.com/
+    img: https://bf.zzxworld.com/images/logo-v2.png
+  - name: 2024-10-29-133009
+    link: https://storeweb.cn/
+    img: https://i.ibb.co/tc0z0Y5/2024-10-29-133009.png
+  - name: 空间穿梭-随机访问BlogsClub成员博客
+    link: https://www.blogsclub.org/go
+    img: https://www.blogsclub.org/images/shuttle_4.png
+
+## 底部文字链接,需要设置name，link
+footer_links_text:
+  - name: 文字链接
+    link: 
+
+
 ```
-npm install hexo-theme-wang
-```
-主题会安装到`node_modules`中
-在hexo主配置文件中修改`theme`为`wang`
 
-
-## 参考
- 感谢以下的教程和文章及其网站，在此向他们表示感谢！
- + [hexo官网](https://hexo.io/)
- + [代码高亮highlight](https://highlightjs.org/)
- + [kimi](https://kimi.moonshot.cn/)
- + [从 0 到 1 开发 Hexo 主题杂谈](https://liuyib.github.io/2019/08/20/develop-hexo-theme-from-0-to-1/)
- + [Element-Plus](https://element-plus.org)
- + [tailwindcss](https://tailwindcss.com/)  
-# 开发日志
-## 2024-12-10
- + 修复bug 
-## 2024 12-9
- + 完成基本功能，基本满足日常使用
-## 2024-12-8
- + 增加标签，分类，归档，链接，右侧边栏
- + 优化代码，修复bug
-## 2024-12-6
- + 左侧边栏完善
- + 主页主体完善
-## 重构试试 2024-12-3
- + 重构代码
- + vue.js+elementui+tailwindcss
- + 导航栏
- + 左中右结构
-## 2024-11-26
- + 部分页面模块化
- + 修复i8n bug
- + 默认添加开往(Travelling)
-## 2024-11-25
- + 正在发布到hexo-theme
- + npm包发布
- + '<head>'增加扩展内容
- + 优化代码
-## 2024-11-23
- + 响应式ui
-## 2024-11-22
- +  增加底部统计时间人数
- +  代码框优化
- +  i18n国际化
-
-## 2024-11-21
- +  增加文章底部评论区
- +  添加底部网站访问计数
- +  更改项目协议为AGPL3.0
-
-## 2024-11-20
-+  增加文章底部版权信息
-+  右边栏添加标签，分类
-## 2024 11-16
-+  页脚增加更多内容
-+  增加链接页面
-   + 实现内部分页  
-## 2024-11-15
- + 添加分类页面
- + 添加标签页面
- + 细化右边栏
- + 默认模板渲染
-## 2024-11-13
- + 添加归档页面
-
-## 2024-11-12
-+ 左侧边栏
-  + 站长信息
-  + 社交链接
-  + 旋转头像
-+ 内容优化，性能优化
-+ 实现分页效果
-  
-## 2024-11-10
-+ 浮动盒子
-  + 圆角化，更美观
-+ 简单页脚
-
-## 2024-11-9
-+ 文章详情
-  + 标题下划线
-  + 代码高亮
-  + 图片居中
-+ 许可证信息
-
-## 2024-11-6
-+ 文章小盒子细化
-+ 导航栏平滑隐藏
-## 2024-11-5
-+ 文章小盒子细化
-  + 文章标题
-  + 文章日期
-  + 文章摘要
-+ 顶栏导航进一步优化
-
-## 2024-11-3
-+ 文章预览小盒子
-  + 文章标题
-  + 文章日期
-
-## 2024-11-2        
-+ 顶部导航栏css进一步设计
-  + 导航栏加上logo
-  + 导航栏加上标题
-
-
-
-## 2024-10-20
-要不说闲着也是闲着，看了那么多hexo主题,自己不免心里痒痒的，于是也动手准备做一个主题试试，但俗话说的好**万事开头难**，我好像只会html,css,js。什么node.js,esj什么的确实不懂，但也无妨，边做边学嘛
-
-+ 构建整体架构
-+ 顶部导航栏css简单设计
-+ 绘制简单Logo
-<img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
-
-~~翻看hexo文档，查看landscape主题的布局~~
-
+# 最后，祝您使用愉快！

@@ -1,32 +1,30 @@
----
-name: English
-index:
+Home: Home
+Archives: Archives
+Categories: Categories
+Tags: Tags
+About: About
+Links: Links
+PoweredBy: Powered by Hexo
+BuiltWith: Built with Wang Theme
+RSS: RSS
+Travelling: Travelling
+social_links: Contact Me
+
+
+paginator:
+  prev: Previous
+  next: Next
+search:
+  no_results: No results found
+  loading: Loading...
+  placeholder: Search articles...
+post:
+  category: Category
+  posted_on: Posted on
   read_more: Read More
-  search: Search
-  total_visits: Total Visits
-  running_since: Running Since
-  times: Times
-  day: "Day"
-  hour: "Hour"
-  minute: "Minute"
-  second: "Second"
-  copy_success: Copy Success
-menu:
-  home: Home
-  archive: Archive
-  categories: Categories
-  tags: Tags
-  about: About
-  links: Links
-  rss: RSS
-  travellings: Travellings
-  search: Search
-sidebar-left:
-  introduction: Introduction
-sidebar-right:
-  locate_fast: Fast Locate
-  ip_show: IP Show
-  time_show: Time
-links:
-  referral_sites: Referral Sites
-  friend_links: Friend Links
+  word_count: Words
+  reading_time: Reading Time
+  minutes: mins
+  last_updated: Last Updated
+  prev_post: Previous Post
+  next_post: Next Post

@@ -1,34 +1,29 @@
-<el-header class="p-0" padding="0" id="header">
-        <el-menu role="navigation" class="justify-between" mode="horizontal" background-color="#2B2B2C" text-color="#CFD3DC" active-text-color="#CFD3DC" margin="0">
-        <el-menu-item role="button">
-            <el-image aria-hidden="true" alt="logo" src="<%= url_for() %>images/<%= theme.logo %>" fit="contain" style="width: 50px;"/>
-        </el-menu-item>
-        <el-menu-item role="button">
-            <p class="text-3xl hover-underline"><%= config.title %></p>
-        </el-menu-item>
-            <% for (let name in theme.menu) { %>
-            <% let [url, icon] = theme.menu[name].split('||').map(item => item.trim()); %>
-            <el-menu-item role="button">
-                <a href="<%= url %>" class="inline-flex items-center mg-auto " alt="<%= name %>">
-                    <i aria-hidden="true" class="fa <%= icon %> text-lg" aria-hidden="true"></i>
-                    <p aria-hidden="true" class="ml-2 text-lg hover-underline">
-                        <% 
-                        const translated = __('menu.' + name); 
-                        var menuItem = translated
-                        if(menuItem =='menu.'+name)
-                           { menuItem = name}
-                        %>
-                        <%= menuItem %>
-                    </p>
-                </a>
-            </el-menu-item>
-        <% } %> 
-        <el-menu-item role="button">
-            <button v-pre class="menu-item-link inline-flex items-center mg-auto" alt="search" id="triggerSearch" onclick="document.getElementById('search-container').style.display='block';">
-                <i aria-hidden="true" class="fa fa-search text-lg" aria-hidden="true"></i>
-                <p aria-hidden="true" class="hover-underline ml-2 text-lg"><%=__('menu.search') %></p>
-            </button>
-        </el-menu-item>
-        </el-menu>
-</el-header>
-  
+<div class="header-trigger" style="position: fixed; top: 0; left: 0; right: 0; height: 20px;"></div>
+<div class="nav-toggle">
+    <img src="<%= url_for('images/menu_ico/arrow.svg') %>" alt="Toggle Menu">
+</div>
+<header>
+    <nav>
+        <ul>
+            <% for (let key in theme.menu) { %>
+                <li>
+                    <a href="<%= theme.menu[key].split('||')[0].trim() %>" rel="noopener">
+                        <% if (theme.menu[key].split('||')[1]) { %>
+                            <img src="<%= url_for('images/menu_ico/') %><%= theme.menu[key].split('||')[1].trim() %>.svg" class="menu-icon" alt="<%= __(key) || key %>">
+                        <% } %>
+                        <%= __(key) || key %>
+                    </a>
+                </li>
+            <% } %>
+            <% if (theme.search && theme.search.enable) { %>
+                <li>
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+<%- js('js/header') -%>
+<% if (theme.search && theme.search.enable) { %>
+    <%- js('js/search') -%>
+<% } %>

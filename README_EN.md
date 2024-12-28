@@ -1,131 +1,121 @@
-language: en||[zh-CN](README.md)
-<center>
-<img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
+# hexo-theme-wang
+A simple dark theme based on hexo
+hexo-theme-wang
+![alt text](image.png)
 
-# Wang
-</center>
 
-## License
-Fonts:
- + [Douyin Sans](https://fonts.zeoseven.com/en/items/84/) : [OFL License](FONT-LICENSE)
+i18n:zh-CN,zh-TW,zh-HK,en
 
-Code: [AGPL3.0](LICENSE) 
-  According to the infectious nature of AGPL3.0, the project has been switched to the AGPL3.0 license, while the original MIT license is retained but no longer fully applicable.
- + Main code: [MIT License](MIT_LICENSE)
- + [sodesu Comment Section](https://github.com/BeiyanYunyi/sodesu): [AGPL3.0](https://github.com/BeiyanYunyi/sodesu/blob/main/LICENSE)
+My Site: [https://xingwangzhe.fun](https://xingwangzhe.fun)
 
-# Wang - A Minimalist Hexo Theme
+## Thanks to
+  [Copilot](https://github.com/features/copilot) for style help
+  [hexo-theme-landscape](https://github.com/hexojs/hexo-theme-landscape) for the official hexo theme template structure
+  [Mozila](https://developer.mozilla.org/zh-CN/) for the documentation
+  ~~Not thanking myself for the three revisions~~
 
-[wang](wang.png)
+## How to Use
+  1. Clone this repository to your hexo themes folder
+  
+   ```git
+   git clone https://github.com/xingwangzhe/hexo-theme-wang.git
+   ```
 
-To install in your Hexo directory:
+   Or install it using npm as a dependency for Hexo
+
+  ```bash
+  npm install hexo-theme-wang
+  ```
+   2.Change the theme in the _config.yml file under the hexo root directory
+   ```yml
+      theme: hexo-theme-wang
+   ```
+   3. Run hexo s to view the effect
+   
+## Theme Configuration File Explanation (Example)
+```yml
+## Theme configuration file, image paths are all under the source folder in the theme folder
+### Insert content inside the <head> tag, you may need to insert some third-party js libraries, such as tracking code, etc.
+head:
+  '<script>
+  console.log("Hello hexo-theme-wang");
+  </script>'
+
+## Avatar configuration 
+avatar:
+  src: images/avatar.webp # Avatar path
+  isround: true # Whether it is circular
+
+## Navigation bar menu separated by ||, the front is the menu name, and the back is the icon name, located in source/images/menu_ico
+menu:
+  Home: / ||home
+  Archives: /archives ||archives
+  Categories: /categories || categories
+  Tags: /tags || tags
+  About: /about || about
+  Links: /links || links
+  RSS: /atom.xml || rss                   ## Need to install hexo-generator-feed
+  Travelling: https://www.travellings.cn/go.html || train
+
+## Display social media links, the front is the name, and the back is the icon name, located in source/images/social_links
+social_links:
+  Github: https://github.com/xingwangzhe || github
+  Email: mailto:xingwangzhe@outloock.com || envelope
+
+
+  # Need to install hexo-generator-searchdb
+search:
+  enable: false # Whether to enable the search function
+  path: /search.xml # Add a leading slash to indicate starting from the root directory of the website
+
+## Whether to display seconds in time
+time:
+  show_seconds: true
+
+
+## Waline comments, need to set serverURL, for details, please visit the Waline official website: https://waline.js.org
+comments:
+  enable: false # Whether to enable the comment function
+  serverURL: ''
+
+## Friend links, need to set name, link, img, description
+friend_links:
+    - name: Xing Wangzhe
+      link: https://xingwangzhe.fun/
+      img: https://i.ibb.co/vLC0cft/202406212107148.jpg
+      description: Record the trivia of study and life, or technical articles
+    - name: 
+      link: 
+      img: 
+      description:
+
+## Footer links, need to set name, link, img
+footer_links:
+  - name: Travelling - Friend Link Power
+    link: https://www.travellings.cn/go.html
+    img: https://www.travellings.cn/assets/logo.gif
+  - name: Alibaba Cloud Support
+    link: https://www.aliyun.com/minisite/goods?userCode=lmvvqvl9
+    img: https://i.ibb.co/h7XJkfm/LOGO.png
+  - name: Big Shot Forum
+    link: https://www.dalao.net/
+    img: https://www.dalao.net/img/dalao-svg.svg
+  - name: BlogFinder
+    link: https://bf.zzxworld.com/
+    img: https://bf.zzxworld.com/images/logo-v2.png
+  - name: 2024-10-29-133009
+    link: https://storeweb.cn/
+    img: https://i.ibb.co/tc0z0Y5/2024-10-29-133009.png
+  - name: Space Shuttle - Randomly visit BlogsClub member blogs
+    link: https://www.blogsclub.org/go
+    img: https://www.blogsclub.org/images/shuttle_4.png
+
+## Footer text links, need to set name, link
+footer_links_text:
+  - name: Text Link
+    link: 
+
 
 ```
-npm install hexo-theme-wang
-```
 
-The theme will be installed into the `node_modules` directory.
-Modify the `theme` setting to `wang` in your main Hexo configuration file.
-
-## References
-Gratitude to the following tutorials, articles, and websites for their contributions!
- + [Hexo Official Website](https://hexo.io/)
- + [Code Highlighting with Highlight.js](https://highlightjs.org/)
- + [Kimi](https://kimi.moonshot.cn/)
- + [Developing a Hexo Theme from Scratch](https://liuyib.github.io/2019/08/20/develop-hexo-theme-from-0-to-1/)
- + [Element-Plus](https://element-plus.org)
- + [Tailwind CSS](https://tailwindcss.com/)  
-
-# Development Log
-## 2024-12-10
- + Bug fixed
-## 2024-12-9
- + Basic functionality completed, meeting daily use requirements.
-## 2024-12-8
- + Added tags, categories, archives, links, and a right sidebar.
- + Code optimization and bug fixes.
-## 2024-12-6
- + Completed the left sidebar.
- + Main page body completed.
-## Refactor Try 2024-12-3
- + Code refactoring.
- + Vue.js + Element UI + Tailwind CSS.
- + Navigation bar.
- + Left-center-right structure.
-## 2024-11-26
- + Partial page modularization.
- + Fixed i8n bugs.
- + Default addition of Travelling (开往).
-## 2024-11-25
- + Publishing to hexo-theme.
- + NPM package release.
- + Added extended content to '<head>'.
- + Code optimization.
-## 2024-11-23
- + Responsive UI.
-## 2024-11-22
- + Added bottom statistics on time and number of visitors.
- + Optimized code blocks.
- + Internationalization (i18n).
-## 2024-11-21
- + Added a comment section at the bottom of posts.
- + Added website visit count at the bottom.
- + Changed the project license to AGPL3.0.
-## 2024-11-20
- + Added copyright information at the bottom of posts.
- + Added tags and categories to the right sidebar.
-## 2024-11-16
- + Added more content to the footer.
- + Created a link page.
-   + Implemented internal pagination.
-## 2024-11-15
- + Added category page.
- + Added tag page.
- + Refined the right sidebar.
- + Default template rendering.
-## 2024-11-13
- + Added archive page.
-## 2024-11-12
- + Left sidebar
-   + Webmaster information.
-   + Social links.
-   + Rotating avatar.
- + Content and performance optimizations.
- + Implemented pagination effect.
-## 2024-11-10
- + Floating boxes
-   + Rounded corners for better aesthetics.
- + Simple footer.
-## 2024-11-9
- + Post details
-   + Underline under titles.
-   + Code highlighting.
-   + Centered images.
- + License information.
-## 2024-11-6
- + Refined post preview boxes.
- + Smoothly hidden navigation bar.
-## 2024-11-5
- + Further refined post preview boxes
-   + Post title.
-   + Post date.
-   + Post excerpt.
- + Further optimized top navigation bar.
-## 2024-11-3
- + Post preview small boxes
-   + Post title.
-   + Post date.
-## 2024-11-2        
- + Further designed the top navigation bar CSS
-   + Added logo to the navigation bar.
-   + Added title to the navigation bar.
-
-## 2024-10-20
-After seeing so many Hexo themes, I couldn't help but feel itchy to create one myself. As the saying goes, **all beginnings are hard**, and it seems I only know HTML, CSS, and JS. I don't understand Node.js or ES6, but that's okay; I can learn as I go.
-
-+ Built the overall architecture.
-+ Simple design of the top navigation bar CSS.
-+ Drew a simple Logo.
-<img src="https://i.ibb.co/9HSNt5c/wang.png" alt="wang" border="0" width="80" height="80">
-
-~~Reviewed the Hexo documentation and the layout of the landscape theme~~
+# Finally, enjoy using it!

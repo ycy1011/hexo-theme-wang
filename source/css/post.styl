@@ -1,175 +1,183 @@
-.post-article{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    max-width: 100%;
-    margin: 52px 15px;
-    
-}
-@media (max-width: 767px) {
-   .post-article{
-     min-width: 400px;
-     max-width: 100%;
-     margin: 52px 5px;
-    
-    }
-}
-.post-header{
- margin-top: 20px;
-}
-.post-content{
- background-color: #3b3b3b;
- margin:auto;
- max-width: 100%;    
+.post-container {
+  max-width: 900px
+  margin: 2rem auto
+  padding: 2rem
+  background: rgba(15, 15, 25, 0.13)  // 降低不透明度
+  backdrop-filter: blur(15px)  // 增加模糊效果
+  -webkit-backdrop-filter: blur(15px)  // Safari 支持
+  border: 1px solid rgba(255, 255, 255, 0.1)  // 添加微妙的边框
+  border-radius: 12px
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2)  // 增强阴影效果
 }
 
-.post-content>*{
- margin-bottom: 20px;
- margin-left:25px;    
- margin-right:25px; 
-}
-.post-content h1{
-    font-size: 36px;
-    border-bottom: 2px solid #fff;
+.post-title {
+  color: #ffffff
+  font-size: 2.2rem
+  margin-bottom: 1.5rem
+  text-align: center
 }
 
-.post-content h2
-{
-    font-size: 24px;
-    border-bottom: 2px solid #fff;
+.post-meta {
+  color: #a8a8b8
+  text-align: center
+  margin-bottom: 2rem
+  font-size: 0.9rem
 }
 
-.post-content h3
-{
-    font-size: 18px;
-    border-bottom: 1px dashed #fff;
-    
-}
-.post-content h4
-{
-    font-size: 16px;
-    border-bottom: 5px dashed #fff;
-}
-.post-content h5
-{
-    font-size: 14px;
-    border-bottom: 5px dashed #fff;
-}
-.post-content h6
-{
-    font-size: 12px;
-    border-bottom: 5px dashed #fff;
-}
-.post-content .highlight{
-    background-color: #333;
-}
 .post-content {
-
-    ol {
-  list-style-type: decimal; /* 默认样式，数字列表 */
-  padding-left: 20px; /* 列表左侧的内边距 */
-  margin: 20px 0; /* 上下外边距 */
-}
-ol li {
-  margin-bottom: 5px; /* 列表项之间的间距 */
-  line-height: 1.5; /* 行高 */
-}
-
-del {
-  text-decoration: line-through;
-  text-decoration-style: solid;
-  text-decoration-thickness: 1px;
-}
-
->table {
-  width: auto;
-  min-width: 50%; /* 表格宽度 */
-  border-radius: 2px; /* 表格圆角边框 */
-  overflow: hidden; /* 隐藏溢出的内容 */
-
-th, td {
-  border: 1px solid #ddd;
-  padding: 5px;
-  text-align: left;
-}
-
-}
-
-blockquote {
-  background-color: #333;
-  border-left: 5px solid #ccc;
-  margin: 20px 0;
-  padding: 10px 20px;
-}
-
-}
-figure.highlight {
-    position: relative;
-    overflow: auto;
-}
-figure.highlight tr{
-}
-// table{
-//     display block;
-// }
-.gutter{
- width : 0.5em;
-}
-figure.highlight .gutter pre { 
-    padding-right: 0; /* 右侧内边距，以确保有足够的空间 */
-    border-right: 1px solid #ccc; /* 分隔线，可选 */
-    display: inline-block;
-    text-align: right;
-    color: #999;
-    line-height: 1.7; /* 增加行高，使行号之间有更多空间 */
-}
-figure.highlight .code pre {
-    display:block;
-    min-width:50%; 
-    max-width:100vh;/* 高度是视口高度的50% */
-    margin-left:0; /* 代码左侧的内边距，与行号保持一致 */
-    line-height: 1.7; /* 增加行高，使代码之间有更多空间 */
-}
-
-.copy-btn,box{
- position: absolute;   
- right: 0;    
- width :50px;
- height: 30px;
- border-radius: 5px;
+  color: #e4e4e4
+  line-height: 1.8
+  font-size: 1.1rem
+  letter-spacing: 0.01em
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff
+    margin: 2rem 0 1rem
+    font-weight: 600
+    position: relative
+    
+    &::after {
+      content: ""
+      position: absolute
+      bottom: -5px
+      left: 0
+      width: 50px
+      height: 2px
+      background: rgba(127, 166, 255, 0.6)
+    }
+  }
+  
+  p {
+    margin-bottom: 1.5rem
+    text-align: justify
+  }
+  
+  blockquote {
+    margin: 1.5rem 0
+    padding: 1rem 1.5rem
+    border-left: 4px solid rgba(127, 166, 255, 0.6)
+    background: rgba(255, 255, 255, 0.05)
+    border-radius: 0 8px 8px 0
+    
+    p {
+      margin-bottom: 0
+    }
+  }
+  
+  ul, ol {
+    padding-left: 1.5rem
+    margin: 1rem 0
+    
+    li {
+      margin: 0.5rem 0
+    }
+  }
+  .highlight{
+   overflow-x: auto;
 
 }
-.copy-btn{
-background: #333     
+  code {
+    background: rgba(255, 255, 255, 0.1)
+    padding: 0.2em 0.4em
+    border-radius: 4px
+    font-family: "Fira Code", monospace
+  }
+  
+  pre {
+    background: rgba(0, 0, 0, 0.3)
+    padding: 1rem
+    border-radius: 8px
+    overflow-x: auto
+    margin: 1.5rem 0
+    
+    code {
+      background: none
+      padding: 0
+    }
+  }
+  
+  img {
+    display: block
+    max-width: 100%
+    border-radius: 8px
+    margin: 1.5rem auto
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+  }
+  
+  table {
+    width: 100%
+    border-collapse: collapse
+    margin: 1.5rem 0
+    
+    th, td {
+      padding: 0.75rem
+      border: 1px solid rgba(255, 255, 255, 0.1)
+      background: rgba(255, 255, 255, 0.02)
+    }
+    
+    th {
+      background: rgba(127, 166, 255, 0.1)
+    }
+  }
+  
+  hr {
+    border: none
+    height: 1px
+    background: rgba(255, 255, 255, 0.1)
+    margin: 2rem 0
+  }
+
+  a {
+    color: #7fa6ff
+    text-decoration: none
+    border-bottom: 1px dashed rgba(127, 166, 255, 0.4)
+    transition: all 0.3s ease
+    
+    &:hover {
+      color: #afc5ff
+      border-bottom-style: solid
+    }
+  }
 }
-.post-content a{
- text-decoration: underline;
+
+.post-pagination {
+  margin-top: 3rem
+  padding-top: 2rem
+  border-top: 1px solid rgba(255, 255, 255, 0.1)
+  display: flex
+  justify-content: space-between
+  gap: 1rem
+  
+  .post-prev, .post-next {
+    flex: 1
+    
+    .nav-label {
+      display: block
+      font-size: 0.9rem
+      color: #7fa6ff
+      margin-bottom: 0.5rem
+    }
+    
+    a {
+      color: #ffffff
+      text-decoration: none
+      font-size: 1.1rem
+      display: block
+      padding: 1rem
+      background: rgba(255, 255, 255, 0.05)
+      border-radius: 8px
+      transition: all 0.3s ease
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1)
+        transform: translateY(-2px)
+      }
+    }
+  }
+
+  .post-next {
+    text-align: right
+  }
+
 }
-.post-content a:not(.headerlink):not(:has(img))::after {
-  content: '\f08e'; /* Font Awesome 的外链图标 Unicode */
-  font-family: 'Font Awesome 5 Free'; /* 指定 Font Awesome 字体 */
-  font-weight: 900; /* 根据图标库的要求，通常使用 900 粗细 */
-  margin-left: 5px; /* 图标和链接之间的间距 */
-  font-size: 12px; /* 调整图标大小 */
-}
-.pre-next-container{
-  display: flex;
-  justify-content: space-around;
-}
-.pre-btn,.next-btn{
- border:1px solid grey;
- border-radius: 5px;
- padding: 5px 10px;
-}
-.copyright-container{
- display:flex
- align-content: center  
- flex:1; 
- border:1px solid grey;
-}
-.copyright-author-container,.copyright-public-time-container,.copyright-license-container{
- margin-right:15px;
- margin-bottom:15px;
- align-content: center
- justify-content:  space-around;   
-}
+

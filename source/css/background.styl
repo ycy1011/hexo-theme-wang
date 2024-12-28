@@ -1,0 +1,23 @@
+#starry-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    transition: opacity 2s ease-in-out;
+    opacity: 0;  /* 初始透明度改为0 */
+}
+.fade-in {
+    opacity: 0.8;
+}
+.fade-out {
+    opacity: 0;
+}

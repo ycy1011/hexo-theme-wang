@@ -1,18 +1,6 @@
-<%if (config.search!=null){ %>
-    <script v-pre>
-        var search_path = "<%= config.search.path %>";
-        if (search_path.length == 0) {
-            search_path = "search.xml";
-        }
-        var path = "<%= config.root %>" + search_path;
-        searchFunc(path, 'local-search-input', 'local-search-result');
-    </script>
-    <div id="search-container"class="search-container night">
-    <form class="d-flex">
-      <button class="btn text-muted fa fa-search" disabled></button>
-      <input id="local-search-input" class="form-control me-2 pe-4" type="search" aria-label="Search">
-      <button id="close-btn-search" class="btn text-muted fa fa-xmark"></button>
-    </form>
-    <div id="local-search-result"></div>
+<div id="search-results" role="region" aria-label="搜索结果">
+    <div class="search-results-inner">
+        <div class="search-results-list"></div>
     </div>
-<%}%>
+</div>
+<div class="search-overlay"></div>

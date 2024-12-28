@@ -1,9 +1,8 @@
 <%- page.content %>
 <% if (page.path === 'tags/index.html' || page.path === 'tags/') { %>
-    <%- include('tags.ejs') %>
+    <%- include('partials/tags.ejs') %>
   <% } else if(page.path === 'categories/index.html' || page.path === 'categories/') {%>
-    <%- include('categories.ejs') %>
+    <%- include('partials/categories.ejs') %>
   <%} else if(page.path === 'links/index.html' || page.path==='links/'){%>
     <%- include('links.ejs') %>
 <%}%>
-

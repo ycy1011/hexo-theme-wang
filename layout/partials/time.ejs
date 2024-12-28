@@ -1,0 +1,65 @@
+<% if (theme.time.show_seconds) { %>
+    <script>
+      let currentTime = new Date();
+      let hours = currentTime.getHours();
+      let minutes = currentTime.getMinutes();
+      let seconds = currentTime.getSeconds();
+
+      function formatTime(unit) {
+        return unit < 10 ? '0' + unit : unit;
+      }
+
+      function updateClock() {
+        const now = new Date();
+        if (now.getSeconds() !== seconds) {
+          seconds = now.getSeconds();
+          seconds = formatTime(seconds);
+          document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        if (now.getMinutes() !== minutes) {
+          minutes = now.getMinutes();
+          minutes = formatTime(minutes);
+          document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+        if (now.getHours() !== hours) {
+          hours = now.getHours();
+          hours = hours < 10 ? '0' + hours : hours;
+          document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        requestAnimationFrame(updateClock);
+      }
+
+      window.onload = updateClock;
+    </script>
+    <p id="clock" role="timer" aria-live="polite"></p>
+  <% } else { %>
+    <script>
+      let currentTime = new Date();
+      let hours = currentTime.getHours();
+      let minutes = currentTime.getMinutes();
+
+      function formatTime(unit) {
+        return unit < 10 ? '0' + unit : unit;
+      }
+
+      function updateClock() {
+        const now = new Date();
+        if (now.getMinutes() !== minutes) {
+          minutes = now.getMinutes();
+          minutes = formatTime(minutes);
+          document.getElementById('clock').textContent = `${hours}:${minutes}`;
+        }
+        if (now.getHours() !== hours) {
+          hours = now.getHours();
+          hours = hours < 10 ? '0' + hours : hours;
+          document.getElementById('clock').textContent = `${hours}:${minutes}`;
+        }
+
+        requestAnimationFrame(updateClock);
+      }
+
+      window.onload = updateClock;
+    </script>
+    <p id="clock" role="timer" aria-live="polite"></p>
+  <% } %>
