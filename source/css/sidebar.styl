@@ -1,0 +1,114 @@
+.sidebar-container{
+    position: fixed;
+    top: 10%;
+    z-index: 100;
+    min-weight:300px;
+    max-height: 90vh;
+}
+@media (max-width: 1613px) {
+    .sidebar-container{
+        display: none;
+    }
+}
+@media (min-width: ) {
+}
+.sidebar-left{
+    left:5%;
+    right:80%;
+    text-align: center;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-bg{
+        background: rgba(15, 15, 25, 0.13)  // 降低不透明度
+        backdrop-filter: blur(15px)  // 增加模糊效果
+        -webkit-backdrop-filter: blur(15px)  // Safari 支持
+        border: 1px solid rgba(255, 255, 255, 0.1)  // 添加微妙的边框
+        border-radius: 12px
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2)  // 增强阴影效果
+        text-align: center;
+        margin-bottom: 1.5rem;
+        overflow: auto;
+    }
+    .avatar{
+        margin-right: auto;
+        margin-left: auto;    
+    }
+
+    .icon{
+        width:32px;    
+    }
+}
+
+.sidebar-right{
+    right:5%;
+    left:80%;
+    ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    ol{
+        list-style-type: none;
+        padding: 0;
+        margin-left: 16px;
+    }
+    .sidebar-bg{
+        background: rgba(15, 15, 25, 0.13)  // 降低不透明度
+        backdrop-filter: blur(15px)  // 增加模糊效果
+        -webkit-backdrop-filter: blur(15px)  // Safari 支持
+        border: 1px solid rgba(255, 255, 255, 0.1)  // 添加微妙的边框
+        border-radius: 12px
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2)  // 增强阴影效果
+        margin-bottom: 1.5rem;
+        overflow: auto;
+
+    }
+    .avatar{
+        margin-right: auto;
+        margin-left: auto;    
+    }
+
+    #clock {
+        text-align: center;
+        margin:auto;
+        font-size: 2em;
+        color: #646464;
+        font-family: 'Arial', sans-serif;
+        z-index : 1000;
+    }
+    #date {
+        text-align: center;
+        margin:auto;
+        font-size: 2.5em;
+        color: #777777;
+        font-family: 'Arial', sans-serif;
+        z-index : 1000;
+        margin-bottom: 32px;
+    }
+
+    .icon{
+        width:32px;    
+    }
+
+    .card-tags {
+        margin-top: 10px
+        .tag {
+            display: inline-block
+            padding: 2px 8px
+            margin: 0 4px 4px 0
+            background: rgba(255, 255, 255, 0.2)  // 半透明背景
+            border-radius: 4px
+            font-size: 0.8em
+            color: #ccc  // 调整文字颜色为浅灰色
+            text-decoration: none
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.3)  // 悬浮时加深背景透明度
+            }
+        }
+    }
+}

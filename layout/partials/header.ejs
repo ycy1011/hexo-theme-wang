@@ -1,16 +1,29 @@
 <div class="header-trigger" style="position: fixed; top: 0; left: 0; right: 0; height: 20px;"></div>
 <div class="nav-toggle">
-    <img src="images/menu_ico/arrow.svg">
+    <img src="<%= url_for('images/menu_ico/arrow.svg') %>" alt="Toggle Menu">
 </div>
 <header>
-    <ul>
-        <% for (let key in theme.menu) { %>
-            <li>
-                <a href="<%= theme.menu[key] %>">
-                    <%= __(key) || key %>
-                </a>
-            </li>
-        <% } %>
-    </ul>
+    <nav>
+        <ul>
+            <% for (let key in theme.menu) { %>
+                <li>
+                    <a href="<%= theme.menu[key].split('||')[0].trim() %>" rel="noopener">
+                        <% if (theme.menu[key].split('||')[1]) { %>
+                            <img src="<%= url_for('images/menu_ico/') %><%= theme.menu[key].split('||')[1].trim() %>.svg" class="menu-icon" alt="<%= __(key) || key %>">
+                        <% } %>
+                        <%= __(key) || key %>
+                    </a>
+                </li>
+            <% } %>
+            <% if (theme.search && theme.search.enable) { %>
+                <li>
+                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+                </li>
+            <% } %>
+        </ul>
+    </nav>
 </header>
 <%- js('js/header') -%>
+<% if (theme.search && theme.search.enable) { %>
+    <%- js('js/search') -%>
+<% } %>

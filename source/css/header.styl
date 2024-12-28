@@ -1,10 +1,21 @@
 header {
     position: fixed;
     z-index: 4;
-    top: -100px; // 默认隐藏在视口上方
+    top: -125px; // 默认隐藏在视口上方
+
+    @media (max-width: 768px) {
+        top: calc(-100% - 50px); // 窄窗口下隐藏在header高度加50px的位置
+    }
     width: 100%;
     transition: top 0.3s ease;
     backdrop-filter: blur(5px); // 添加毛玻璃效果
+
+    .menu-icon {
+        width: 32px;
+        height: 32px;
+        vertical-align: middle;
+        margin-right: 5px;
+    }
     ul {
         list-style: none;
         display: flex;
@@ -13,6 +24,12 @@ header {
         align-items: center;      // 垂直居中
         gap: 2rem;               // 添加间距
         padding: 0.5rem 2rem;    // 添加内边距
+
+        @media (max-width: 768px) {
+            flex-direction: column; // 视窗宽度不足时纵向排列
+            gap: 1rem;              // 调整间距
+            display: none;          // 隐藏子元素
+        }
     }
     li {
         position: relative;
@@ -50,6 +67,25 @@ header {
             }
         }
     }
+
+    #search-input {
+        padding: 0.5rem;
+        border: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0.5); // 适应暗色背景
+        color: #00ffff;
+        outline: none;
+        transition: background-color 0.3s ease;
+
+        &::placeholder {
+            color: #00ffff;
+        }
+
+        &:focus {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+    }
 }
 
 header.hidden {
@@ -62,6 +98,12 @@ header:hover {
 
 .show-header {
     top: 0 !important; // 显示时移动到顶部
+
+    @media (max-width: 768px) {
+        ul {
+            display: flex; // 显示子元素
+        }
+    }
 }
 
 .nav-toggle {
@@ -106,7 +148,33 @@ header:hover {
     }
 }
 
-// 删除之前的 header.show-header + .nav-toggle 相关样式
+#search-results {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+}
+
+.search-result-item {
+    margin-bottom: 1rem;
+}
+
+.search-result-item a {
+    color: #00ffff;
+    text-decoration: none;
+}
+
+.search-result-item a:hover {
+    text-decoration: underline;
+}
 
 @keyframes pulse {
     0% {

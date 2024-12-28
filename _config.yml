@@ -1,17 +1,102 @@
-
 avatar:
   src: images/avatar.webp #头像
   isround: true #是否是圆形
 
-
 # html lang
 language: en
 
-# main menu navigation
 menu:
-  Home: /
-  Archives: /archives
-  Categories: /categories
-  Tags: /tags
-  About: /about
-  Links: /links
+  Home: / ||home
+  Archives: /archives ||archives
+  Categories: /categories || categories
+  Tags: /tags || tags
+  About: /about || about
+  Links: /links || links
+  RSS: /atom.xml || rss                    #hexo-generator-feed
+  Travelling: https://www.travellings.cn/go.html || train
+
+
+social_links:
+  Github: https://github.com/xingwangzhe || github
+  Email: mailto:xingwangzhe@outloock.com || envelope
+
+search:
+  enable: true # 是否启用搜索功能
+  path: /search.xml # 添加前导斜杠，表示从网站根目录开始
+
+time:
+  show_seconds: true
+
+comments:
+  enable: true
+  serverURL: 'https://waline.xingwangzhe.fun'
+
+friend_links:
+    - name: Lily Ellenvia
+      link: https://blog.lilynet.work
+      img: https://avatars.githubusercontent.com/u/118451956?v=4
+      description: 喜歡睡覺的普通人
+    - name: 夜梦星尘の折腾日记
+      link: https://tech.yemengstar.com/
+      img: https://tech.yemengstar.com/wp-content/uploads/2024/04/cropped-yemenglogoNEW-32x32.png
+      description: 眼底星河荡漾，踏着梦走过时光。
+    - name: 浪海导航
+      link: https://www.langhai.net/
+      img: https://www.langhai.net/assets/images/langhai-logo.png
+      description: 浪海导航 ~ 收录各种类型的博客以及论坛网站
+    - name: 琼西往事
+      link: https://fushaolei.fun/
+      img: https://cdn.jsdelivr.net/gh/fushaolei/img/20200524104925.jpg
+      description: Do Not Be Sorry, Be Better
+    - name: 龙腾收录网
+      link: https://dh.lt6.ltd/
+      img: https://dh.lt6.ltd/favicon.ico
+      description: 我们致力于为广大站长提供一个纯净的精品网站收录,在龙腾收录网可互换友情链接，增加彼此网站曝光度!
+    - name: 吃猫的鱼
+      link: https://www.fish9.cn/
+      img: https://www.fish9.cn/favicon.ico
+      description: 吃猫的鱼--一个优质的技术博客！
+    - name: ksh
+      link: https://ksh7.com/
+      img: https://ksh7.com/img/avatar.webp
+      description: Life Oriented Programming
+    - name: Admibrill
+      link: https://blog.qyadbrill.top
+      img: https://source-admibrill.pages.dev/file/f69c9c86b22cb90df18a1.png
+      description: 有志者，事竟成。
+    - name: 大佬论坛
+      link: https://www.dalao.net/
+      img: https://www.dalao.net/upload/attach/202410/1_1728884298539.webp
+      description: 站长论坛，互联网站长综合交流，十年之约合作论坛
+    - name: BlogFinder
+      link: https://bf.zzxworld.com/
+      img: https://bf.zzxworld.com/images/favicon.png
+      description: 每个博客都是一座宝藏
+    - name: 浩瀚星河
+      link: https://haohanxinghe.com
+      img: https://haohanxinghe.com/assets/images/avatar.webp
+      description: 代码，日常，生活
+
+footer_links:
+  - name: 开往-友链接力
+    link: https://www.travellings.cn/go.html
+    img: https://www.travellings.cn/assets/logo.gif
+  - name: 阿里云支持
+    link: https://www.aliyun.com/minisite/goods?userCode=lmvvqvl9
+    img: https://i.ibb.co/h7XJkfm/LOGO.png
+  - name: 大佬论坛
+    link: https://www.dalao.net/
+    img: https://www.dalao.net/img/dalao-svg.svg
+  - name: BlogFinder
+    link: https://bf.zzxworld.com/
+    img: https://bf.zzxworld.com/images/logo-v2.png
+  - name: 2024-10-29-133009
+    link: https://storeweb.cn/
+    img: https://i.ibb.co/tc0z0Y5/2024-10-29-133009.png
+  - name: 空间穿梭-随机访问BlogsClub成员博客
+    link: https://www.blogsclub.org/go
+    img: https://www.blogsclub.org/images/shuttle_4.png
+
+footer_links_text:
+  - name: 辽ICP备2024042064号-1
+    link: http://beian.miit.gov.cn/

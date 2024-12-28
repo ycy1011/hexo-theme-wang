@@ -1,8 +1,8 @@
-body, html {
+body{
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden;
     background: radial-gradient(ellipse at bottom, #1c2331 0%, #090a0f 100%);
     color: #ffffff;  // 添加默认文字颜色
 }
@@ -20,6 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     color: #00ffff;  // 链接使用青色
+    list-style none;
     &:hover {
         color: #66ffff;  // 悬停时颜色变亮
     }
@@ -54,6 +55,38 @@ p {
   color: #ffffff;  // 设置文本颜色
 }
 
-@import background;
-@import first_screen;
+// 滚动条样式
+::-webkit-scrollbar {
+    width: 10px;  // 稍微加宽滚动条
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #2c2c2c;  // 深灰色轨道
+}
+
+::-webkit-scrollbar-thumb {
+    background: #666;  // 中灰色滑块
+    border-radius: 10px;
+    border: 2px solid #2c2c2c;  // 添加边框营造立体感
+    
+    &:hover {
+        background: #888;  // 悬停时变亮
+    }
+}
+
+@import background
+@import first_screen
 @import header
+@import footer
+@import archives
+@import paginator
+@import page  
+@import tags  
+@import categories 
+@import links
+@import search
+@import post
+@import time
+@import date
+@import sidebar

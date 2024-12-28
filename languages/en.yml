@@ -4,3 +4,27 @@ Categories: Categories
 Tags: Tags
 About: About
 Links: Links
+PoweredBy: Powered by Hexo
+BuiltWith: Built with Wang Theme
+RSS: RSS
+Travelling: Travelling
+social_links: Contact Me
+
+
+paginator:
+  prev: Previous
+  next: Next
+search:
+  no_results: No results found
+  loading: Loading...
+  placeholder: Search articles...
+post:
+  category: Category
+  posted_on: Posted on
+  read_more: Read More
+  word_count: Words
+  reading_time: Reading Time
+  minutes: mins
+  last_updated: Last Updated
+  prev_post: Previous Post
+  next_post: Next Post

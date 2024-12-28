@@ -1,6 +1,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="<%= page.keywords || config.keywords %>">
+<title><%= page.title || config.title %></title>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <%- open_graph({
   title: page.title || config.title,
   description: page.description || config.description,
@@ -12,3 +14,8 @@
 })%>
 <%-js('js/wang') -%>
 <%-css('css/wang')-%>
+<link
+rel="stylesheet"
+href="https://unpkg.com/@waline/client@v3/dist/waline.css"
+/>
+<%- theme.head%>

@@ -1,10 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="dark" lang="<%= config.language || 'en' %>">
 <head>
     <%- partial('partials/head.ejs',{cache: true}) -%>
 </head>
 <body>
-    <%- body -%>
-    <%-js('js/background')-%>
+<main>
+    <%- partial('partials/header.ejs')%>
+    <% if (theme.search && theme.search.enable) { %>
+        <%- partial('partials/search.ejs') %>
+    <% } %>
+        <%- body %>
+    <%- partial('partials/footer.ejs')-%>
+    <%- js('js/background') -%>
+</main>
 </body>
 </html>

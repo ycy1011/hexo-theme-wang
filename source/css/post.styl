@@ -1,0 +1,183 @@
+.post-container {
+  max-width: 900px
+  margin: 2rem auto
+  padding: 2rem
+  background: rgba(15, 15, 25, 0.13)  // 降低不透明度
+  backdrop-filter: blur(15px)  // 增加模糊效果
+  -webkit-backdrop-filter: blur(15px)  // Safari 支持
+  border: 1px solid rgba(255, 255, 255, 0.1)  // 添加微妙的边框
+  border-radius: 12px
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2)  // 增强阴影效果
+}
+
+.post-title {
+  color: #ffffff
+  font-size: 2.2rem
+  margin-bottom: 1.5rem
+  text-align: center
+}
+
+.post-meta {
+  color: #a8a8b8
+  text-align: center
+  margin-bottom: 2rem
+  font-size: 0.9rem
+}
+
+.post-content {
+  color: #e4e4e4
+  line-height: 1.8
+  font-size: 1.1rem
+  letter-spacing: 0.01em
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: #ffffff
+    margin: 2rem 0 1rem
+    font-weight: 600
+    position: relative
+    
+    &::after {
+      content: ""
+      position: absolute
+      bottom: -5px
+      left: 0
+      width: 50px
+      height: 2px
+      background: rgba(127, 166, 255, 0.6)
+    }
+  }
+  
+  p {
+    margin-bottom: 1.5rem
+    text-align: justify
+  }
+  
+  blockquote {
+    margin: 1.5rem 0
+    padding: 1rem 1.5rem
+    border-left: 4px solid rgba(127, 166, 255, 0.6)
+    background: rgba(255, 255, 255, 0.05)
+    border-radius: 0 8px 8px 0
+    
+    p {
+      margin-bottom: 0
+    }
+  }
+  
+  ul, ol {
+    padding-left: 1.5rem
+    margin: 1rem 0
+    
+    li {
+      margin: 0.5rem 0
+    }
+  }
+  .highlight{
+   overflow-x: auto;
+
+}
+  code {
+    background: rgba(255, 255, 255, 0.1)
+    padding: 0.2em 0.4em
+    border-radius: 4px
+    font-family: "Fira Code", monospace
+  }
+  
+  pre {
+    background: rgba(0, 0, 0, 0.3)
+    padding: 1rem
+    border-radius: 8px
+    overflow-x: auto
+    margin: 1.5rem 0
+    
+    code {
+      background: none
+      padding: 0
+    }
+  }
+  
+  img {
+    display: block
+    max-width: 100%
+    border-radius: 8px
+    margin: 1.5rem auto
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15)
+  }
+  
+  table {
+    width: 100%
+    border-collapse: collapse
+    margin: 1.5rem 0
+    
+    th, td {
+      padding: 0.75rem
+      border: 1px solid rgba(255, 255, 255, 0.1)
+      background: rgba(255, 255, 255, 0.02)
+    }
+    
+    th {
+      background: rgba(127, 166, 255, 0.1)
+    }
+  }
+  
+  hr {
+    border: none
+    height: 1px
+    background: rgba(255, 255, 255, 0.1)
+    margin: 2rem 0
+  }
+
+  a {
+    color: #7fa6ff
+    text-decoration: none
+    border-bottom: 1px dashed rgba(127, 166, 255, 0.4)
+    transition: all 0.3s ease
+    
+    &:hover {
+      color: #afc5ff
+      border-bottom-style: solid
+    }
+  }
+}
+
+.post-pagination {
+  margin-top: 3rem
+  padding-top: 2rem
+  border-top: 1px solid rgba(255, 255, 255, 0.1)
+  display: flex
+  justify-content: space-between
+  gap: 1rem
+  
+  .post-prev, .post-next {
+    flex: 1
+    
+    .nav-label {
+      display: block
+      font-size: 0.9rem
+      color: #7fa6ff
+      margin-bottom: 0.5rem
+    }
+    
+    a {
+      color: #ffffff
+      text-decoration: none
+      font-size: 1.1rem
+      display: block
+      padding: 1rem
+      background: rgba(255, 255, 255, 0.05)
+      border-radius: 8px
+      transition: all 0.3s ease
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1)
+        transform: translateY(-2px)
+      }
+    }
+  }
+
+  .post-next {
+    text-align: right
+  }
+
+}
+
