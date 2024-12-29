@@ -5,6 +5,7 @@
 </head>
 <body>
 <main>
+    <%- partial('partials/alert.ejs') -%>
     <%- partial('partials/header.ejs')%>
     <% if (theme.search && theme.search.enable) { %>
         <%- partial('partials/search.ejs') %>

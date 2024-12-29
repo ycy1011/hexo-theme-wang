@@ -7,7 +7,7 @@ Links: 連結
 PoweredBy: 由 Hexo 提供動力
 BuiltWith: 使用 Wang 主題建置
 RSS: RSS
-Travelling: 旅行
+Travelling: 开往
 social_links: 聯絡我
 
 paginator:
@@ -27,3 +27,7 @@ post:
   last_updated: 最後更新
   prev_post: 上一篇文章
   next_post: 下一篇文章
+  license: 授權協議
+  author: 作者
+  title: 標題
+  published: 發佈於
