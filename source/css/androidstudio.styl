@@ -1,64 +1,103 @@
 pre code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em
+  padding: 1em;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  line-height: 1.5;
 }
+
 code.hljs {
-  padding: 3px 5px
+  padding: 3px 5px;
+  border-radius: 3px;
 }
+
 /*
 Date: 24 Fev 2015
 Author: Pedro Oliveira <kanytu@gmail . com>
 */
-.hljs,.highlight{
+
+.hljs,
+.highlight {
   color: #a9b7c6;
-  background: #282b2e
-  position: relative; 
+  background: #282b2e;
+  position: relative;
   border-radius: 10px;
-.number,
-.literal,
-.symbol,
-.bullet {
-  color: #6897BB
-}
-.keyword,
-.selector-tag,
-.deletion {
-  color: #cc7832
-}
-.variable,
-.template-variable,
-.link {
-  color: #629755
-}
-.comment,
-.quote {
-  color: #808080
-}
-.meta {
-  color: #bbb529
-}
-.string,
-.attribute,
-.addition {
-  color: #6A8759
-}
-.section,
-.title,
-.type {
-  color: #ffc66d
-}
-.name,
-.selector-id,
-.selector-class {
-  color: #e8bf6a
-}
-.emphasis {
-  font-style: italic
-}
-.strong {
-  font-weight: bold
-}
-
-
+  
+  .number,
+  .literal,
+  .symbol,
+  .bullet,
+  .hljs-number,
+  .hljs-literal,
+  .hljs-symbol,
+  .hljs-bullet {
+    color: #6897BB;
+  }
+  
+  .keyword,
+  .selector-tag,
+  .deletion,
+  .heighlight-keyword,
+  .highlight-deletion,
+  .highlight-selector-tag {
+    color: #cc7832;
+  }
+  
+  .variable,
+  .template-variable,
+  .link,
+  .hljs-variable,
+  .hljs-template-variable,
+  .hljs-link {
+    color: #629755;
+  }
+  
+  .comment,
+  .quote,
+  .hljs-comment,
+  .hljs-quote {
+    color: #808080;
+  }
+  
+  .meta,
+  .hljs-meta {
+    color: #bbb529;
+  }
+  
+  .string,
+  .attribute,
+  .addition,
+  .hljs-string,
+  .hljs-attribute,
+  .hljs-addition {
+    color: #6A8759;
+  }
+  
+  .section,
+  .title,
+  .type,
+  .hljs-section,
+  .hljs-title,
+  .hljs-type {
+    color: #ffc66d;
+  }
+  
+  .name,
+  .selector-id,
+  .selector-class,
+  .hljs-name,
+  .hljs-selector-id,
+  .hljs-selector-class {
+    color: #e8bf6a;
+  }
+  
+  .emphasis,
+  .hljs-emphasis {
+    font-style: italic;
+  }
+  
+  .strong,
+  .hljs-strong {
+    font-weight: bold;
+  }
 }
