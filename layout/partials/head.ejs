@@ -1,6 +1,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="<%= page.keywords || config.keywords %>">
+<meta itemprop="name" content="<%= page.title || config.title %>">
+<link rel="icon" href="<%= config.url %>/favicon.ico" type="image/x-icon">
+<meta itemprop="description" content="<%= page.description || (page.layout === 'post' ? page.excerpt : config.description) %>">
 <title><%= page.title || config.title %></title>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <%- open_graph({
