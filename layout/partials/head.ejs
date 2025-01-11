@@ -1,20 +1,50 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="keywords" content="<%= page.keywords || config.keywords %>">
-<meta itemprop="name" content="<%= page.title || config.title %>">
+<% if (page.noindex || is_category() || is_tag()) { %>
+  <meta name="robots" content="noindex">
+<% } %>
+<title><%
+  if (is_home()) {
+    %><%= config.title %><%
+  } else {
+    var currentPath = page.path;
+    var segments = currentPath.split('/').filter(Boolean);
+    var lastSegment = segments.length ? segments[segments.length - 1].replace('.html', '') : '';
+    if (lastSegment === 'index') {
+      lastSegment = segments.length > 1 ? segments[segments.length - 2] : '';
+    }
+    if (page.title) {
+      %><%= page.title + ' || ' + config.title %><%
+    } else {
+      %><%= lastSegment + ' || ' + config.title %><%
+    }
+  }
+%></title>
 <link rel="icon" href="<%= config.url %>/favicon.ico" type="image/x-icon">
-<meta itemprop="description" content="<%= page.description || (page.layout === 'post' ? page.excerpt : config.description) %>">
-<title><%= page.title || config.title %></title>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<%- open_graph({
-  title: page.title || config.title,
-  description: page.description || config.description,
-  type: 'website',
-  url: url,
-  image: page.cover || config.cover,
-  site_name: config.title,
-  author: config.author
-})%>
+<meta property="og:title" content="<%= page.title || config.title %>">
+<meta property="og:type" content="website">
+<meta property="og:url" content="<%= url %>">
+<meta property="og:image" content="<%= page.cover || config.cover %>">
+<meta property="og:site_name" content="<%= config.title %>">
+<meta property="og:author" content="<%= config.author %>">
+<% if (page.content) { %>
+  <% let rawContent = page.content; %>
+  <% let pureContent = rawContent.replace(/<[^>]*>/g, '') 
+                                 .replace(/&lt;/g, '')
+                                 .replace(/\s+/g, '')
+                                 .replace(/\n+/g, '')
+                                 .replace(/:::/g, ''); %>
+  <% let description = pureContent.substr(0, 155); %>
+  <meta name="description" content="<%= description %>">
+<% } else { %>
+  <% if (page.title) { %>
+    <meta name="description" content="<%= page.title + ' || ' + config.title + ' || ' + config.description %>">
+  <% } else { %>
+    <meta name="description" content="<%= lastSegment + ' || ' + config.title + ' || ' + config.description %>">
+  <% } %>
+<% } %>
 <%-js('js/wang') -%>
 <%-css('css/wang')-%>
 <link
