@@ -17,7 +17,10 @@
             <% } %>
             <% if (theme.search && theme.search.enable) { %>
                 <li>
-                    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+                    <button class="search-toggle-btn" aria-label="<%= __('search.toggle_search') %>">
+                        <img src="<%= url_for('images/menu_ico/search.svg') %>" class="menu-icon" alt="<%= __('search') %>">
+                        <%= __('searchs') || "Search" %>
+                    </button>
                 </li>
             <% } %>
         </ul>

@@ -1,51 +1,68 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let lastScrollPosition = 0;
     const header = document.querySelector('header');
-    const trigger = document.querySelector('.header-trigger');
     const navToggle = document.querySelector('.nav-toggle');
-    const searchInput = document.getElementById('search-input');
     
+    // 显示头部的函数
     function showHeader() {
         header.classList.add('show-header');
         navToggle.classList.add('nav-hidden');
     }
     
+    // 隐藏头部的函数
     function hideHeader() {
         header.classList.remove('show-header');
         navToggle.classList.remove('nav-hidden');
     }
     
-    [trigger, navToggle].forEach(element => {
-        element.addEventListener('mouseover', showHeader);
+    // 绑定事件
+    const trigger = document.querySelector('.header-trigger');
+    if (trigger) {
+        trigger.addEventListener('mouseover', showHeader);
+    }
+    
+    if (navToggle) {
+        navToggle.addEventListener('mouseover', showHeader);
+    }
+    
+    // 顶部触发区域
+    const headerTriggerArea = document.querySelector('.header-trigger');
+    if (headerTriggerArea) {
+        headerTriggerArea.addEventListener('mouseover', showHeader);
+    }
+    
+    // 头部区域
+    if (header) {
+        header.addEventListener('mouseleave', hideHeader);
+        header.addEventListener('mouseover', showHeader);
+    }
+    
+    // 窗口滚动事件监听
+    window.addEventListener('scroll', function() {
+        const currentScrollPosition = window.pageYOffset;
+        
+        if (currentScrollPosition <= 50) {
+            // 靠近顶部时显示头部
+            showHeader();
+        } else {
+            hideHeader();
+        }
     });
     
-    header.addEventListener('mouseleave', hideHeader);
-    header.addEventListener('mouseover', showHeader); // 鼠标在header上时保持显示
-
-    // 当视窗宽度变化时，检查宽度并调整header显示逻辑
+    // 窗口大小改变事件
     window.addEventListener('resize', function() {
+        // 在移动设备视图下处理逻辑
         if (window.innerWidth <= 768) {
             hideHeader();
-            header.classList.add('vertical-layout');
         } else {
+            // 非移动设备视图下始终显示
             showHeader();
-            header.classList.remove('vertical-layout');
         }
     });
-
-    // 初始检查视窗宽度
+    
+    // 初始化时检查窗口大小
     if (window.innerWidth <= 768) {
         hideHeader();
-        header.classList.add('vertical-layout');
+    } else {
+        showHeader();
     }
-
-    window.addEventListener('scroll', () => {
-        // 如果搜索框处于焦点状态，不要隐藏header
-        if (document.activeElement === searchInput) {
-            header.style.transform = 'translateY(0)';
-            return;
-        }
-
-        // ...existing code...
-    });
 });

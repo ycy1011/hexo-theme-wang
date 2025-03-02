@@ -29,8 +29,10 @@ social_links:
 
   # 需要安装hexo-generator-searchdb
 search:
-  enable: false # 是否启用搜索功能
+  enable: true # 是否启用搜索功能
   path: /search.xml # 添加前导斜杠，表示从网站根目录开始
+  field: post # 可选值: post | page | all
+  content: true # 是否搜索文章内容
 
 ## 时间是否显示秒
 time:
@@ -67,9 +69,6 @@ footer_links:
   - name: BlogFinder
     link: https://bf.zzxworld.com/
     img: https://bf.zzxworld.com/images/logo-v2.png
-  - name: 2024-10-29-133009
-    link: https://storeweb.cn/
-    img: https://i.ibb.co/tc0z0Y5/2024-10-29-133009.png
   - name: 空间穿梭-随机访问BlogsClub成员博客
     link: https://www.blogsclub.org/go
     img: https://www.blogsclub.org/images/shuttle_4.png
@@ -77,5 +76,5 @@ footer_links:
 ## 底部文字链接,需要设置name，link
 footer_links_text:
   - name: 文字链接
-    link: 
+    link:
 

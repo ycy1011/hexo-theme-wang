@@ -8,6 +8,7 @@ PoweredBy: 由 Hexo 驱动
 BuiltWith: Wang 主题构建
 RSS: RSS订阅
 Travelling: 开往
+searchs: 搜索
 
 social_links: 联系
 
@@ -16,8 +17,13 @@ paginator:
   next: 下一页
 search:
   no_results: 没有找到相关结果
-  loading: 加载中...
-  placeholder: 搜索文章...
+  loading: 正在加载...
+  placeholder: 输入关键词搜索
+  results: 搜索结果
+  error_loading: 加载搜索数据失败
+  close: 关闭
+  shortcut_tip: 按 ESC 关闭
+  toggle_search: 打开搜索
 post:
   category: 分类
   posted_on: 发布于

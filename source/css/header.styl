@@ -1,14 +1,21 @@
 header {
     position: fixed;
-    z-index: 4;
+    z-index: 1000;
     top: -100px; // 默认隐藏在视口上方
-
-    @media (max-width: 768px) {
-        top: calc(-100% - 50px); // 窄窗口下隐藏在header高度加50px的位置
-    }
+    left: 0;
+    right: 0;
     width: 100%;
-    transition: top 0.3s ease;
-    backdrop-filter: blur(5px); // 添加毛玻璃效果
+    transition: top 0.3s ease, opacity 0.3s ease, backdrop-filter 0.5s ease;
+    // 增强磨砂玻璃效果
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    background-color: rgba(0, 0, 0, 0.11); // 降低不透明度增强透明感
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); // 添加微妙边框
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+    
+    @media (max-width: 768px) {
+        top: -100%;
+    }
 
     .menu-icon {
         width: 32px;
@@ -36,7 +43,7 @@ header {
         padding: 0.5rem 1rem;
         transition: all 0.3s ease;
     }
-    a {
+    a, button.search-toggle-btn {
         position: relative;
         text-decoration: none;
         color: #e1e1ff;
@@ -68,24 +75,7 @@ header {
         }
     }
 
-    #search-input {
-        padding: 0.5rem;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        background-color: rgba(0, 0, 0, 0.5); // 适应暗色背景
-        color: #00ffff;
-        outline: none;
-        transition: background-color 0.3s ease;
-
-        &::placeholder {
-            color: #00ffff;
-        }
-
-        &:focus {
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-    }
+    // 移除原有的搜索框样式
 }
 
 header.hidden {
@@ -96,7 +86,7 @@ header:hover {
     top: 0; // 鼠标悬停时，导航栏下移到视口内
 }
 
-.show-header {
+header.show-header {
     top: 0 !important; // 显示时移动到顶部
 
     @media (max-width: 768px) {
