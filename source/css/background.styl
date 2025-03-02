@@ -6,18 +6,22 @@
     height: 100%;
     z-index: -1;
     pointer-events: none;
+    overflow: hidden;
+    background-color: transparent; // 确保背景透明
 }
 
-.star {
+#stars-canvas {
+    display: block;
     position: absolute;
-    background: white;
-    border-radius: 50%;
-    transition: opacity 2s ease-in-out;
-    opacity: 0;  /* 初始透明度改为0 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
-.fade-in {
-    opacity: 0.8;
-}
-.fade-out {
-    opacity: 0;
+
+// 在低端设备上减少动画效果
+@media (prefers-reduced-motion: reduce) {
+    #stars-canvas {
+        animation: none !important;
+    }
 }
