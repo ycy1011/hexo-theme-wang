@@ -3,12 +3,73 @@ pre code.hljs {
   overflow-x: auto;
   padding: 1em;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  line-height: 1.5;
+  font-size: 0.9em; // 减小字体尺寸
+  line-height: 1.4; // 减小行高使代码更紧凑
 }
 
 code.hljs {
   padding: 3px 5px;
   border-radius: 3px;
+  font-size: 0.9em; // 减小内联代码字体大小
+}
+
+// 优化代码框结构
+figure.highlight {
+  margin: 1.5em 0;
+  overflow: auto;
+  position: relative;
+  font-size: 0.9em; // 整体减小字体大小
+  
+  table {
+    width: 100%;
+    border-spacing: 0;
+    margin: 0;
+  }
+  
+  // 缩窄行号宽度
+  .gutter {
+    width: 2.5em;  // 减小宽度
+    user-select: none;
+    position: relative; // 确保定位上下文
+    
+    pre {
+      text-align: right;
+      padding: 0 0.7em 0 0; // 增加右侧内边距避开竖线
+      color: #6c6c6c;
+    }
+  }
+  
+  .code {
+    width: calc(100% - 2.5em);
+    padding-left: 0.7em; // 增加左内边距
+    
+    pre {
+      margin: 0;
+    }
+  }
+  
+  // 修复竖线位置，避免与数字重叠
+  .gutter::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0; // 改为右侧定位，避免与数字重叠
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  // 移动端优化
+  @media (max-width: 768px) {
+    .gutter {
+      width: 2em;
+    }
+    .gutter::after {
+      left: 2em;
+    }
+    .code {
+      width: calc(100% - 2em);
+    }
+  }
 }
 
 /*
@@ -22,6 +83,12 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   background: #282b2e;
   position: relative;
   border-radius: 10px;
+  
+  // 添加内边距优化并减小行间距
+  pre {
+    padding: 8px 0; // 减小上下内边距
+    line-height: 1.3; // 更紧凑的行高
+  }
   
   .number,
   .literal,
