@@ -36,16 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
         header.addEventListener('mouseover', showHeader);
     }
 
-    // 窗口大小改变事件
-    window.addEventListener('resize', function() {
-        // 在移动设备视图下处理逻辑
-        if (window.innerWidth <= 768) {
-            hideHeader();
-        } else {
-            // 非移动设备视图下始终显示
-            showHeader();
-        }
-    });
 
     // 初始化时检查窗口大小
     if (window.innerWidth <= 768) {
@@ -53,4 +43,5 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
         showHeader();
     }
+
 });
