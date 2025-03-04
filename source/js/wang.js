@@ -8,6 +8,6 @@ document.addEventListener('keydown', function(event) {
         setTimeout(function() {
             alertDiv.style.display = 'none';
             alertDiv.classList.remove('showAlert');
-        }, 2500); // 5000毫秒 = 5秒
+        }, 15000); // 15S
     }
 });
