@@ -12,7 +12,7 @@ header {
     background-color: rgba(0, 0, 0, 0.11); // 降低不透明度增强透明感
     border-bottom: 1px solid rgba(255, 255, 255, 0.05); // 添加微妙边框
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
-    
+
     @media (max-width: 768px) {
         top: -100%;
     }
@@ -30,7 +30,7 @@ header {
         justify-content: center;  // 居中对齐
         align-items: center;      // 垂直居中
         gap: 2rem;               // 添加间距
-        padding: 0.5rem 2rem;    // 添加内边距
+        padding: 0.3rem 2rem;    // 添加内边距
 
         @media (max-width: 768px) {
             flex-direction: column; // 视窗宽度不足时纵向排列
@@ -40,7 +40,7 @@ header {
     }
     li {
         position: relative;
-        padding: 0.5rem 1rem;
+        padding: 0.3rem 1rem;
         transition: all 0.3s ease;
     }
     a, button.search-toggle-btn {
@@ -52,7 +52,7 @@ header {
         display: inline-block;
         font-size: 1.25rem;  // 设置字体大小与h3类似
         font-family: 'Arial', sans-serif;  // 设置字体
-        
+
         &::before {
             content: '';
             position: absolute;
@@ -65,10 +65,10 @@ header {
             transition: width 0.3s ease-in-out;
             opacity: 1;
         }
-        
+
         &:hover {
             color: #fff;
-            
+
             &::before {
                 width: 100%;
             }
@@ -113,26 +113,26 @@ header.show-header {
     opacity: 1;
     visibility: visible; // 添加可见性属性
     transition: all 0.3s ease; // 修改过渡效果包含所有属性
-    
+
     &.nav-hidden {
         opacity: 0;
         visibility: hidden;
         transform: translateX(-50%) scale(0.8);
         pointer-events: none;
     }
-    
+
     img {
         border: 2px solid rgba(148, 148, 148, 0.397); // 添加边框
         border-radius: 45%; // 设置为圆形
         width: 25px;  // 稍微放大图标
         height: 25px;
         transition: transform 0.3s ease;
-        animation: 
+        animation:
             pulse 1.5s infinite ease-in-out,    // 加快动画速度
             breathing 1.5s infinite ease-in-out; // 同步两个动画
         filter: drop-shadow(0 0 3px rgba(66,185,231,0.3));
     }
-    
+
     &:hover img {
         animation: none;
         transform: translateY(3px);  // 增加悬停时的移动距离
