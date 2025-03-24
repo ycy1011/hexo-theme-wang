@@ -7,6 +7,12 @@
 <title><%
   if (is_home()) {
     %><%= config.title %><%
+  } else if (is_archive()) {
+    %>Archives <%= page.current ? page.current : '' %> || <%= config.title %><%
+  } else if (is_category()) {
+    %>Category: <%= page.category %> <%= page.current ? page.current : '' %> || <%= config.title %><%
+  } else if (is_tag()) {
+    %>Tag: <%= page.tag %> <%= page.current ? page.current : '' %> || <%= config.title %><%
   } else {
     var currentPath = page.path;
     var segments = currentPath.split('/').filter(Boolean);
@@ -15,9 +21,9 @@
       lastSegment = segments.length > 1 ? segments[segments.length - 2] : '';
     }
     if (page.title) {
-      %><%= page.title + ' || ' + config.title %><%
+      %><%= page.title + (page.current ? ' ' + page.current : '') + ' || ' + config.title %><%
     } else {
-      %><%= lastSegment + ' || ' + config.title %><%
+      %><%= lastSegment + (page.current ? ' ' + page.current : '') + ' || ' + config.title %><%
     }
   }
 %></title>
