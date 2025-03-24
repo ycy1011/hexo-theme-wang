@@ -1,73 +1,83 @@
 pre code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em;
-  font-family: Consolas, Monaco, 'Andale Mono', monospace;
-  font-size: 0.9em; // 减小字体尺寸
-  line-height: 1.4; // 减小行高使代码更紧凑
+  padding: 0.3em;
+  font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', monospace;
+  font-size: 0.9em;
+  line-height: 1.35;
 }
 
 code.hljs {
-  padding: 3px 5px;
-  border-radius: 3px;
-  font-size: 0.9em; // 减小内联代码字体大小
+  padding: 1px 2px;
+  border-radius: 2px;
+  font-size: 0.9em;
 }
 
 // 优化代码框结构
 figure.highlight {
-  margin: 1.5em 0;
+  margin: 0.8em 0;
   overflow: auto;
   position: relative;
-  font-size: 0.9em; // 整体减小字体大小
-  
+  font-size: 0.9em;
+  border-radius: 5px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
   table {
     width: 100%;
     border-spacing: 0;
     margin: 0;
   }
-  
+
   // 缩窄行号宽度
   .gutter {
-    width: 2.5em;  // 减小宽度
+    width: 2em;
     user-select: none;
-    position: relative; // 确保定位上下文
-    
+    position: relative;
+    background: rgba(0, 0, 0, 0.08);
+
     pre {
       text-align: right;
-      padding: 0 0.7em 0 0; // 增加右侧内边距避开竖线
-      color: #6c6c6c;
+      padding: 0 0.2em 0 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      color: rgba(169, 183, 198, 0.4);
     }
   }
-  
+
   .code {
-    width: calc(100% - 2.5em);
-    padding-left: 0.7em; // 增加左内边距
-    
+    width: calc(100% - 2em);
+    padding-left: 0.2em;
+    padding-right: 0.2em;
+
     pre {
       margin: 0;
+      width: 100%;
+      height: 100%;
     }
   }
-  
-  // 修复竖线位置，避免与数字重叠
+
+  // 修复竖线位置，变得更轻细
   .gutter::after {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    right: 0; // 改为右侧定位，避免与数字重叠
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    right: 0;
+    border-left: 1px solid rgba(255, 255, 255, 0.03);
   }
-  
+
   // 移动端优化
   @media (max-width: 768px) {
     .gutter {
-      width: 2em;
+      width: 1.6em;
     }
     .gutter::after {
-      left: 2em;
+      left: 1.6em;
     }
     .code {
-      width: calc(100% - 2em);
+      width: calc(100% - 1.6em);
     }
   }
 }
@@ -82,14 +92,15 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   color: #a9b7c6;
   background: #282b2e;
   position: relative;
-  border-radius: 10px;
-  
+  border-radius: 6px;
+
   // 添加内边距优化并减小行间距
   pre {
-    padding: 8px 0; // 减小上下内边距
-    line-height: 1.3; // 更紧凑的行高
+    padding: 1px 0; // 减小上下内边距
+    line-height: 1.25; // 更紧凑的行高
+    box-sizing: border-box;
   }
-  
+
   .number,
   .literal,
   .symbol,
@@ -100,7 +111,7 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   .hljs-bullet {
     color: #6897BB;
   }
-  
+
   .keyword,
   .selector-tag,
   .deletion,
@@ -109,7 +120,7 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   .highlight-selector-tag {
     color: #cc7832;
   }
-  
+
   .variable,
   .template-variable,
   .link,
@@ -118,19 +129,19 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   .hljs-link {
     color: #629755;
   }
-  
+
   .comment,
   .quote,
   .hljs-comment,
   .hljs-quote {
     color: #808080;
   }
-  
+
   .meta,
   .hljs-meta {
     color: #bbb529;
   }
-  
+
   .string,
   .attribute,
   .addition,
@@ -139,7 +150,7 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   .hljs-addition {
     color: #6A8759;
   }
-  
+
   .section,
   .title,
   .type,
@@ -148,7 +159,7 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   .hljs-type {
     color: #ffc66d;
   }
-  
+
   .name,
   .selector-id,
   .selector-class,
@@ -157,12 +168,12 @@ Author: Pedro Oliveira <kanytu@gmail . com>
   .hljs-selector-class {
     color: #e8bf6a;
   }
-  
+
   .emphasis,
   .hljs-emphasis {
     font-style: italic;
   }
-  
+
   .strong,
   .hljs-strong {
     font-weight: bold;
