@@ -1,33 +1,39 @@
-// 代码块基础样式
+// 代码块基础样式 - 优化
 pre code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em;
+  padding: 1.2em;
   font-family: 'JetBrains Mono', Consolas, Monaco, 'Andale Mono', monospace !important;
-  font-size: 0.9em;
+  font-size: 0.92em;
   line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
 code.hljs {
-  padding: 1px 4px;
-  border-radius: 3px;
-  font-size: 0.9em;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.92em;
 }
 
-// 代码框主结构
+// 代码框主结构 - 现代化外观
 figure.highlight {
-  margin: 1.5em 0;
+  margin: 1.8em 0;
   position: relative;
-  font-size: 0.9em;
-  border-radius: 10px;
-  background: #282b2e;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
-  border: 1px solid rgba(100, 100, 255, 0.12);
-  transition: all 0.3s ease;
+  font-size: 0.92em;
+  border-radius: 12px;
+  background: rgba(30, 30, 40, 0.95); // 调整背景色
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.3),
+    0 0 10px rgba(100, 100, 255, 0.1); // 双层阴影
+  border: 1px solid rgba(100, 100, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   overflow: hidden;
 
   &:hover {
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    box-shadow:
+      0 12px 35px rgba(0, 0, 0, 0.4),
+      0 0 15px rgba(100, 100, 255, 0.15);
+    transform: translateY(-2px);
   }
 
   // 表格结构
@@ -43,17 +49,17 @@ figure.highlight {
     border: none;
   }
 
-  // 行号区域
+  // 行号区域 - 改善对比度
   .gutter {
-    width: 3em;
+    width: 3.2em;
     user-select: none;
-    background: rgba(30, 30, 40, 0.5);
+    background: rgba(20, 20, 30, 0.7); // 加深背景色
 
     pre {
       text-align: right;
-      padding: 1em 0.5em 1em 0;
+      padding: 1em 0.7em 1em 0;
       margin: 0;
-      color: rgba(169, 183, 198, 0.5);
+      color: rgba(169, 183, 198, 0.6); // 提高可读性
       font-family: 'JetBrains Mono', Consolas, Monaco, monospace !important;
     }
 
@@ -63,31 +69,34 @@ figure.highlight {
     }
   }
 
-  // 代码区域
+  // 代码区域 - 添加内边距
   .code {
-    width: calc(100% - 3em);
+    width: calc(100% - 3.2em);
 
     pre {
       margin: 0;
       padding: 1em 1.5em;
-      padding-left: 0;
+      padding-left: 0.5em; // 添加左侧内边距
       font-family: 'JetBrains Mono', Consolas, Monaco, monospace !important;
     }
   }
 }
 
-// 语言标签
+// 语言标签 - 增强显示效果
 figure.highlight::before {
   content: attr(data-lang);
   position: absolute;
   top: 0;
   left: 0;
   color: #e4e4e4;
-  background: rgba(60, 60, 90, 0.7);
-  padding: 0.2em 0.7em;
-  border-radius: 0 0 5px 0;
+  background: rgba(60, 60, 120, 0.7); // 调整为蓝紫色调
+  padding: 0.3em 0.8em;
+  border-radius: 0 0 8px 0;
   font-size: 0.75em;
+  font-weight: 500;
+  letter-spacing: 0.05em;
   z-index: 2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 // 复制按钮容器
@@ -98,20 +107,27 @@ figure.highlight::before {
   z-index: 5;
 }
 
-// 复制按钮
+// 复制按钮 - 现代化设计
 .copy-btn {
-  background: rgba(80, 80, 120, 0.3);
-  border: 1px solid rgba(100, 100, 255, 0.2);
-  color: #d0d0e0;
-  padding: 0.3em 0.7em;
-  border-radius: 0 8px 0 8px;
+  background: rgba(80, 80, 180, 0.3); // 更加蓝紫的基调
+  border: 1px solid rgba(100, 100, 255, 0.25);
+  color: #e0e0ff;
+  padding: 0.35em 0.8em;
+  border-radius: 0 10px 0 10px;
   font-size: 0.8em;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
+  outline: none;
 
   &:hover {
-    background: rgba(100, 100, 150, 0.5);
+    background: rgba(100, 100, 200, 0.5);
     color: white;
+    box-shadow: 0 0 10px rgba(100, 100, 255, 0.2);
+  }
+
+  &:active {
+    transform: translateY(1px);
   }
 }
 

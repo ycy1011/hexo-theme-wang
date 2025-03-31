@@ -1,13 +1,23 @@
 .post-container {
   max-width: 900px
-  margin: 2rem auto
-  padding: 2rem
-  background: rgba(15, 15, 25, 0.13)  // 降低不透明度
-  backdrop-filter: blur(15px)  // 增加模糊效果
-  -webkit-backdrop-filter: blur(15px)  // Safari 支持
-  border: 1px solid rgba(255, 255, 255, 0.1)  // 添加微妙的边框
-  border-radius: 12px
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.11)  // 增强阴影效果
+  margin: 2.5rem auto // 增加上下边距
+  padding: 2.5rem
+  background: rgba(15, 15, 25, 0.15) // 轻微调整透明度
+  backdrop-filter: blur(18px) // 增强模糊效果
+  -webkit-backdrop-filter: blur(18px)
+  border: 1px solid rgba(255, 255, 255, 0.12)
+  border-radius: 16px // 增大圆角
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.15),
+    0 0 20px rgba(0, 0, 0, 0.1) // 双层阴影增强深度感
+  transition: transform 0.3s ease, box-shadow 0.3s ease
+
+  &:hover {
+    box-shadow:
+      0 15px 50px rgba(0, 0, 0, 0.2),
+      0 0 25px rgba(0, 0, 0, 0.15)
+    transform: translateY(-5px)
+  }
 }
 
 // 新增响应式设计
@@ -18,16 +28,20 @@
 
 .post-title {
   color: #ffffff
-  font-size: 2.2rem
-  margin-bottom: 1.5rem
+  font-size: 2.4rem
+  margin-bottom: 1.8rem
   text-align: center
+  font-weight: 600
+  letter-spacing: 0.02em
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1) // 添加微妙文字阴影
 }
 
 .post-meta {
   color: #a8a8b8
   text-align: center
-  margin-bottom: 2rem
-  font-size: 0.9rem
+  margin-bottom: 2.5rem
+  font-size: 0.95rem
+  font-style: italic
 }
 
 .post-content {
@@ -38,7 +52,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     color: #ffffff
-    margin: 2rem 0 1rem
+    margin: 2.5rem 0 1.2rem
     font-weight: 700
     position: relative
     letter-spacing: 0.02em
@@ -46,11 +60,12 @@
     &::after {
       content: ""
       position: absolute
-      bottom: -5px
+      bottom: -6px
       left: 0
-      width: 50px
-      height: 2px
-      background: rgba(127, 166, 255, 0.6)
+      width: 60px // 增加宽度
+      height: 3px // 增加高度
+      background: linear-gradient(90deg, rgba(127, 166, 255, 0.8), rgba(127, 166, 255, 0.2)) // 添加渐变
+      border-radius: 3px
     }
   }
 
@@ -64,11 +79,12 @@
   }
 
   blockquote {
-    margin: 1rem 0
-    padding: 1rem
-    border-left: 4px solid rgba(255, 255, 255, 0.2)
-    background: rgba(0, 0, 0, 0.3)
-    border-radius: 0 8px 8px 0
+    margin: 1.5rem 0
+    padding: 1.2rem 1.5rem
+    border-left: 4px solid rgba(0, 255, 255, 0.3) // 使用青色边框
+    background: rgba(0, 0, 0, 0.25)
+    border-radius: 0 10px 10px 0
+    font-style: italic
 
     p {
       margin-bottom: 0
@@ -180,13 +196,16 @@
   a {
     color: #00ffff
     text-decoration: none
-    border-bottom: 1px dashed rgba(127, 166, 255, 0.4)
+    border-bottom: 1px dashed rgba(0, 255, 255, 0.4)
     transition: all 0.3s ease
+    position: relative
+    padding: 0 2px
 
     &:hover {
-      color: #afc5ff
+      color: #80ffff
       border-bottom-style: solid
-      opacity: 0.8
+      background: rgba(0, 255, 255, 0.08)
+      border-radius: 2px
     }
   }
 
