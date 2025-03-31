@@ -1,3 +1,4 @@
+[english](README_EN.md)
 # hexo-theme-wang
 一个基于hexo的简约的暗色主题
 hexo-theme-wang

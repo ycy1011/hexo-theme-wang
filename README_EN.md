@@ -1,3 +1,4 @@
+[中文](README.md)
 # hexo-theme-wang
 A simple dark theme based on hexo
 hexo-theme-wang
