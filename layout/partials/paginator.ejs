@@ -1,8 +1,8 @@
 <% if (page.total > 1) { %>
     <nav class="paginator" aria-label="分页导航">
       <%- paginator({
-        prev_text: '&raquo;',
-        next_text: '&laquo;',
+        prev_text: '&laquo;',
+        next_text: '&raquo;',
         mid_size: 2,
         end_size: 1,
         space: '&nbsp;',
@@ -14,8 +14,8 @@
           item: 'paginator-item',
           link: 'paginator-link',
           current: 'paginator-current',
-          prev: 'paginator-next',
-          next: 'paginator-prev',
+          prev: 'paginator-prev',
+          next: 'paginator-next',
           disabled: 'paginator-disabled'
         }
       }) %>
