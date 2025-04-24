@@ -39,6 +39,8 @@ My Site: [https://xingwangzhe.fun](https://xingwangzhe.fun)
 ```yml
 ## Theme configuration file, image paths are all under the source folder in the theme folder
 ### Insert content inside the <head> tag, you may need to insert some third-party js libraries, such as tracking code, etc.
+favicon:
+  src: /wang.icon
 head:
   '<script>
   console.log("Hello hexo-theme-wang");
