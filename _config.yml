@@ -25,9 +25,8 @@ menu:
 
 ## 展示社交媒体链接 前面是名称，后面是图标名称 位置在source/images/social_links
 social_links:
-  Github: https://github.com/xingwangzhe || github
-  Email: mailto:xingwangzhe@outloock.com || envelope
-
+  Github: https://github.com/yinchunyuan || github
+  
 
   # 需要安装hexo-generator-searchdb
 search:
@@ -42,19 +41,19 @@ time:
 
 ## 首页动态文字配置
 typed_text:
-  enable: true # 是否启用首页中间的动态打字效果区域
+  enable: false # 是否启用首页中间的动态打字效果区域
 
 ## Waline评论,需要设置serverURL，详情请访问Waline官网:https://waline.js.org
 comments:
-  enable: false # 是否启用评论功能
+  enable: false  # 是否启用评论功能
   serverURL: ''
 
 ## 友链,需要设置name，link，img，description
 friend_links:
-    - name: 姓王者
-      link: https://xingwangzhe.fun/
+    - name: ycy
+      link: https://github.com/yinchunyuan
       img: https://i.ibb.co/vLC0cft/202406212107148.jpg
-      description: 记录学习生活的琐事，或技术文章
+      description: 记录学习生活的琐事, 或技术文章
     - name:
       link:
       img:
