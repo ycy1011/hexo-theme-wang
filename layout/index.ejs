@@ -31,8 +31,10 @@
             </ul>
         </div>
     </div>
+    <% if (theme.typed_text && theme.typed_text.enable !== false) { %>
     <div class="description-io">
         <h2 id="typed-output" data-text="<%= config.description %>"></h2>
     </div>
+    <%- js('js/typed-effect.js') -%>
+    <% } %>
 </div>
-<%- js('js/typed-effect.js') -%>
