@@ -25,7 +25,7 @@ menu:
 
 ## 展示社交媒体链接 前面是名称，后面是图标名称 位置在source/images/social_links
 social_links:
-  Github: https://github.com/yinchunyuan || github
+  Github: https://github.com/ycy1011 || github
   
 
   # 需要安装hexo-generator-searchdb
@@ -50,8 +50,8 @@ comments:
 
 ## 友链,需要设置name，link，img，description
 friend_links:
-    - name: ycy
-      link: https://github.com/yinchunyuan
+    - name: ycy1011
+      link: https://github.com/ycy1011
       img: https://i.ibb.co/vLC0cft/202406212107148.jpg
       description: 记录学习生活的琐事, 或技术文章
     - name:
@@ -61,21 +61,9 @@ friend_links:
 
 ## 底部链接,需要设置name，link，img
 footer_links:
-  - name: 开往-友链接力
-    link: https://www.travellings.cn/go.html
-    img: https://www.travellings.cn/assets/logo.gif
-  - name: 阿里云支持
-    link: https://www.aliyun.com/minisite/goods?userCode=lmvvqvl9
-    img: https://i.ibb.co/h7XJkfm/LOGO.png
-  - name: 大佬论坛
-    link: https://www.dalao.net/
-    img: https://www.dalao.net/img/dalao-svg.svg
-  - name: BlogFinder
-    link: https://bf.zzxworld.com/
-    img: https://bf.zzxworld.com/images/logo-v2.png
-  - name: 空间穿梭-随机访问BlogsClub成员博客
-    link: https://www.blogsclub.org/go
-    img: https://www.blogsclub.org/images/shuttle_4.png
+  - name: ycy1011
+    link: https://github.com/ycy1011
+
 
 ## 底部文字链接,需要设置name，link
 footer_links_text:
